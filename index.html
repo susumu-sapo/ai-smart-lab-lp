@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AIスマートLab｜AI動画制作サービス BtoB特化</title>
-<meta name="description" content="撮影ゼロ・最短7日・従来比1/3以下のコストで広告動画・UGC動画を制作。累計40社以上・制作1,000本超のノウハウ。">
+<meta name="description" content="撮影ゼロ・最短5日・従来比1/3以下のコストで広告動画・UGC動画を制作。累計40社以上・制作1,000本超のノウハウ。">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 /* ==================== RESET & BASE ==================== */
@@ -30,6 +30,7 @@
   --c-success: #4ade80;
   --font-display: 'Syne', sans-serif;
   --font-body: 'Noto Sans JP', sans-serif;
+  --font-num: 'Inter', sans-serif;
   --max-w: 720px;
   --radius: 12px;
   --radius-sm: 6px;
@@ -189,9 +190,9 @@ body {
 
 .proof-item { flex: 1; }
 .proof-num {
-  font-family: var(--font-display);
+  font-family: var(--font-num);
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--c-text);
   letter-spacing: -0.03em;
   line-height: 1;
@@ -369,32 +370,13 @@ body {
 }
 
 /* ==================== VIDEO GALLERY ==================== */
-.vid-tabs {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.vid-tab {
-  font-size: 12px;
-  padding: 6px 14px;
-  border-radius: 100px;
-  border: 1px solid var(--c-border2);
-  background: transparent;
-  color: var(--c-text2);
-  cursor: pointer;
-  font-family: var(--font-body);
-  transition: all 0.2s ease;
-}
-
-.vid-tab:hover { border-color: var(--c-accent); color: var(--c-accent); }
-
-.vid-tab.active {
-  background: var(--c-accent);
-  color: #0a0a0a;
-  border-color: transparent;
+.vid-format-label {
+  font-size: 13px;
   font-weight: 700;
+  color: var(--c-accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .vid-grid {
@@ -483,8 +465,6 @@ body {
   padding: 0 8px;
 }
 
-.tab-panel { display: none; }
-.tab-panel.active { display: block; }
 
 .vid-tool-note {
   margin-top: 16px;
@@ -513,10 +493,10 @@ body {
 }
 
 .stat-num {
-  font-family: var(--font-display);
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-family: var(--font-num);
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   color: var(--c-text);
   line-height: 1;
   margin-bottom: 8px;
@@ -697,8 +677,8 @@ body {
 }
 
 .plan-price {
-  font-family: var(--font-display);
-  font-size: 22px;
+  font-family: var(--font-num);
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--c-text);
@@ -895,8 +875,8 @@ body {
 }
 
 .limited-price-new {
-  font-family: var(--font-display);
-  font-size: 38px;
+  font-family: var(--font-num);
+  font-size: 44px;
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--c-accent);
@@ -1043,8 +1023,8 @@ body {
 }
 
 .profile-photo {
-  width: 100px; height: 100px;
-  min-width: 100px;
+  width: 180px; height: 180px;
+  min-width: 180px;
   border-radius: 50%;
   background: var(--c-bg3);
   border: 2px solid var(--c-border2);
@@ -1269,7 +1249,7 @@ body {
 <nav class="nav">
   <div class="nav-inner">
     <div class="nav-logo">AI<span>スマート</span>Lab</div>
-    <a class="nav-cta" href="LINE_URL_HERE">
+    <a class="nav-cta" href="https://page.line.me/977pycyt">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg>
       無料相談する
     </a>
@@ -1283,7 +1263,7 @@ body {
     <h1 class="hero-title">
       御社のサービスを、<br>
       <span style="white-space:nowrap"><span class="accent">AIで動画広告</span>に変える。</span>
-      <span class="line2">撮影不要・最短7日。</span>
+      <span class="line2">撮影不要・最短<span style="font-family:var(--font-num);font-weight:800">5</span>日。</span>
     </h1>
     <p class="hero-sub">制作本数1,000本超のノウハウを持つチームが、最新AIを活用して広告動画・UGC動画をスピード制作。従来の制作会社にかかる費用を丸ごと削減し、全工程を一気通貫で対応します。</p>
 
@@ -1297,13 +1277,13 @@ body {
         <div class="proof-label">制作本数の<br>ノウハウ</div>
       </div>
       <div class="proof-item">
-        <div class="proof-num">最短7日</div>
+        <div class="proof-num">最短5日</div>
         <div class="proof-label">納品<br>スピード</div>
       </div>
     </div>
 
     <div class="hero-ctas">
-      <a class="btn-primary" href="LINE_URL_HERE">
+      <a class="btn-primary" href="https://page.line.me/977pycyt">
         <div class="line-icon">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg>
         </div>
@@ -1406,7 +1386,7 @@ body {
       </div>
       <div class="compare-cell new">
         <div class="compare-row-label">納期</div>
-        最短7営業日
+        最短5営業日
       </div>
 
       <div class="compare-cell old">
@@ -1439,90 +1419,6 @@ body {
   </section>
 </div>
 
-<!-- PROFILE -->
-<div class="container">
-  <section class="sec reveal">
-    <div class="sec-label">プロフィール</div>
-    <h2 class="sec-title">AIスマートLabの運営者</h2>
-    <div class="profile-box">
-      <div class="profile-photo">
-        <!-- ↓↓↓ プロフィール写真差し替え: src="profile.jpg" に変更 -->
-        <div class="profile-photo-placeholder">写真を<br>差し替え</div>
-      </div>
-      <div>
-        <div class="profile-eyebrow">PROFILE</div>
-        <div class="profile-name">すすむ</div>
-        <div class="profile-role">SNSコーチ / コンテンツクリエイター</div>
-        <p class="profile-bio">会社に依存しない人生にすると決意し、副業を開始。SNS運用と動画制作の知見を武器に、個人・法人のSNS集客支援を行う。</p>
-        <ul class="profile-stats">
-          <li><strong>累計売上4,000万円</strong>・総フォロワー<strong>20万人</strong>達成</li>
-          <li>顔出しなしでも<strong>4ヶ月</strong>で<strong>全SNS収益化</strong>を実現</li>
-          <li>「再現性のある型」で累計<strong>8個以上の万垢</strong>を達成</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- SNS ACHIEVEMENTS -->
-<div class="container">
-  <section class="sec reveal">
-    <div class="sec-label">SNS実績</div>
-    <h2 class="sec-title">全SNSで万垢を再現</h2>
-    <p class="sec-desc">累計フォロワー20万人超・ショート動画1億再生突破。すべて自分自身で再現してきた実績です。</p>
-
-    <div class="achievements-grid">
-      <div class="achievement-card">
-        <div class="achievement-img">
-          <img src="17.jpg" alt="ショート動画累計1億再生突破">
-        </div>
-        <div class="achievement-text">ショート動画累計<span class="highlight">1億再生突破</span>（TikTok / Instagram / YouTube）</div>
-      </div>
-      <div class="achievement-card">
-        <div class="achievement-img">
-          <img src="jisseki_3.jpg" alt="8か月でフォロワー13万人達成">
-        </div>
-        <div class="achievement-text">8か月でフォロワー<span class="highlight">13万人達成</span>（Instagram＋TikTok）</div>
-      </div>
-      <div class="achievement-card">
-        <div class="achievement-img">
-          <img src="jisseki_4.jpg" alt="62投稿でフォロワー4.1万人達成">
-        </div>
-        <div class="achievement-text">62投稿でフォロワー<span class="highlight">4.1万人達成</span>・1446万再生を再現（Instagram）</div>
-      </div>
-      <div class="achievement-card">
-        <div class="achievement-img">
-          <img src="10.jpg" alt="22投稿でフォロワー3.5万人達成">
-        </div>
-        <div class="achievement-text">22投稿でフォロワー<span class="highlight">3.5万人達成</span>・一ヶ月で万垢を再現（Instagram）</div>
-      </div>
-      <div class="achievement-card">
-        <div class="achievement-img">
-          <img src="jisseki_1.jpg" alt="50投稿でフォロワー3.1万人達成">
-        </div>
-        <div class="achievement-text">50投稿でフォロワー<span class="highlight">3.1万人達成</span>・648万人へリーチ（Instagram）</div>
-      </div>
-      <div class="achievement-card">
-        <div class="achievement-img">
-          <img src="jisseki_2.jpg" alt="28投稿でフォロワー2万人達成">
-        </div>
-        <div class="achievement-text">28投稿でフォロワー<span class="highlight">2万人達成</span>・2024年後発でも最速で万垢（Instagram）</div>
-      </div>
-      <div class="achievement-card">
-        <div class="achievement-img">
-          <img src="12.jpg" alt="4か月でフォロワー1.7万人達成">
-        </div>
-        <div class="achievement-text">4か月でフォロワー<span class="highlight">1.7万人達成</span>・1本の動画で広告収益20万円（YouTube）</div>
-      </div>
-      <div class="achievement-card">
-        <div class="achievement-img">
-          <img src="11.jpg" alt="6か月でフォロワー1万人達成・2個目も達成">
-        </div>
-        <div class="achievement-text">6か月でフォロワー<span class="highlight">1万人達成</span>・2個目のアカウントも万垢達成（TikTok）</div>
-      </div>
-    </div>
-  </section>
-</div>
 
 <!-- VIDEO SAMPLE -->
 <div class="container">
@@ -1531,119 +1427,66 @@ body {
     <h2 class="sec-title">実際にAIで制作した動画</h2>
     <p class="sec-desc">広告動画・UGC・TV Spot・Unboxingなど多様なフォーマットに対応。</p>
 
-    <div style="margin-top: 24px;">
-      <div class="vid-tabs">
-        <button class="vid-tab active" onclick="switchTab(event,'all')">すべて</button>
-        <button class="vid-tab" onclick="switchTab(event,'ad')">広告動画</button>
-        <button class="vid-tab" onclick="switchTab(event,'ugc')">UGC</button>
-        <button class="vid-tab" onclick="switchTab(event,'product')">商品紹介</button>
-        <button class="vid-tab" onclick="switchTab(event,'service')">サービス紹介</button>
-      </div>
-
-      <!-- TAB: ALL -->
-      <div id="tab-all" class="tab-panel active">
-        <div class="vid-grid">
-          <!-- ↓↓↓ VIDEO差し込み方法: src="動画ファイル名.mp4" に変更し、class に "has-video" を追加 -->
-          <div class="vid-thumb" id="vid-1">
-            <div class="vid-type-badge">広告動画</div>
-            <video src="" loop muted playsinline></video>
-            <div class="vid-placeholder">
-              <div class="vid-play-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-              <span class="vid-caption">飲食・食品系</span>
-            </div>
-          </div>
-          <div class="vid-thumb" id="vid-2">
-            <div class="vid-type-badge">UGC</div>
-            <video src="" loop muted playsinline></video>
-            <div class="vid-placeholder">
-              <div class="vid-play-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-              <span class="vid-caption">アパレル</span>
-            </div>
-          </div>
-          <div class="vid-thumb" id="vid-3">
-            <div class="vid-type-badge">TV Spot</div>
-            <video src="" loop muted playsinline></video>
-            <div class="vid-placeholder">
-              <div class="vid-play-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-              <span class="vid-caption">高級品・宝飾</span>
-            </div>
-          </div>
-          <div class="vid-thumb" id="vid-4">
-            <div class="vid-type-badge">Unboxing</div>
-            <video src="" loop muted playsinline></video>
-            <div class="vid-placeholder">
-              <div class="vid-play-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-              <span class="vid-caption">EC・D2C</span>
-            </div>
-          </div>
-          <div class="vid-thumb" id="vid-5">
-            <div class="vid-type-badge">UGC Virtual Try On</div>
-            <video src="" loop muted playsinline></video>
-            <div class="vid-placeholder">
-              <div class="vid-play-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-              <span class="vid-caption">アパレル</span>
-            </div>
-          </div>
-          <div class="vid-thumb" id="vid-6">
-            <div class="vid-type-badge">Hyper Motion</div>
-            <video src="" loop muted playsinline></video>
-            <div class="vid-placeholder">
-              <div class="vid-play-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-              <span class="vid-caption">飲料・FMCG</span>
-            </div>
-          </div>
+    <!-- 横型動画 3×3 -->
+    <div style="margin-top: 32px;">
+      <div class="vid-format-label">横型動画</div>
+      <div class="vid-grid">
+        <div class="vid-thumb wide has-video">
+          <video src="/サンプル動画/動画 ガジェット.mp4" loop muted playsinline></video>
+          <span class="vid-caption">ガジェット</span>
+        </div>
+        <div class="vid-thumb wide has-video">
+          <video src="/サンプル動画/動画 ジュエリー①.mp4" loop muted playsinline></video>
+          <span class="vid-caption">ジュエリー</span>
+        </div>
+        <div class="vid-thumb wide has-video">
+          <video src="/サンプル動画/動画 ジュエリー単体.mp4" loop muted playsinline></video>
+          <span class="vid-caption">ジュエリー（単体）</span>
+        </div>
+        <div class="vid-thumb wide has-video">
+          <video src="/サンプル動画/動画 トラベル.mp4" loop muted playsinline></video>
+          <span class="vid-caption">トラベル</span>
+        </div>
+        <div class="vid-thumb wide has-video">
+          <video src="/サンプル動画/動画 ドリンク②横型.mp4" loop muted playsinline></video>
+          <span class="vid-caption">ドリンク</span>
+        </div>
+        <div class="vid-thumb wide has-video">
+          <video src="/サンプル動画/動画 ドリンク横.mp4" loop muted playsinline></video>
+          <span class="vid-caption">ドリンク②</span>
+        </div>
+        <div class="vid-thumb wide has-video">
+          <video src="/サンプル動画/動画 化粧品.mov" loop muted playsinline></video>
+          <span class="vid-caption">化粧品</span>
+        </div>
+        <div class="vid-thumb wide has-video">
+          <video src="/サンプル動画/動画 靴.mp4" loop muted playsinline></video>
+          <span class="vid-caption">靴・シューズ</span>
+        </div>
+        <div class="vid-thumb wide has-video">
+          <video src="/サンプル動画/hf_20260521_073604_c3fc516b-066d-4da5-b8c5-a3fe98cf2931.mp4" loop muted playsinline></video>
+          <span class="vid-caption">アクセサリー</span>
         </div>
       </div>
+    </div>
 
-      <!-- TAB: AD -->
-      <div id="tab-ad" class="tab-panel">
-        <div class="vid-grid">
-          <div class="vid-thumb"><div class="vid-type-badge">広告動画</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">飲食・食品系</span></div></div>
-          <div class="vid-thumb"><div class="vid-type-badge">TV Spot</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">高級品・宝飾</span></div></div>
-          <div class="vid-thumb"><div class="vid-type-badge">Hyper Motion</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">飲料・FMCG</span></div></div>
+    <!-- 縦型動画 1行3列 -->
+    <div style="margin-top: 40px;">
+      <div class="vid-format-label">縦型動画</div>
+      <div class="vid-grid">
+        <div class="vid-thumb has-video">
+          <video src="/サンプル動画/動画 縦型①.mp4" loop muted playsinline></video>
+          <span class="vid-caption">ショート①</span>
+        </div>
+        <div class="vid-thumb has-video">
+          <video src="/サンプル動画/動画 縦型②.mp4" loop muted playsinline></video>
+          <span class="vid-caption">ショート②</span>
+        </div>
+        <div class="vid-thumb has-video">
+          <video src="/サンプル動画/動画 縦型③.mp4" loop muted playsinline></video>
+          <span class="vid-caption">ショート③</span>
         </div>
       </div>
-
-      <!-- TAB: UGC -->
-      <div id="tab-ugc" class="tab-panel">
-        <div class="vid-grid">
-          <div class="vid-thumb"><div class="vid-type-badge">UGC</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">アパレル</span></div></div>
-          <div class="vid-thumb"><div class="vid-type-badge">UGC Virtual Try On</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">アパレル</span></div></div>
-          <div class="vid-thumb"><div class="vid-type-badge">Tutorial</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">美容・コスメ</span></div></div>
-        </div>
-      </div>
-
-      <!-- TAB: PRODUCT -->
-      <div id="tab-product" class="tab-panel">
-        <div class="vid-grid">
-          <div class="vid-thumb"><div class="vid-type-badge">Unboxing</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">EC・D2C</span></div></div>
-          <div class="vid-thumb"><div class="vid-type-badge">TV Spot</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">香水・コスメ</span></div></div>
-          <div class="vid-thumb"><div class="vid-type-badge">Hyper Motion</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">飲料</span></div></div>
-        </div>
-      </div>
-
-      <!-- TAB: SERVICE -->
-      <div id="tab-service" class="tab-panel">
-        <div class="vid-grid">
-          <div class="vid-thumb wide"><div class="vid-type-badge">Business Ad</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">IT・SaaS</span></div></div>
-          <div class="vid-thumb wide"><div class="vid-type-badge">Corporate</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">物流・B2B</span></div></div>
-          <div class="vid-thumb wide"><div class="vid-type-badge">Recruit</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">採用・HR</span></div></div>
-        </div>
-      </div>
-
-
     </div>
   </section>
 </div>
@@ -1663,8 +1506,8 @@ body {
         <div class="stat-label">制作本数の<br>ノウハウ蓄積</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">480万</div>
-        <div class="stat-label">単一動画最高<br>再生数</div>
+        <div class="stat-num">1億回+</div>
+        <div class="stat-label">ショート動画<br>累計再生数</div>
       </div>
     </div>
   </section>
@@ -1699,14 +1542,44 @@ body {
         <div class="client-work">ブランディングムービー・企業紹介動画</div>
       </div>
       <div class="client-card">
-        <div class="client-industry">医療業界</div>
-        <div class="client-name">歯科クリニック</div>
-        <div class="client-work">医院紹介動画・患者インタビュー動画</div>
+        <div class="client-industry">医療・歯科</div>
+        <div class="client-name">インプラント歯科クリニック</div>
+        <div class="client-work">院内紹介動画・施術説明コンテンツ・患者インタビュー</div>
       </div>
       <div class="client-card">
         <div class="client-industry">介護業界</div>
         <div class="client-name">訪問介護会社</div>
         <div class="client-work">Indeed連携・採用促進動画</div>
+      </div>
+      <div class="client-card">
+        <div class="client-industry">人材業界</div>
+        <div class="client-name">大手人材派遣グループ</div>
+        <div class="client-work">求人HP用概要動画・働き方紹介コンテンツ</div>
+      </div>
+      <div class="client-card">
+        <div class="client-industry">飲食業界</div>
+        <div class="client-name">韓国料理フランチャイズ</div>
+        <div class="client-work">新業態PR動画・クラファン用クリエイティブ</div>
+      </div>
+      <div class="client-card">
+        <div class="client-industry">EC・D2C</div>
+        <div class="client-name">アパレルECブランド</div>
+        <div class="client-work">商品紹介動画・Instagram広告クリエイティブ（CVR向上）</div>
+      </div>
+      <div class="client-card">
+        <div class="client-industry">スポーツ</div>
+        <div class="client-name">プロスポーツチーム</div>
+        <div class="client-work">チーム紹介・ファン向けブランディング動画</div>
+      </div>
+      <div class="client-card">
+        <div class="client-industry">飲食業界</div>
+        <div class="client-name">飲食フランチャイズチェーン</div>
+        <div class="client-work">新店舗オープン告知動画・採用動画</div>
+      </div>
+      <div class="client-card">
+        <div class="client-industry">ガジェット・EC</div>
+        <div class="client-name">ガジェット系ECサイト</div>
+        <div class="client-work">商品PR動画・TikTok広告クリエイティブ</div>
       </div>
     </div>
 
@@ -1717,15 +1590,15 @@ body {
       <span class="ind-tag">医療・歯科</span>
       <span class="ind-tag">インフラ</span>
       <span class="ind-tag">介護</span>
-      <span class="ind-tag">酒類</span>
+      <span class="ind-tag">EC・D2C</span>
       <span class="ind-tag">スポーツ</span>
       <span class="ind-tag">アパレル</span>
       <span class="ind-tag">美容</span>
-      <span class="ind-tag">行政</span>
+      <span class="ind-tag">ガジェット</span>
     </div>
 
     <div style="margin-top: 28px; text-align: center;">
-      <a class="btn-primary" href="LINE_URL_HERE">
+      <a class="btn-primary" href="https://page.line.me/977pycyt">
         <div class="line-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg></div>
         自社の事例について相談する
       </a>
@@ -1737,7 +1610,7 @@ body {
 <div class="container">
   <section class="sec reveal">
     <div class="sec-label">お客様の声</div>
-    <h2 class="sec-title">SNS運用代行をご利用いただいた企業様の声</h2>
+    <h2 class="sec-title">実際にサービスをご利用いただいたお客様の声</h2>
 
     <div class="testimonial-list">
       <div class="testimonial-card">
@@ -1770,11 +1643,35 @@ body {
           <div class="testimonial-screenshot-placeholder">アカウント<br>スクリーンショット<br>（モザイク済み）</div>
         </div>
         <div>
-          <!-- ↓↓↓ 見出し・本文・社名を差し替えてください -->
-          <div class="testimonial-headline">（お客様の声 3社目 見出しを差し替え）</div>
-          <p class="testimonial-body">（お客様の声 本文を差し替えてください）</p>
-          <span class="testimonial-source">（会社名・業種を差し替え）</span>
+          <div class="testimonial-headline">撮影なしで本格動画が完成。公開から2週間でECのCVRが1.8倍に</div>
+          <p class="testimonial-body">商品のPR動画を作りたかったのですが、撮影費や制作期間がネックで踏み切れずにいました。AIスマートLabさんに相談すると「商品画像を送ってもらえれば大丈夫です」と言われ、半信半疑でお願いしたところ、5日で想像以上のクオリティで納品されてびっくりしました。Instagram広告に使ったら問い合わせとカートへの遷移が一気に増えて、費用対効果に本当に驚いています。もっと早く頼めばよかったです。</p>
+          <span class="testimonial-source">某アパレルEC事業者</span>
         </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PROFILE -->
+<div class="container">
+  <section class="sec reveal">
+    <div class="sec-label">プロフィール</div>
+    <h2 class="sec-title">AIスマートLabの運営者</h2>
+    <div class="profile-box">
+      <div class="profile-photo">
+        <img src="/プロフィール写真/写真 2026-06-03 15 23 48.png" alt="すすむ" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+      </div>
+      <div>
+        <div class="profile-eyebrow">PROFILE</div>
+        <div class="profile-name">すすむ</div>
+        <div class="profile-role">AI動画クリエイター / SNSコーチ</div>
+        <p class="profile-bio">累計40社以上・動画制作1,000本超の実績を持つAI動画のプロ。ショート動画累計1億再生を自ら達成し、そのノウハウをBtoB向けAI動画制作に転用。撮影不要・最短5日納品を実現している。</p>
+        <ul class="profile-stats">
+          <li><strong>累計支援企業40社以上</strong>（人材・飲食・IT・医療など）</li>
+          <li><strong>動画制作1,000本超</strong>のノウハウと実績</li>
+          <li>ショート動画累計<strong>1億再生</strong>を自ら達成</li>
+          <li>個人SNSでも全SNS<strong>8個以上のアカウントでフォロワー1万人</strong>を再現</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -1815,7 +1712,7 @@ body {
 <div class="container">
   <section class="sec reveal">
     <div class="sec-label">ご依頼の流れ</div>
-    <h2 class="sec-title">申し込みから最短7営業日で納品</h2>
+    <h2 class="sec-title">申し込みから最短5営業日で納品</h2>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
@@ -1834,7 +1731,7 @@ body {
       <div class="step">
         <div class="step-num">3</div>
         <div>
-          <div class="step-title">制作〜納品（〜7日）</div>
+          <div class="step-title">制作〜納品（〜5営業日）</div>
           <div class="step-desc">最新AIツールで動画を制作し納品。即日SNS投稿が可能です。</div>
         </div>
       </div>
@@ -1847,7 +1744,7 @@ body {
   <section class="sec reveal">
     <div class="sec-label">料金プラン</div>
     <h2 class="sec-title">3つのプランからお選びください</h2>
-    <p class="sec-desc">全プラン：修正2回・LINEサポート・SNS運用アドバイス含む。税抜き表示。</p>
+    <p class="sec-desc">全プラン：LINEサポート含む。お試し：修正1回、プロ・VIP：修正2回。プロ・VIPはSNS運用アドバイス付き。税抜き表示。</p>
 
     <div class="plans">
       <div class="plan-card">
@@ -1855,15 +1752,14 @@ body {
         <div class="plan-price">¥100,000</div>
         <div class="plan-sub">15秒 1本制作</div>
         <div class="plan-divider"></div>
-        <div class="plan-desc">まず1本試したい方向け。効果を確認してから継続判断できます。</div>
+        <div class="plan-desc">撮影ゼロでAI動画の品質を体感。まず1本から始められます。</div>
         <ul class="plan-features">
           <li>15秒動画 1本</li>
           <li>横型 or 縦型 どちらか1本</li>
-          <li>修正2回まで</li>
-          <li>納品：最短7営業日</li>
-          <li>SNS運用アドバイス付き</li>
+          <li>修正1回まで</li>
+          <li>納品：最短5営業日</li>
         </ul>
-        <a class="plan-cta" href="LINE_URL_HERE">
+        <a class="plan-cta" href="https://page.line.me/977pycyt">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg>
           相談する
         </a>
@@ -1872,18 +1768,19 @@ body {
       <div class="plan-card featured">
         <div class="plan-badge">人気プラン</div>
         <div class="plan-name">プロプラン</div>
-        <div class="plan-price">¥200,000〜</div>
-        <div class="plan-sub">〜¥300,000 / 15〜30秒</div>
+        <div class="plan-price">¥200,000</div>
+        <div class="plan-sub">15〜30秒 動画2本制作</div>
         <div class="plan-divider"></div>
-        <div class="plan-desc">本格的な広告・PRに。尺と訴求に合わせて柔軟に対応。</div>
+        <div class="plan-desc">最先端AI×最高品質。横型・縦型2本で全SNSを即カバー。</div>
         <ul class="plan-features">
-          <li>15〜30秒動画 1本</li>
-          <li>横型 or 縦型 どちらか1本</li>
+          <li>15〜30秒動画 2本</li>
+          <li>横型・縦型の組み合わせ自由</li>
+          <li>最先端AIツール使用・最高品質</li>
           <li>修正2回まで</li>
-          <li>納品：最短7営業日</li>
+          <li>納品：最短5営業日</li>
           <li>SNS運用アドバイス付き</li>
         </ul>
-        <a class="plan-cta" href="LINE_URL_HERE">
+        <a class="plan-cta" href="https://page.line.me/977pycyt">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg>
           相談する
         </a>
@@ -1892,17 +1789,19 @@ body {
       <div class="plan-card">
         <div class="plan-name">VIPプラン</div>
         <div class="plan-price">¥300,000〜</div>
-        <div class="plan-sub">〜¥400,000 / 計2本納品</div>
+        <div class="plan-sub">30秒以下2本 or 60秒1本 選択可</div>
         <div class="plan-divider"></div>
-        <div class="plan-desc">横型・縦型の両フォーマット対応。全プラットフォームで即活用。</div>
+        <div class="plan-desc">CM品質のエネルギッシュな本格映像。秒数・本数はニーズに合わせてカスタム。</div>
         <ul class="plan-features">
-          <li>15〜30秒動画 2本納品</li>
-          <li>横型＋縦型 セット</li>
+          <li>30秒以下 動画2本 <span style="color:var(--c-text3);font-size:11px">or</span></li>
+          <li>60秒 動画1本 — いずれかを選択</li>
+          <li>横型 or 縦型 どちらか1本</li>
+          <li>CM品質・エネルギッシュな演出</li>
           <li>修正2回まで</li>
-          <li>納品：最短7営業日</li>
+          <li>納品：最短5営業日</li>
           <li>SNS運用アドバイス付き</li>
         </ul>
-        <a class="plan-cta" href="LINE_URL_HERE">
+        <a class="plan-cta" href="https://page.line.me/977pycyt">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg>
           相談する
         </a>
@@ -1931,19 +1830,19 @@ body {
     <div class="faq-list">
       <div class="faq-item">
         <div class="faq-q"><span class="faq-q-mark">Q.</span>どんな素材があれば制作できますか？</div>
-        <p class="faq-a">商品・サービスの画像、ロゴ、訴求ポイントのテキストがあれば制作可能です。撮影は不要です。素材が少ない場合もご相談ください。</p>
+        <p class="faq-a">商品・サービスの画像やURL、ロゴ、訴求したいポイントのテキストがあれば制作可能です。撮影は一切不要です。素材が少ない場合もお気軽にご相談ください。</p>
       </div>
       <div class="faq-item">
-        <div class="faq-q"><span class="faq-q-mark">Q.</span>縦型と横型はどう使い分ければいいですか？</div>
-        <p class="faq-a">TikTok・Instagram Reels・YouTube Shortsには縦型（9:16）、YouTubeやWebサイト掲載には横型（16:9）が最適です。VIPプランでは両方納品するため、全プラットフォームで即利用できます。</p>
+        <div class="faq-q"><span class="faq-q-mark">Q.</span>プランによってクオリティはどう違いますか？</div>
+        <p class="faq-a">お試しプランは基本的なAI動画制作です。プロプランは最先端のAIツールを複数駆使し、広告・SNSで成果が出る最高品質に仕上げます。VIPプランはCMのような躍動感・エネルギッシュな演出の本格映像で、ブランドの世界観を表現します。</p>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span class="faq-q-mark">Q.</span>修正は何回まで対応してもらえますか？</div>
-        <p class="faq-a">全プラン共通で修正は2回まで対応します。方向性の大幅な変更は別途ご相談ください。</p>
+        <p class="faq-a">お試しプランは修正1回、プロ・VIPプランは修正2回まで対応します。方向性の大幅な変更は別途ご相談ください。</p>
       </div>
       <div class="faq-item">
-        <div class="faq-q"><span class="faq-q-mark">Q.</span>AI制作でもクオリティは担保されますか？</div>
-        <p class="faq-a">はい。制作本数1,000本以上のノウハウを持つチームが、AIツールの選定から演出・編集まで一貫して対応します。ツールまかせではなく、SNSで成果が出る動画に仕上げます。</p>
+        <div class="faq-q"><span class="faq-q-mark">Q.</span>縦型と横型はどう使い分ければいいですか？</div>
+        <p class="faq-a">TikTok・Instagram Reels・YouTube Shortsには縦型（9:16）、YouTubeやWebサイト掲載には横型（16:9）が最適です。プロプランは2本制作のため横型・縦型を1本ずつ組み合わせることも可能です。</p>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span class="faq-q-mark">Q.</span>著作権はどうなりますか？</div>
@@ -1951,7 +1850,7 @@ body {
       </div>
       <div class="faq-item">
         <div class="faq-q"><span class="faq-q-mark">Q.</span>飲食・IT以外の業界でも対応できますか？</div>
-        <p class="faq-a">はい。人材・医療・介護・インフラ・スポーツ・アパレル・美容など多岐にわたる業界で実績があります。業界特有の表現についてもご相談ください。</p>
+        <p class="faq-a">はい。人材・医療・介護・インフラ・スポーツ・アパレル・ガジェット・美容など40社以上の実績があります。業界特有の訴求についてもご相談ください。</p>
       </div>
     </div>
   </section>
@@ -1975,7 +1874,7 @@ body {
       <div class="limited-price-old">通常 ¥100,000</div>
       <div class="limited-price-new">¥80,000</div>
       <div class="limited-price-sub">（税抜）</div>
-      <a class="btn-primary" href="LINE_URL_HERE">
+      <a class="btn-primary" href="https://page.line.me/977pycyt">
         <div class="line-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg></div>
         LINEで今すぐ申し込む
       </a>
@@ -1990,7 +1889,7 @@ body {
     <div class="sec-label" style="justify-content: center;">無料相談受付中</div>
     <h2 class="final-cta-title">まずはLINEで<br>お気軽にご相談を</h2>
     <p class="final-cta-sub">予算・用途・本数など、どんな小さなことでもOKです。<br>無理な営業は一切ありません。</p>
-    <a class="btn-primary" href="LINE_URL_HERE">
+    <a class="btn-primary" href="https://page.line.me/977pycyt">
       <div class="line-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg></div>
       LINEで無料相談する
     </a>
@@ -2003,14 +1902,6 @@ body {
 </footer>
 
 <script>
-// タブ切り替え
-function switchTab(e, id) {
-  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.vid-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById('tab-' + id).classList.add('active');
-  e.target.classList.add('active');
-}
-
 // ビデオホバー再生
 document.querySelectorAll('.vid-thumb.has-video').forEach(thumb => {
   const video = thumb.querySelector('video');
