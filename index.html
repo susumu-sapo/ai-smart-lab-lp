@@ -1,0 +1,2036 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIスマートLab｜AI動画制作サービス BtoB特化</title>
+<meta name="description" content="撮影ゼロ・最短7日・従来比1/3以下のコストで広告動画・UGC動画を制作。累計40社以上・制作1,000本超のノウハウ。">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* ==================== RESET & BASE ==================== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --c-bg: #0a0a0a;
+  --c-bg2: #111111;
+  --c-bg3: #1a1a1a;
+  --c-border: rgba(255,255,255,0.08);
+  --c-border2: rgba(255,255,255,0.14);
+  --c-text: #f0ede8;
+  --c-text2: #9a9490;
+  --c-text3: #5a5652;
+  --c-accent: #d4ff5c;
+  --c-accent2: #ff6b35;
+  --c-danger: #ff4444;
+  --c-success: #4ade80;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Noto Sans JP', sans-serif;
+  --max-w: 720px;
+  --radius: 12px;
+  --radius-sm: 6px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==================== NAV ==================== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 16px 0;
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--c-border);
+  transition: all 0.3s ease;
+}
+
+.nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--c-text);
+}
+
+.nav-logo span {
+  color: var(--c-accent);
+}
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--c-accent);
+  color: #0a0a0a;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-cta:hover {
+  background: #c8f050;
+  transform: translateY(-1px);
+}
+
+/* ==================== HERO ==================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 24px 80px;
+  position: relative;
+  overflow: hidden;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(212,255,92,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.1s forwards;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 20px; height: 1px;
+  background: var(--c-accent);
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.2s forwards;
+}
+
+.hero-title .accent { color: var(--c-accent); }
+.hero-title .line2 { display: block; }
+
+.hero-sub {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--c-text2);
+  max-width: 520px;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.3s forwards;
+}
+
+.hero-proof-row {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.4s forwards;
+}
+
+.proof-item { flex: 1; }
+.proof-num {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--c-text);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.proof-label {
+  font-size: 11px;
+  color: var(--c-text3);
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.5s forwards;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--c-accent);
+  color: #0a0a0a;
+  border: none;
+  padding: 15px 32px;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #c8f050;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(212,255,92,0.25);
+}
+
+.btn-sub-text {
+  font-size: 12px;
+  color: var(--c-text3);
+}
+
+/* LINE icon SVG */
+.line-icon {
+  width: 18px; height: 18px;
+  background: #0a0a0a;
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ==================== SECTION BASE ==================== */
+.sec {
+  padding: 80px 0;
+  border-top: 1px solid var(--c-border);
+}
+
+.sec-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sec-label::before {
+  content: '';
+  display: block;
+  width: 16px; height: 1px;
+  background: var(--c-accent);
+}
+
+.sec-title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.sec-desc {
+  font-size: 15px;
+  color: var(--c-text2);
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+/* ==================== COMPARE ==================== */
+.cost-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 28px;
+}
+
+.cost-tag {
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 100px;
+  background: rgba(255,68,68,0.12);
+  color: #ff8080;
+  border: 1px solid rgba(255,68,68,0.2);
+  font-weight: 500;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 24px;
+}
+
+.compare-header {
+  padding: 14px 18px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.compare-header.old {
+  background: rgba(255,68,68,0.1);
+  color: #ff8080;
+}
+
+.compare-header.new {
+  background: rgba(212,255,92,0.1);
+  color: var(--c-accent);
+}
+
+.compare-row {
+  display: contents;
+}
+
+.compare-cell {
+  padding: 14px 18px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.compare-cell.old {
+  background: var(--c-bg2);
+  color: #ff8080;
+}
+
+.compare-cell.new {
+  background: var(--c-bg3);
+  color: var(--c-success);
+  font-weight: 500;
+}
+
+.compare-row-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  font-size: 11px;
+  color: var(--c-text3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ==================== VIDEO GALLERY ==================== */
+.vid-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.vid-tab {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  border: 1px solid var(--c-border2);
+  background: transparent;
+  color: var(--c-text2);
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: all 0.2s ease;
+}
+
+.vid-tab:hover { border-color: var(--c-accent); color: var(--c-accent); }
+
+.vid-tab.active {
+  background: var(--c-accent);
+  color: #0a0a0a;
+  border-color: transparent;
+  font-weight: 700;
+}
+
+.vid-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.vid-thumb {
+  position: relative;
+  aspect-ratio: 9/14;
+  background: var(--c-bg2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.vid-thumb:hover {
+  border-color: var(--c-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+.vid-thumb.wide { aspect-ratio: 16/9; }
+
+/* VIDEO: mp4差し込み用 */
+.vid-thumb video {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.vid-thumb.has-video video { opacity: 1; }
+.vid-thumb.has-video .vid-placeholder { display: none; }
+
+.vid-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%; height: 100%;
+}
+
+.vid-play-icon {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--c-border2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--c-text3);
+  transition: all 0.2s ease;
+}
+
+.vid-thumb:hover .vid-play-icon {
+  border-color: var(--c-accent);
+  color: var(--c-accent);
+}
+
+.vid-type-badge {
+  position: absolute;
+  top: 8px; left: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(4px);
+}
+
+.vid-caption {
+  font-size: 11px;
+  color: var(--c-text3);
+  text-align: center;
+  padding: 0 8px;
+}
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+.vid-tool-note {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: var(--c-bg2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--c-text3);
+}
+
+/* ==================== STATS ==================== */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 28px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.stat-card {
+  background: var(--c-bg2);
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--c-text);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--c-text3);
+  line-height: 1.5;
+}
+
+/* ==================== CLIENTS ==================== */
+.client-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.client-card {
+  background: var(--c-bg2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 18px;
+  transition: border-color 0.2s ease;
+}
+
+.client-card:hover { border-color: var(--c-border2); }
+
+.client-industry {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  margin-bottom: 6px;
+}
+
+.client-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--c-text);
+  margin-bottom: 6px;
+}
+
+.client-work {
+  font-size: 12px;
+  color: var(--c-text3);
+  line-height: 1.6;
+}
+
+.industry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.ind-tag {
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 100px;
+  border: 1px solid var(--c-border2);
+  color: var(--c-text2);
+}
+
+/* ==================== PLATFORMS ==================== */
+.platform-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.platform-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid var(--c-border2);
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--c-text);
+  background: var(--c-bg2);
+}
+
+/* ==================== STEPS ==================== */
+.steps { margin-top: 28px; }
+
+.step {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.step:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 15px; top: 32px; bottom: 0;
+  width: 1px;
+  background: var(--c-border);
+}
+
+.step-num {
+  width: 32px; height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--c-border2);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--c-accent);
+  background: var(--c-bg);
+  z-index: 1;
+}
+
+.step-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--c-text);
+  margin-bottom: 6px;
+  padding-top: 5px;
+}
+
+.step-desc {
+  font-size: 13px;
+  color: var(--c-text2);
+  line-height: 1.7;
+}
+
+/* ==================== PLANS ==================== */
+.plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.plan-card {
+  background: var(--c-bg2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease;
+}
+
+.plan-card:hover { border-color: var(--c-border2); }
+
+.plan-card.featured {
+  border-color: var(--c-accent);
+  background: rgba(212,255,92,0.04);
+}
+
+.plan-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 100px;
+  background: var(--c-accent);
+  color: #0a0a0a;
+  margin-bottom: 12px;
+  align-self: flex-start;
+}
+
+.plan-name {
+  font-size: 12px;
+  color: var(--c-text2);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.plan-price {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--c-text);
+  margin-bottom: 2px;
+}
+
+.plan-sub {
+  font-size: 12px;
+  color: var(--c-text3);
+  margin-bottom: 14px;
+}
+
+.plan-divider {
+  height: 1px;
+  background: var(--c-border);
+  margin-bottom: 14px;
+}
+
+.plan-desc {
+  font-size: 12px;
+  color: var(--c-text2);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.plan-features {
+  list-style: none;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.plan-features li {
+  font-size: 12px;
+  color: var(--c-text2);
+  padding: 4px 0;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.plan-features li::before {
+  content: '✓';
+  color: var(--c-success);
+  font-weight: 700;
+  font-size: 11px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.plan-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid var(--c-border2);
+  color: var(--c-text);
+  background: transparent;
+}
+
+.plan-cta:hover { border-color: var(--c-accent); color: var(--c-accent); }
+
+.plan-card.featured .plan-cta {
+  background: var(--c-accent);
+  color: #0a0a0a;
+  border-color: transparent;
+}
+
+.plan-card.featured .plan-cta:hover {
+  background: #c8f050;
+}
+
+.options-box {
+  margin-top: 16px;
+  padding: 16px 18px;
+  background: var(--c-bg2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+}
+
+.options-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--c-text2);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.option-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--c-border);
+  font-size: 13px;
+}
+
+.option-row:last-child { border-bottom: none; }
+.option-name { color: var(--c-text2); }
+.option-price { font-weight: 700; color: var(--c-text); font-family: var(--font-display); }
+
+/* ==================== FAQ ==================== */
+.faq-list { margin-top: 28px; }
+
+.faq-item {
+  border-bottom: 1px solid var(--c-border);
+  padding: 20px 0;
+}
+
+.faq-q {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--c-text);
+  margin-bottom: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.faq-q-mark {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--c-accent);
+  flex-shrink: 0;
+}
+
+.faq-a {
+  font-size: 13px;
+  color: var(--c-text2);
+  line-height: 1.8;
+  padding-left: 24px;
+}
+
+/* ==================== LIMITED ==================== */
+.limited-box {
+  margin-top: 28px;
+  padding: 36px 28px;
+  background: linear-gradient(135deg, rgba(212,255,92,0.06) 0%, rgba(212,255,92,0.02) 100%);
+  border: 1px solid rgba(212,255,92,0.2);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.limited-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  margin-bottom: 14px;
+}
+
+.limited-slots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.slot {
+  width: 22px; height: 8px;
+  border-radius: 100px;
+  background: rgba(212,255,92,0.2);
+  border: 1px solid rgba(212,255,92,0.3);
+}
+
+.slot-label {
+  font-size: 12px;
+  color: var(--c-text3);
+  margin-bottom: 20px;
+}
+
+.limited-desc {
+  font-size: 14px;
+  color: var(--c-text2);
+  margin-bottom: 8px;
+}
+
+.limited-price-old {
+  font-size: 15px;
+  color: var(--c-text3);
+  text-decoration: line-through;
+  margin-bottom: 6px;
+}
+
+.limited-price-new {
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--c-accent);
+  margin-bottom: 4px;
+}
+
+.limited-price-sub {
+  font-size: 13px;
+  color: var(--c-text3);
+  margin-bottom: 24px;
+}
+
+.limited-note {
+  font-size: 12px;
+  color: var(--c-text3);
+  margin-top: 14px;
+}
+
+/* ==================== FINAL CTA ==================== */
+.final-cta-section {
+  padding: 80px 0 100px;
+  border-top: 1px solid var(--c-border);
+  text-align: center;
+}
+
+.final-cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.final-cta-sub {
+  font-size: 15px;
+  color: var(--c-text2);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.final-cta-note {
+  font-size: 12px;
+  color: var(--c-text3);
+  margin-top: 12px;
+}
+
+.footer {
+  padding: 24px 0;
+  border-top: 1px solid var(--c-border);
+  text-align: center;
+  font-size: 12px;
+  color: var(--c-text3);
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================== PAIN ==================== */
+.pain-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.pain-card {
+  background: var(--c-bg2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  transition: border-color 0.2s ease;
+}
+
+.pain-card:hover { border-color: var(--c-border2); }
+
+.pain-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pain-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--c-text);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.pain-desc {
+  font-size: 12px;
+  color: var(--c-text3);
+  line-height: 1.6;
+}
+
+.pain-cta-bridge {
+  margin-top: 28px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, rgba(212,255,92,0.06) 0%, rgba(212,255,92,0.02) 100%);
+  border: 1px solid rgba(212,255,92,0.15);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.pain-cta-bridge p {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--c-text);
+  line-height: 1.6;
+}
+
+.pain-cta-bridge span {
+  color: var(--c-accent);
+}
+
+/* ==================== PROFILE ==================== */
+.profile-box {
+  margin-top: 28px;
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  background: var(--c-bg2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+}
+
+.profile-photo {
+  width: 100px; height: 100px;
+  min-width: 100px;
+  border-radius: 50%;
+  background: var(--c-bg3);
+  border: 2px solid var(--c-border2);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+
+.profile-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.profile-photo-placeholder {
+  font-size: 11px;
+  color: var(--c-text3);
+  text-align: center;
+}
+
+.profile-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  margin-bottom: 4px;
+}
+
+.profile-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--c-text);
+  margin-bottom: 4px;
+}
+
+.profile-role {
+  font-size: 13px;
+  color: var(--c-text2);
+  margin-bottom: 14px;
+}
+
+.profile-bio {
+  font-size: 13px;
+  color: var(--c-text2);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.profile-stats {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-stats li {
+  font-size: 13px;
+  color: var(--c-text2);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.profile-stats li strong {
+  color: var(--c-accent);
+  font-weight: 700;
+}
+
+.profile-stats li::before {
+  content: '●';
+  color: var(--c-accent);
+  font-size: 8px;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+/* ==================== SNS ACHIEVEMENTS ==================== */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.achievement-card {
+  background: var(--c-bg2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.achievement-card:hover {
+  border-color: var(--c-border2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.achievement-img {
+  aspect-ratio: 16/9;
+  background: var(--c-bg3);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.achievement-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.achievement-img-placeholder {
+  font-size: 11px;
+  color: var(--c-text3);
+  text-align: center;
+  padding: 10px;
+}
+
+.achievement-text {
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--c-text);
+  line-height: 1.4;
+}
+
+.achievement-text .highlight {
+  color: var(--c-accent);
+}
+
+/* ==================== TESTIMONIALS ==================== */
+.testimonial-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.testimonial-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--c-bg2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.testimonial-screenshot {
+  width: 120px;
+  min-width: 120px;
+  aspect-ratio: 9/16;
+  background: var(--c-bg3);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-screenshot img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-screenshot-placeholder {
+  font-size: 10px;
+  color: var(--c-text3);
+  text-align: center;
+  padding: 8px;
+}
+
+.testimonial-headline {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--c-accent2);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.testimonial-body {
+  font-size: 13px;
+  color: var(--c-text2);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.testimonial-source {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  background: var(--c-bg3);
+  border-radius: 4px;
+  color: var(--c-text);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 600px) {
+  .hero-proof-row { gap: 16px; }
+  .proof-num { font-size: 22px; }
+  .compare-grid { grid-template-columns: 1fr 1fr; }
+  .vid-grid { grid-template-columns: repeat(2, 1fr); }
+  .plans { grid-template-columns: 1fr; }
+  .client-grid { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: 1fr; gap: 2px; }
+  .profile-box { flex-direction: column; align-items: center; text-align: center; }
+  .profile-stats li { justify-content: center; }
+  .pain-grid { grid-template-columns: 1fr; }
+  .achievements-grid { grid-template-columns: 1fr; }
+  .testimonial-card { flex-direction: column; }
+  .testimonial-screenshot { width: 100%; aspect-ratio: 16/9; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">AI<span>スマート</span>Lab</div>
+    <a class="nav-cta" href="LINE_URL_HERE">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg>
+      無料相談する
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="container">
+  <section class="hero">
+    <div class="hero-eyebrow">BtoB特化 AI動画制作サービス</div>
+    <h1 class="hero-title">
+      御社のサービスを、<br>
+      <span style="white-space:nowrap"><span class="accent">AIで動画広告</span>に変える。</span>
+      <span class="line2">撮影不要・最短7日。</span>
+    </h1>
+    <p class="hero-sub">制作本数1,000本超のノウハウを持つチームが、最新AIを活用して広告動画・UGC動画をスピード制作。従来の制作会社にかかる費用を丸ごと削減し、全工程を一気通貫で対応します。</p>
+
+    <div class="hero-proof-row">
+      <div class="proof-item">
+        <div class="proof-num">40社+</div>
+        <div class="proof-label">累計支援<br>企業数</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">1,000本+</div>
+        <div class="proof-label">制作本数の<br>ノウハウ</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">最短7日</div>
+        <div class="proof-label">納品<br>スピード</div>
+      </div>
+    </div>
+
+    <div class="hero-ctas">
+      <a class="btn-primary" href="LINE_URL_HERE">
+        <div class="line-icon">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg>
+        </div>
+        LINEで無料相談する
+      </a>
+      <span class="btn-sub-text">返信1営業日以内 · 無理な営業は一切なし</span>
+    </div>
+  </section>
+</div>
+
+<!-- PAIN -->
+<div class="container">
+  <section class="sec reveal">
+    <div class="sec-label">こんな悩みはないですか？</div>
+    <h2 class="sec-title">動画広告をやりたいのに、<br>こんな壁にぶつかっていませんか</h2>
+
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon">💸</div>
+        <div>
+          <div class="pain-title">制作費が高すぎて手が出ない</div>
+          <div class="pain-desc">制作会社に見積もりを取ったら60〜200万円。予算が合わず動画広告を断念している。</div>
+        </div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">📅</div>
+        <div>
+          <div class="pain-title">納期が1〜2ヶ月かかる</div>
+          <div class="pain-desc">撮影・編集で時間がかかりすぎる。キャンペーンやセールに間に合わない。</div>
+        </div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🎥</div>
+        <div>
+          <div class="pain-title">撮影の手配が大変</div>
+          <div class="pain-desc">カメラマン・スタジオ・出演者の手配が必要で、そもそも動き出せない。</div>
+        </div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">👤</div>
+        <div>
+          <div class="pain-title">社内に動画制作の人材がいない</div>
+          <div class="pain-desc">担当者がおらず、外注するしかないが費用と時間がかかりすぎる。</div>
+        </div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">📉</div>
+        <div>
+          <div class="pain-title">静止画広告の効果が落ちてきた</div>
+          <div class="pain-desc">バナー広告のCTRが年々低下。動画への切り替えが急務だがノウハウがない。</div>
+        </div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">❓</div>
+        <div>
+          <div class="pain-title">何から始めればいいかわからない</div>
+          <div class="pain-desc">TikTok・Instagram・YouTube Shortsと媒体が多すぎて、どこに何を出すか迷っている。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pain-cta-bridge">
+      <p>その悩み、<span>AIスマートLabが全部まとめて解決します。</span></p>
+    </div>
+  </section>
+</div>
+
+<!-- COMPARE -->
+<div class="container">
+  <section class="sec reveal">
+    <div class="sec-label">従来の制作会社 vs AIスマートLab</div>
+    <h2 class="sec-title">なぜ今、AI動画制作なのか</h2>
+    <p class="sec-desc">従来の制作会社には、見えないコストが山積しています。</p>
+
+    <div class="cost-tags">
+      <span class="cost-tag">人件費</span>
+      <span class="cost-tag">撮影費</span>
+      <span class="cost-tag">機材費</span>
+      <span class="cost-tag">複数回の打ち合わせ</span>
+      <span class="cost-tag">AIノウハウ不足</span>
+      <span class="cost-tag">長期間の制作時間</span>
+    </div>
+
+    <div class="compare-grid">
+      <div class="compare-header old">従来の制作会社</div>
+      <div class="compare-header new">AIスマートLab</div>
+
+      <div class="compare-cell old">
+        <div class="compare-row-label">費用</div>
+        60〜200万円/本
+      </div>
+      <div class="compare-cell new">
+        <div class="compare-row-label">費用</div>
+        10〜40万円/本
+      </div>
+
+      <div class="compare-cell old">
+        <div class="compare-row-label">納期</div>
+        1〜2ヶ月
+      </div>
+      <div class="compare-cell new">
+        <div class="compare-row-label">納期</div>
+        最短7営業日
+      </div>
+
+      <div class="compare-cell old">
+        <div class="compare-row-label">撮影</div>
+        必須（ロケ費・日程調整）
+      </div>
+      <div class="compare-cell new">
+        <div class="compare-row-label">撮影</div>
+        不要（画像・情報のみ）
+      </div>
+
+      <div class="compare-cell old">
+        <div class="compare-row-label">フォーマット</div>
+        横型が多く縦型は別途
+      </div>
+      <div class="compare-cell new">
+        <div class="compare-row-label">フォーマット</div>
+        縦型・横型 両対応
+      </div>
+
+      <div class="compare-cell old">
+        <div class="compare-row-label">SNS最適化</div>
+        別途費用・別会社が多い
+      </div>
+      <div class="compare-cell new">
+        <div class="compare-row-label">SNS最適化</div>
+        全工程を一気通貫
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PROFILE -->
+<div class="container">
+  <section class="sec reveal">
+    <div class="sec-label">プロフィール</div>
+    <h2 class="sec-title">AIスマートLabの運営者</h2>
+    <div class="profile-box">
+      <div class="profile-photo">
+        <!-- ↓↓↓ プロフィール写真差し替え: src="profile.jpg" に変更 -->
+        <div class="profile-photo-placeholder">写真を<br>差し替え</div>
+      </div>
+      <div>
+        <div class="profile-eyebrow">PROFILE</div>
+        <div class="profile-name">すすむ</div>
+        <div class="profile-role">SNSコーチ / コンテンツクリエイター</div>
+        <p class="profile-bio">会社に依存しない人生にすると決意し、副業を開始。SNS運用と動画制作の知見を武器に、個人・法人のSNS集客支援を行う。</p>
+        <ul class="profile-stats">
+          <li><strong>累計売上4,000万円</strong>・総フォロワー<strong>20万人</strong>達成</li>
+          <li>顔出しなしでも<strong>4ヶ月</strong>で<strong>全SNS収益化</strong>を実現</li>
+          <li>「再現性のある型」で累計<strong>8個以上の万垢</strong>を達成</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- SNS ACHIEVEMENTS -->
+<div class="container">
+  <section class="sec reveal">
+    <div class="sec-label">SNS実績</div>
+    <h2 class="sec-title">全SNSで万垢を再現</h2>
+    <p class="sec-desc">累計フォロワー20万人超・ショート動画1億再生突破。すべて自分自身で再現してきた実績です。</p>
+
+    <div class="achievements-grid">
+      <div class="achievement-card">
+        <div class="achievement-img">
+          <img src="17.jpg" alt="ショート動画累計1億再生突破">
+        </div>
+        <div class="achievement-text">ショート動画累計<span class="highlight">1億再生突破</span>（TikTok / Instagram / YouTube）</div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-img">
+          <img src="jisseki_3.jpg" alt="8か月でフォロワー13万人達成">
+        </div>
+        <div class="achievement-text">8か月でフォロワー<span class="highlight">13万人達成</span>（Instagram＋TikTok）</div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-img">
+          <img src="jisseki_4.jpg" alt="62投稿でフォロワー4.1万人達成">
+        </div>
+        <div class="achievement-text">62投稿でフォロワー<span class="highlight">4.1万人達成</span>・1446万再生を再現（Instagram）</div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-img">
+          <img src="10.jpg" alt="22投稿でフォロワー3.5万人達成">
+        </div>
+        <div class="achievement-text">22投稿でフォロワー<span class="highlight">3.5万人達成</span>・一ヶ月で万垢を再現（Instagram）</div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-img">
+          <img src="jisseki_1.jpg" alt="50投稿でフォロワー3.1万人達成">
+        </div>
+        <div class="achievement-text">50投稿でフォロワー<span class="highlight">3.1万人達成</span>・648万人へリーチ（Instagram）</div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-img">
+          <img src="jisseki_2.jpg" alt="28投稿でフォロワー2万人達成">
+        </div>
+        <div class="achievement-text">28投稿でフォロワー<span class="highlight">2万人達成</span>・2024年後発でも最速で万垢（Instagram）</div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-img">
+          <img src="12.jpg" alt="4か月でフォロワー1.7万人達成">
+        </div>
+        <div class="achievement-text">4か月でフォロワー<span class="highlight">1.7万人達成</span>・1本の動画で広告収益20万円（YouTube）</div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-img">
+          <img src="11.jpg" alt="6か月でフォロワー1万人達成・2個目も達成">
+        </div>
+        <div class="achievement-text">6か月でフォロワー<span class="highlight">1万人達成</span>・2個目のアカウントも万垢達成（TikTok）</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- VIDEO SAMPLE -->
+<div class="container">
+  <section class="sec reveal">
+    <div class="sec-label">制作サンプル</div>
+    <h2 class="sec-title">実際にAIで制作した動画</h2>
+    <p class="sec-desc">広告動画・UGC・TV Spot・Unboxingなど多様なフォーマットに対応。</p>
+
+    <div style="margin-top: 24px;">
+      <div class="vid-tabs">
+        <button class="vid-tab active" onclick="switchTab(event,'all')">すべて</button>
+        <button class="vid-tab" onclick="switchTab(event,'ad')">広告動画</button>
+        <button class="vid-tab" onclick="switchTab(event,'ugc')">UGC</button>
+        <button class="vid-tab" onclick="switchTab(event,'product')">商品紹介</button>
+        <button class="vid-tab" onclick="switchTab(event,'service')">サービス紹介</button>
+      </div>
+
+      <!-- TAB: ALL -->
+      <div id="tab-all" class="tab-panel active">
+        <div class="vid-grid">
+          <!-- ↓↓↓ VIDEO差し込み方法: src="動画ファイル名.mp4" に変更し、class に "has-video" を追加 -->
+          <div class="vid-thumb" id="vid-1">
+            <div class="vid-type-badge">広告動画</div>
+            <video src="" loop muted playsinline></video>
+            <div class="vid-placeholder">
+              <div class="vid-play-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="vid-caption">飲食・食品系</span>
+            </div>
+          </div>
+          <div class="vid-thumb" id="vid-2">
+            <div class="vid-type-badge">UGC</div>
+            <video src="" loop muted playsinline></video>
+            <div class="vid-placeholder">
+              <div class="vid-play-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="vid-caption">アパレル</span>
+            </div>
+          </div>
+          <div class="vid-thumb" id="vid-3">
+            <div class="vid-type-badge">TV Spot</div>
+            <video src="" loop muted playsinline></video>
+            <div class="vid-placeholder">
+              <div class="vid-play-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="vid-caption">高級品・宝飾</span>
+            </div>
+          </div>
+          <div class="vid-thumb" id="vid-4">
+            <div class="vid-type-badge">Unboxing</div>
+            <video src="" loop muted playsinline></video>
+            <div class="vid-placeholder">
+              <div class="vid-play-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="vid-caption">EC・D2C</span>
+            </div>
+          </div>
+          <div class="vid-thumb" id="vid-5">
+            <div class="vid-type-badge">UGC Virtual Try On</div>
+            <video src="" loop muted playsinline></video>
+            <div class="vid-placeholder">
+              <div class="vid-play-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="vid-caption">アパレル</span>
+            </div>
+          </div>
+          <div class="vid-thumb" id="vid-6">
+            <div class="vid-type-badge">Hyper Motion</div>
+            <video src="" loop muted playsinline></video>
+            <div class="vid-placeholder">
+              <div class="vid-play-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="vid-caption">飲料・FMCG</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: AD -->
+      <div id="tab-ad" class="tab-panel">
+        <div class="vid-grid">
+          <div class="vid-thumb"><div class="vid-type-badge">広告動画</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">飲食・食品系</span></div></div>
+          <div class="vid-thumb"><div class="vid-type-badge">TV Spot</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">高級品・宝飾</span></div></div>
+          <div class="vid-thumb"><div class="vid-type-badge">Hyper Motion</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">飲料・FMCG</span></div></div>
+        </div>
+      </div>
+
+      <!-- TAB: UGC -->
+      <div id="tab-ugc" class="tab-panel">
+        <div class="vid-grid">
+          <div class="vid-thumb"><div class="vid-type-badge">UGC</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">アパレル</span></div></div>
+          <div class="vid-thumb"><div class="vid-type-badge">UGC Virtual Try On</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">アパレル</span></div></div>
+          <div class="vid-thumb"><div class="vid-type-badge">Tutorial</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">美容・コスメ</span></div></div>
+        </div>
+      </div>
+
+      <!-- TAB: PRODUCT -->
+      <div id="tab-product" class="tab-panel">
+        <div class="vid-grid">
+          <div class="vid-thumb"><div class="vid-type-badge">Unboxing</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">EC・D2C</span></div></div>
+          <div class="vid-thumb"><div class="vid-type-badge">TV Spot</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">香水・コスメ</span></div></div>
+          <div class="vid-thumb"><div class="vid-type-badge">Hyper Motion</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">飲料</span></div></div>
+        </div>
+      </div>
+
+      <!-- TAB: SERVICE -->
+      <div id="tab-service" class="tab-panel">
+        <div class="vid-grid">
+          <div class="vid-thumb wide"><div class="vid-type-badge">Business Ad</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">IT・SaaS</span></div></div>
+          <div class="vid-thumb wide"><div class="vid-type-badge">Corporate</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">物流・B2B</span></div></div>
+          <div class="vid-thumb wide"><div class="vid-type-badge">Recruit</div><div class="vid-placeholder"><div class="vid-play-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="vid-caption">採用・HR</span></div></div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+</div>
+
+<!-- STATS -->
+<div class="container">
+  <section class="sec reveal">
+    <div class="sec-label">実績数値</div>
+    <h2 class="sec-title">数字が証明する実績</h2>
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-num">40社+</div>
+        <div class="stat-label">累計支援企業数<br>（人材・飲食・IT等）</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1,000本+</div>
+        <div class="stat-label">制作本数の<br>ノウハウ蓄積</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">480万</div>
+        <div class="stat-label">単一動画最高<br>再生数</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- CLIENTS -->
+<div class="container">
+  <section class="sec reveal">
+    <div class="sec-label">導入事例（一部）</div>
+    <h2 class="sec-title">業界を問わず、対応実績あり</h2>
+    <p class="sec-desc">様々な業界での実績があります。</p>
+
+    <div class="client-grid">
+      <div class="client-card">
+        <div class="client-industry">人材業界</div>
+        <div class="client-name">大手人材グループ</div>
+        <div class="client-work">採用HP用コンセプトムービー・社内ダイジェスト動画</div>
+      </div>
+      <div class="client-card">
+        <div class="client-industry">飲食業界</div>
+        <div class="client-name">会員制焼鳥店</div>
+        <div class="client-work">新店舗PR動画・クラファンクリエイティブ（目標金額大幅達成）</div>
+      </div>
+      <div class="client-card">
+        <div class="client-industry">IT業界</div>
+        <div class="client-name">チップシステム企業</div>
+        <div class="client-work">ブランディングムービー・サービス概要説明動画</div>
+      </div>
+      <div class="client-card">
+        <div class="client-industry">インフラ業界</div>
+        <div class="client-name">管路管理企業</div>
+        <div class="client-work">ブランディングムービー・企業紹介動画</div>
+      </div>
+      <div class="client-card">
+        <div class="client-industry">医療業界</div>
+        <div class="client-name">歯科クリニック</div>
+        <div class="client-work">医院紹介動画・患者インタビュー動画</div>
+      </div>
+      <div class="client-card">
+        <div class="client-industry">介護業界</div>
+        <div class="client-name">訪問介護会社</div>
+        <div class="client-work">Indeed連携・採用促進動画</div>
+      </div>
+    </div>
+
+    <div class="industry-tags">
+      <span class="ind-tag">人材・採用</span>
+      <span class="ind-tag">飲食</span>
+      <span class="ind-tag">IT・テック</span>
+      <span class="ind-tag">医療・歯科</span>
+      <span class="ind-tag">インフラ</span>
+      <span class="ind-tag">介護</span>
+      <span class="ind-tag">酒類</span>
+      <span class="ind-tag">スポーツ</span>
+      <span class="ind-tag">アパレル</span>
+      <span class="ind-tag">美容</span>
+      <span class="ind-tag">行政</span>
+    </div>
+
+    <div style="margin-top: 28px; text-align: center;">
+      <a class="btn-primary" href="LINE_URL_HERE">
+        <div class="line-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg></div>
+        自社の事例について相談する
+      </a>
+    </div>
+  </section>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="container">
+  <section class="sec reveal">
+    <div class="sec-label">お客様の声</div>
+    <h2 class="sec-title">SNS運用代行をご利用いただいた企業様の声</h2>
+
+    <div class="testimonial-list">
+      <div class="testimonial-card">
+        <div class="testimonial-screenshot">
+          <!-- 差し替え: <img src="voice-1.png" alt=""> -->
+          <div class="testimonial-screenshot-placeholder">アカウント<br>スクリーンショット<br>（モザイク済み）</div>
+        </div>
+        <div>
+          <div class="testimonial-headline">20代,30代の求人問い合わせが0から平均毎月5件に！</div>
+          <p class="testimonial-body">元々採用サイトに掲載していたんですが、ほとんど問い合わせもなく、来たとしても50代60代の方が多かったですね。TikTokを活用してからは若い方からの問い合わせが増え、採用もしっかり取れています！最近、面接来た方の専門学校でプチブームになってると聞いて嬉しかったですね</p>
+          <span class="testimonial-source">某運送会社</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-screenshot">
+          <!-- 差し替え: <img src="voice-2.png" alt=""> -->
+          <div class="testimonial-screenshot-placeholder">アカウント<br>スクリーンショット<br>（モザイク済み）</div>
+        </div>
+        <div>
+          <div class="testimonial-headline">売り上げ赤字から認知度拡大で月200万以上の黒字に！</div>
+          <p class="testimonial-body">元々雑居ビルに入っていたお店で、存在自体知っている人がいなかったので、お客さん来ない日も全然ありましたね(笑) 今ではありがたいことにTikTok,Instagramや電話からも沢山ご予約いただいてます。知られていないと集客だけじゃなくて、求人も中々来なかったのですが、今では毎月5件以上問い合わせが来てTikTok初めてなかったらと考えると恐ろしいですね(笑)</p>
+          <span class="testimonial-source">某飲食店経営者</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-screenshot">
+          <!-- 差し替え: <img src="voice-3.png" alt=""> -->
+          <div class="testimonial-screenshot-placeholder">アカウント<br>スクリーンショット<br>（モザイク済み）</div>
+        </div>
+        <div>
+          <!-- ↓↓↓ 見出し・本文・社名を差し替えてください -->
+          <div class="testimonial-headline">（お客様の声 3社目 見出しを差し替え）</div>
+          <p class="testimonial-body">（お客様の声 本文を差し替えてください）</p>
+          <span class="testimonial-source">（会社名・業種を差し替え）</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PLATFORMS -->
+<div class="container">
+  <section class="sec reveal">
+    <div class="sec-label">対応プラットフォーム</div>
+    <h2 class="sec-title">主要SNS・動画プラットフォームに対応</h2>
+    <p class="sec-desc">縦型・横型どちらも制作可能。投稿先に最適化したフォーマットで納品します。</p>
+    <div class="platform-list">
+      <div class="platform-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.27 8.27 0 0 0 4.84 1.56V6.8a4.85 4.85 0 0 1-1.07-.11z"/></svg>
+        TikTok
+      </div>
+      <div class="platform-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        Instagram Reels
+      </div>
+      <div class="platform-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.499 6.203a3.008 3.008 0 0 0-2.089-2.089C19.669 3.6 12 3.6 12 3.6s-7.669 0-9.411.514A3.008 3.008 0 0 0 .5 6.203C0 7.945 0 12 0 12s0 4.055.5 5.797a3.008 3.008 0 0 0 2.089 2.089C4.331 20.4 12 20.4 12 20.4s7.669 0 9.411-.514a3.008 3.008 0 0 0 2.089-2.089C24 16.055 24 12 24 12s0-4.055-.501-5.797zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"/></svg>
+        YouTube Shorts
+      </div>
+      <div class="platform-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.499 6.203a3.008 3.008 0 0 0-2.089-2.089C19.669 3.6 12 3.6 12 3.6s-7.669 0-9.411.514A3.008 3.008 0 0 0 .5 6.203C0 7.945 0 12 0 12s0 4.055.5 5.797a3.008 3.008 0 0 0 2.089 2.089C4.331 20.4 12 20.4 12 20.4s7.669 0 9.411-.514a3.008 3.008 0 0 0 2.089-2.089C24 16.055 24 12 24 12s0-4.055-.501-5.797zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"/></svg>
+        YouTube（横型）
+      </div>
+      <div class="platform-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        Webサイト掲載
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FLOW -->
+<div class="container">
+  <section class="sec reveal">
+    <div class="sec-label">ご依頼の流れ</div>
+    <h2 class="sec-title">申し込みから最短7営業日で納品</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">LINEで無料相談（当日〜翌日）</div>
+          <div class="step-desc">用途・ターゲット・どんな動画を作りたいかをご相談ください。</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">素材・情報を共有（1〜2日）</div>
+          <div class="step-desc">商品・サービスの画像、ロゴ、訴求ポイントをご共有ください。撮影は不要です。</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">制作〜納品（〜7日）</div>
+          <div class="step-desc">最新AIツールで動画を制作し納品。即日SNS投稿が可能です。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PLANS -->
+<div class="container">
+  <section class="sec reveal">
+    <div class="sec-label">料金プラン</div>
+    <h2 class="sec-title">3つのプランからお選びください</h2>
+    <p class="sec-desc">全プラン：修正2回・LINEサポート・SNS運用アドバイス含む。税抜き表示。</p>
+
+    <div class="plans">
+      <div class="plan-card">
+        <div class="plan-name">お試しプラン</div>
+        <div class="plan-price">¥100,000</div>
+        <div class="plan-sub">15秒 1本制作</div>
+        <div class="plan-divider"></div>
+        <div class="plan-desc">まず1本試したい方向け。効果を確認してから継続判断できます。</div>
+        <ul class="plan-features">
+          <li>15秒動画 1本</li>
+          <li>横型 or 縦型 どちらか1本</li>
+          <li>修正2回まで</li>
+          <li>納品：最短7営業日</li>
+          <li>SNS運用アドバイス付き</li>
+        </ul>
+        <a class="plan-cta" href="LINE_URL_HERE">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg>
+          相談する
+        </a>
+      </div>
+
+      <div class="plan-card featured">
+        <div class="plan-badge">人気プラン</div>
+        <div class="plan-name">プロプラン</div>
+        <div class="plan-price">¥200,000〜</div>
+        <div class="plan-sub">〜¥300,000 / 15〜30秒</div>
+        <div class="plan-divider"></div>
+        <div class="plan-desc">本格的な広告・PRに。尺と訴求に合わせて柔軟に対応。</div>
+        <ul class="plan-features">
+          <li>15〜30秒動画 1本</li>
+          <li>横型 or 縦型 どちらか1本</li>
+          <li>修正2回まで</li>
+          <li>納品：最短7営業日</li>
+          <li>SNS運用アドバイス付き</li>
+        </ul>
+        <a class="plan-cta" href="LINE_URL_HERE">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg>
+          相談する
+        </a>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-name">VIPプラン</div>
+        <div class="plan-price">¥300,000〜</div>
+        <div class="plan-sub">〜¥400,000 / 計2本納品</div>
+        <div class="plan-divider"></div>
+        <div class="plan-desc">横型・縦型の両フォーマット対応。全プラットフォームで即活用。</div>
+        <ul class="plan-features">
+          <li>15〜30秒動画 2本納品</li>
+          <li>横型＋縦型 セット</li>
+          <li>修正2回まで</li>
+          <li>納品：最短7営業日</li>
+          <li>SNS運用アドバイス付き</li>
+        </ul>
+        <a class="plan-cta" href="LINE_URL_HERE">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg>
+          相談する
+        </a>
+      </div>
+    </div>
+
+    <div class="options-box">
+      <div class="options-title">オプション</div>
+      <div class="option-row">
+        <span class="option-name">SNSアカウント立ち上げ</span>
+        <span class="option-price">+¥20,000</span>
+      </div>
+      <div class="option-row">
+        <span class="option-name">SNS運用代行</span>
+        <span class="option-price">要相談</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FAQ -->
+<div class="container">
+  <section class="sec reveal">
+    <div class="sec-label">よくある質問</div>
+    <h2 class="sec-title">FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-mark">Q.</span>どんな素材があれば制作できますか？</div>
+        <p class="faq-a">商品・サービスの画像、ロゴ、訴求ポイントのテキストがあれば制作可能です。撮影は不要です。素材が少ない場合もご相談ください。</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-mark">Q.</span>縦型と横型はどう使い分ければいいですか？</div>
+        <p class="faq-a">TikTok・Instagram Reels・YouTube Shortsには縦型（9:16）、YouTubeやWebサイト掲載には横型（16:9）が最適です。VIPプランでは両方納品するため、全プラットフォームで即利用できます。</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-mark">Q.</span>修正は何回まで対応してもらえますか？</div>
+        <p class="faq-a">全プラン共通で修正は2回まで対応します。方向性の大幅な変更は別途ご相談ください。</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-mark">Q.</span>AI制作でもクオリティは担保されますか？</div>
+        <p class="faq-a">はい。制作本数1,000本以上のノウハウを持つチームが、AIツールの選定から演出・編集まで一貫して対応します。ツールまかせではなく、SNSで成果が出る動画に仕上げます。</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-mark">Q.</span>著作権はどうなりますか？</div>
+        <p class="faq-a">納品後の著作権はすべてお客様に帰属します。広告・SNS・自社サイト等に自由にご利用いただけます。</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-mark">Q.</span>飲食・IT以外の業界でも対応できますか？</div>
+        <p class="faq-a">はい。人材・医療・介護・インフラ・スポーツ・アパレル・美容など多岐にわたる業界で実績があります。業界特有の表現についてもご相談ください。</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- LIMITED -->
+<div class="container">
+  <section class="sec reveal">
+    <div class="sec-label">限定特価</div>
+    <h2 class="sec-title">先着4社限定：初回特別オファー</h2>
+    <div class="limited-box">
+      <div class="limited-eyebrow">先着4社限定 · 定員に達し次第終了</div>
+      <div class="limited-slots">
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
+      <div class="slot-label">残り4枠</div>
+      <div class="limited-desc">お試しプランを特別価格でご提供</div>
+      <div class="limited-price-old">通常 ¥100,000</div>
+      <div class="limited-price-new">¥80,000</div>
+      <div class="limited-price-sub">（税抜）</div>
+      <a class="btn-primary" href="LINE_URL_HERE">
+        <div class="line-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg></div>
+        LINEで今すぐ申し込む
+      </a>
+      <div class="limited-note">※ 先着4社のみ。定員に達し次第このオファーは終了します。</div>
+    </div>
+  </section>
+</div>
+
+<!-- FINAL CTA -->
+<div class="container">
+  <section class="final-cta-section reveal" id="final-cta">
+    <div class="sec-label" style="justify-content: center;">無料相談受付中</div>
+    <h2 class="final-cta-title">まずはLINEで<br>お気軽にご相談を</h2>
+    <p class="final-cta-sub">予算・用途・本数など、どんな小さなことでもOKです。<br>無理な営業は一切ありません。</p>
+    <a class="btn-primary" href="LINE_URL_HERE">
+      <div class="line-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg></div>
+      LINEで無料相談する
+    </a>
+    <div class="final-cta-note">返信は通常1営業日以内</div>
+  </section>
+</div>
+
+<footer class="footer container">
+  <p>© 2025 AIスマートLab · 累計40社以上 · 制作1,000本超のノウハウ</p>
+</footer>
+
+<script>
+// タブ切り替え
+function switchTab(e, id) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.vid-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  e.target.classList.add('active');
+}
+
+// ビデオホバー再生
+document.querySelectorAll('.vid-thumb.has-video').forEach(thumb => {
+  const video = thumb.querySelector('video');
+  if (!video) return;
+  thumb.addEventListener('mouseenter', () => video.play());
+  thumb.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+});
+
+// スクロールアニメーション
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
