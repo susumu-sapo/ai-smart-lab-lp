@@ -57,7 +57,7 @@ body {
 /* ==================== NAV ==================== */
 .nav {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 40px; left: 0; right: 0;
   z-index: 100;
   padding: 16px 0;
   background: rgba(10,10,10,0.85);
@@ -116,7 +116,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 120px 24px 80px;
+  padding: 160px 24px 80px;
   position: relative;
   overflow: hidden;
   max-width: var(--max-w);
@@ -885,7 +885,9 @@ body {
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 1.5;
-  position: relative;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 101;
   overflow: hidden;
 }
 .urgency-banner::before {
@@ -1393,6 +1395,11 @@ body {
 
 <body>
 
+<!-- URGENCY BANNER -->
+<div class="urgency-banner">
+  <span class="ub-fire">🔥</span>今だけ先着<strong>4名様限定</strong>｜特別価格 <strong>¥80,000〜</strong> でお申込み可能！
+</div>
+
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
@@ -1403,11 +1410,6 @@ body {
     </a>
   </div>
 </nav>
-
-<!-- URGENCY BANNER -->
-<div class="urgency-banner">
-  <span class="ub-fire">🔥</span>今だけ先着<strong>4名様限定</strong>｜特別価格 <strong>¥80,000〜</strong> でお申込み可能！
-</div>
 
 <!-- HERO -->
 <div class="container">
