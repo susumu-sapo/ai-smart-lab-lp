@@ -1929,7 +1929,25 @@ body {
 </footer>
 
 <script>
-// YouTubeホバー再生
+// R2動画ホバー再生
+document.querySelectorAll('.vid-thumb.has-video').forEach(thumb => {
+  const video = thumb.querySelector('video');
+  if (!video) return;
+  video.muted = true;
+  video.playsInline = true;
+  // 自動でプリロード（最初のフレームを表示）
+  video.preload = 'metadata';
+  thumb.addEventListener('mouseenter', () => {
+    const p = video.play();
+    if (p && p.catch) p.catch(()=>{});
+  });
+  thumb.addEventListener('mouseleave', () => {
+    video.pause();
+    video.currentTime = 0;
+  });
+});
+
+// YouTubeホバー再生（残ったyt-thumb用）
 document.querySelectorAll('.yt-thumb').forEach(thumb => {
   const ytId = thumb.dataset.ytid;
   if (!ytId) return;
