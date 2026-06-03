@@ -1260,7 +1260,8 @@ body {
   .client-grid { grid-template-columns: 1fr; }
   .stats-row { grid-template-columns: 1fr; gap: 2px; }
   .profile-box { flex-direction: column; align-items: center; text-align: center; }
-  .profile-stats li { justify-content: center; }
+  .profile-stats li { display: block; text-align: center; }
+  .profile-stats li::before { display: inline; margin-right: 4px; }
   .pain-grid { grid-template-columns: 1fr; }
   .achievements-grid { grid-template-columns: 1fr; }
   .testimonial-card { flex-direction: column; }
@@ -1690,10 +1691,10 @@ body {
         <div class="profile-role">AI動画クリエイター / SNSコーチ</div>
         <p class="profile-bio">累計40社以上・動画制作1,000本超の実績を持つAI動画のプロ。ショート動画累計1億再生を自ら達成し、そのノウハウをBtoB向けAI動画制作に転用。撮影不要・最短5日納品を実現している。</p>
         <ul class="profile-stats">
-          <li><strong>累計支援企業40社以上</strong>（人材・飲食・IT・医療など）</li>
-          <li><strong>動画制作1,000本超</strong>のノウハウと実績</li>
+          <li>累計<strong>40社以上</strong>を支援（人材・飲食・IT・医療など）</li>
+          <li>動画制作<strong>1,000本超</strong>のノウハウと実績</li>
           <li>ショート動画累計<strong>1億再生</strong>を自ら達成</li>
-          <li>個人SNSでも全プラットフォームで<strong>8アカウント・フォロワー1万人超え</strong>を自ら再現</li>
+          <li>全SNSで累計<strong>8アカウント・フォロワー1万人</strong>を再現</li>
         </ul>
       </div>
     </div>
