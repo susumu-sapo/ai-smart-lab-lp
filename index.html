@@ -1929,23 +1929,53 @@ body {
 </footer>
 
 <script>
-// R2動画ホバー再生
-document.querySelectorAll('.vid-thumb.has-video').forEach(thumb => {
-  const video = thumb.querySelector('video');
-  if (!video) return;
-  video.muted = true;
-  video.playsInline = true;
-  // 自動でプリロード（最初のフレームを表示）
-  video.preload = 'metadata';
-  thumb.addEventListener('mouseenter', () => {
-    const p = video.play();
-    if (p && p.catch) p.catch(()=>{});
+// R2動画再生（PC: ホバー / モバイル: 画面に入ったら自動再生）
+(function(){
+  const isTouch = window.matchMedia('(hover: none)').matches || 'ontouchstart' in window;
+  const thumbs = document.querySelectorAll('.vid-thumb.has-video');
+
+  thumbs.forEach(thumb => {
+    const video = thumb.querySelector('video');
+    if (!video) return;
+    video.muted = true;
+    video.playsInline = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    video.preload = 'metadata';
+
+    if (isTouch) {
+      // モバイル: 画面内に入ったら自動再生
+      video.loop = true;
+    } else {
+      // PC: ホバーで再生
+      thumb.addEventListener('mouseenter', () => {
+        const p = video.play();
+        if (p && p.catch) p.catch(()=>{});
+      });
+      thumb.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+    }
   });
-  thumb.addEventListener('mouseleave', () => {
-    video.pause();
-    video.currentTime = 0;
-  });
-});
+
+  if (isTouch && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const video = entry.target.querySelector('video');
+        if (!video) return;
+        if (entry.isIntersecting) {
+          const p = video.play();
+          if (p && p.catch) p.catch(()=>{});
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.4 });
+    thumbs.forEach(t => io.observe(t));
+  }
+})();
 
 // YouTubeホバー再生（残ったyt-thumb用）
 document.querySelectorAll('.yt-thumb').forEach(thumb => {
