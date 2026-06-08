@@ -1058,6 +1058,97 @@ body {
   line-height: 1.8;
 }
 
+/* ==================== FREE SAMPLE OFFER ==================== */
+.sample-offer-box {
+  margin-top: 40px;
+  background: linear-gradient(135deg, #111 0%, #181f0a 100%);
+  border: 1.5px solid var(--c-accent);
+  border-radius: 20px;
+  padding: 40px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.sample-offer-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(212,255,92,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.sample-offer-emoji {
+  font-size: 52px;
+  line-height: 1;
+  margin-bottom: 16px;
+  display: block;
+}
+.sample-offer-title {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 5vw, 30px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.sample-offer-title span { color: var(--c-accent); }
+.sample-offer-sub {
+  font-size: 14px;
+  color: var(--c-text2);
+  margin-bottom: 28px;
+}
+.sample-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0 auto 28px;
+  max-width: 320px;
+  text-align: left;
+}
+.sample-step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--c-border2);
+  border-radius: var(--radius);
+}
+.sample-step + .sample-step { margin-top: 4px; }
+.sample-step-num {
+  width: 26px; height: 26px;
+  background: var(--c-accent);
+  color: #0a0a0a;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-num);
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.sample-step-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--c-text);
+}
+.sample-offer-note {
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--c-text3);
+}
+.sample-offer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(212,255,92,0.12);
+  border: 1px solid rgba(212,255,92,0.3);
+  color: var(--c-accent);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
 /* ==================== FINAL CTA ==================== */
 .final-cta-section {
   padding: 80px 0 100px;
@@ -1412,7 +1503,7 @@ body {
 
 <!-- URGENCY BANNER -->
 <div class="urgency-banner">
-  <span class="ub-fire">🔥</span>今だけ先着<strong>4名様限定</strong>｜特別価格 <strong>¥80,000〜</strong>
+  🎁 業種別サンプル無料 &nbsp;<span class="ub-fire">🔥</span>先着<strong>4名様限定</strong>｜<strong>¥80,000〜</strong>
 </div>
 
 <!-- NAV -->
@@ -1421,7 +1512,7 @@ body {
     <div class="nav-logo">AI<span>スマート</span>Lab</div>
     <a class="nav-cta" href="https://page.line.me/977pycyt">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg>
-      無料相談する
+      無料サンプル動画を受け取る 🎁
     </a>
   </div>
 </nav>
@@ -1453,6 +1544,14 @@ body {
         <div class="proof-num">最短5日</div>
         <div class="proof-label">納品<br>スピード</div>
       </div>
+    </div>
+
+    <div class="hero-ctas">
+      <a class="btn-primary" href="https://page.line.me/977pycyt">
+        <div class="line-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg></div>
+        業種別サンプル動画を無料でもらう 🎁
+      </a>
+      <span class="btn-sub-text">先着4名様限定 · 完全無料 · 1営業日以内にお届け</span>
     </div>
 
   </section>
@@ -1770,7 +1869,7 @@ body {
     <div style="margin-top: 28px; text-align: center;">
       <a class="btn-primary" href="https://page.line.me/977pycyt">
         <div class="line-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg></div>
-        自社の事例について相談する
+        無料サンプル動画を受け取る 🎁
       </a>
     </div>
   </section>
@@ -1958,6 +2057,41 @@ body {
   </section>
 </div>
 
+<!-- FREE SAMPLE OFFER -->
+<div class="container">
+  <section class="sec reveal" id="free-sample">
+    <div class="sec-label" style="justify-content:center;">完全無料プレゼント</div>
+    <h2 class="sec-title" style="text-align:center;">申込み前に<br><span style="color:var(--c-accent)">業種別サンプル動画</span>を確認できます</h2>
+    <p class="sec-desc" style="text-align:center; margin-top:8px;">クオリティを見てから検討できるので安心。気に入ったらそのまま依頼OK。</p>
+
+    <div class="sample-offer-box">
+      <span class="sample-offer-emoji">🎁</span>
+      <div class="sample-offer-badge">先着4名様限定 · 完全無料</div>
+      <div class="sample-offer-title">業種別サンプル動画<br><span>1本プレゼント</span></div>
+      <p class="sample-offer-sub">LINEで業種を送るだけ。1営業日以内にお届けします。</p>
+      <div class="sample-steps">
+        <div class="sample-step">
+          <div class="sample-step-num">1</div>
+          <div class="sample-step-text">LINEに登録する</div>
+        </div>
+        <div class="sample-step">
+          <div class="sample-step-num">2</div>
+          <div class="sample-step-text">業種・商品ジャンルを送るだけ</div>
+        </div>
+        <div class="sample-step">
+          <div class="sample-step-num">3</div>
+          <div class="sample-step-text">1営業日以内にサンプル動画をお届け</div>
+        </div>
+      </div>
+      <a class="btn-primary" href="https://page.line.me/977pycyt">
+        <div class="line-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg></div>
+        無料サンプル動画を受け取る 🎁
+      </a>
+      <p class="sample-offer-note">※ 先着4名様限定。定員に達し次第終了します。</p>
+    </div>
+  </section>
+</div>
+
 <!-- FAQ -->
 <div class="container">
   <section class="sec reveal">
@@ -2013,7 +2147,7 @@ body {
       <div class="limited-price-sub">（税抜）· 撮影不要 · 最短5日納品</div>
       <a class="btn-primary" href="https://page.line.me/977pycyt">
         <div class="line-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg></div>
-        今すぐLINEで申し込む →
+        無料サンプル動画を受け取る 🎁
       </a>
       <div class="limited-note">※ 先着4社のみ。定員に達し次第この特別価格は終了します。<br>お早めにご相談ください。</div>
     </div>
@@ -2028,7 +2162,7 @@ body {
     <p class="final-cta-sub">予算・用途・本数など気軽にご相談ください。<br>無理な営業は一切ありません。</p>
     <a class="btn-primary" href="https://page.line.me/977pycyt">
       <div class="line-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg></div>
-      LINEで無料相談する
+      無料サンプル動画を受け取る 🎁
     </a>
     <div class="final-cta-note">返信は通常1営業日以内</div>
   </section>
