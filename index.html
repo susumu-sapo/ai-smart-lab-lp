@@ -1415,48 +1415,77 @@ body {
 .testimonial-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   margin-top: 28px;
 }
 
 .testimonial-card {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
   background: var(--c-bg2);
   border: 1px solid var(--c-border);
   border-radius: var(--radius);
-  padding: 24px;
+  padding: 28px 24px;
+  position: relative;
 }
 
-.testimonial-screenshot {
-  width: 120px;
-  min-width: 120px;
-  aspect-ratio: 9/16;
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: 16px; right: 20px;
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(212,255,92,0.1);
+  pointer-events: none;
+}
+
+.testimonial-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.testimonial-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
   background: var(--c-bg3);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
+  border: 1px solid var(--c-border2);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
 }
 
-.testimonial-screenshot img {
-  width: 100%; height: 100%;
-  object-fit: cover;
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
-.testimonial-screenshot-placeholder {
-  font-size: 10px;
+.testimonial-source {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--c-text);
+}
+
+.testimonial-industry {
+  font-size: 11px;
   color: var(--c-text3);
-  text-align: center;
-  padding: 8px;
+}
+
+.testimonial-stars {
+  color: #facc15;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
 .testimonial-headline {
   font-size: 15px;
   font-weight: 700;
-  color: var(--c-accent2);
+  color: var(--c-accent);
   margin-bottom: 10px;
   line-height: 1.4;
 }
@@ -1464,18 +1493,29 @@ body {
 .testimonial-body {
   font-size: 13px;
   color: var(--c-text2);
-  line-height: 1.8;
-  margin-bottom: 12px;
+  line-height: 1.9;
+  margin-bottom: 14px;
 }
 
-.testimonial-source {
-  display: inline-block;
-  font-size: 11px;
+.testimonial-result {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(212,255,92,0.08);
+  border: 1px solid rgba(212,255,92,0.2);
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-family: var(--font-num);
+  font-size: 12px;
   font-weight: 700;
-  padding: 4px 12px;
-  background: var(--c-bg3);
-  border-radius: 4px;
-  color: var(--c-text);
+  color: var(--c-accent);
+}
+
+.testimonial-date {
+  font-size: 11px;
+  color: var(--c-text3);
+  margin-top: 12px;
+  text-align: right;
 }
 
 /* ==================== RESPONSIVE ==================== */
@@ -1493,8 +1533,7 @@ body {
   .profile-stats li::before { display: inline; margin-right: 4px; }
   .pain-grid { grid-template-columns: 1fr; }
   .achievements-grid { grid-template-columns: 1fr; }
-  .testimonial-card { flex-direction: column; }
-  .testimonial-screenshot { width: 100%; aspect-ratio: 16/9; }
+  .testimonial-card { padding: 22px 18px; }
 }
 </style>
 </head>
@@ -1884,36 +1923,48 @@ body {
 
     <div class="testimonial-list">
       <div class="testimonial-card">
-        <div class="testimonial-screenshot">
-          <img src="voice-1.jpg" alt="">
+        <div class="testimonial-top">
+          <div class="testimonial-avatar">🚚</div>
+          <div class="testimonial-meta">
+            <span class="testimonial-source">某運送会社 代表</span>
+            <span class="testimonial-industry">物流・運送業</span>
+          </div>
         </div>
-        <div>
-          <div class="testimonial-headline">20代,30代の求人問い合わせが0から平均毎月5件に！</div>
-          <p class="testimonial-body">元々採用サイトに掲載していたんですが、ほとんど問い合わせもなく、来たとしても50代60代の方が多かったですね。TikTokを活用してからは若い方からの問い合わせが増え、採用もしっかり取れています！最近、面接来た方の専門学校でプチブームになってると聞いて嬉しかったですね</p>
-          <span class="testimonial-source">某運送会社</span>
-        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-headline">20代・30代の求人問い合わせが0→毎月5件に！</div>
+        <p class="testimonial-body">元々採用サイトに掲載していたんですが、ほとんど問い合わせもなく、来たとしても50代60代の方が多かったですね。TikTokを活用してからは若い方からの問い合わせが増え、採用もしっかり取れています！最近、面接来た方の専門学校でプチブームになってると聞いて嬉しかったですね。</p>
+        <div class="testimonial-result">📈 若手採用 月5件ペース</div>
+        <div class="testimonial-date">利用プラン：プロプラン</div>
       </div>
 
       <div class="testimonial-card">
-        <div class="testimonial-screenshot">
-          <img src="voice-2.jpg" alt="">
+        <div class="testimonial-top">
+          <div class="testimonial-avatar">🍽️</div>
+          <div class="testimonial-meta">
+            <span class="testimonial-source">某飲食店 オーナー</span>
+            <span class="testimonial-industry">飲食業</span>
+          </div>
         </div>
-        <div>
-          <div class="testimonial-headline">売り上げ赤字から認知度拡大で月200万以上の黒字に！</div>
-          <p class="testimonial-body">元々雑居ビルに入っていたお店で、存在自体知っている人がいなかったので、お客さん来ない日も全然ありましたね(笑) 今ではありがたいことにTikTok,Instagramや電話からも沢山ご予約いただいてます。知られていないと集客だけじゃなくて、求人も中々来なかったのですが、今では毎月5件以上問い合わせが来てTikTok初めてなかったらと考えると恐ろしいですね(笑)</p>
-          <span class="testimonial-source">某飲食店経営者</span>
-        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-headline">売上赤字から認知度拡大で月200万以上の黒字に！</div>
+        <p class="testimonial-body">元々雑居ビルに入っていたお店で、存在自体知っている人がいなかったので、お客さん来ない日も全然ありましたね(笑) 今ではありがたいことにTikTok・Instagramや電話からも沢山ご予約いただいてます。知られていないと集客だけじゃなくて、求人も中々来なかったのですが、今では毎月5件以上問い合わせが来てTikTok始めてなかったらと考えると恐ろしいですね(笑)</p>
+        <div class="testimonial-result">📈 月商 赤字 → 200万超黒字</div>
+        <div class="testimonial-date">利用プラン：プロプラン</div>
       </div>
 
       <div class="testimonial-card">
-        <div class="testimonial-screenshot">
-          <img src="voice-3.jpg" alt="">
+        <div class="testimonial-top">
+          <div class="testimonial-avatar">👗</div>
+          <div class="testimonial-meta">
+            <span class="testimonial-source">某アパレルEC 事業責任者</span>
+            <span class="testimonial-industry">アパレル・EC</span>
+          </div>
         </div>
-        <div>
-          <div class="testimonial-headline">撮影なしで本格動画が完成。公開から2週間でECのCVRが1.8倍に</div>
-          <p class="testimonial-body">商品のPR動画を作りたかったのですが、撮影費や制作期間がネックで踏み切れずにいました。AIスマートLabさんに相談すると「商品画像を送ってもらえれば大丈夫です」と言われ、半信半疑でお願いしたところ、5日で想像以上のクオリティで納品されてびっくりしました。Instagram広告に使ったら問い合わせとカートへの遷移が一気に増えて、費用対効果に本当に驚いています。もっと早く頼めばよかったです。</p>
-          <span class="testimonial-source">某アパレルEC事業者</span>
-        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-headline">撮影なしで本格動画が完成。2週間でCVRが1.8倍に</div>
+        <p class="testimonial-body">商品のPR動画を作りたかったのですが、撮影費や制作期間がネックで踏み切れずにいました。AIスマートLabさんに相談すると「商品画像を送ってもらえれば大丈夫です」と言われ、半信半疑でお願いしたところ、5日で想像以上のクオリティで納品されてびっくりしました。Instagram広告に使ったら問い合わせとカートへの遷移が一気に増えて、費用対効果に本当に驚いています。もっと早く頼めばよかったです。</p>
+        <div class="testimonial-result">📈 ECのCVR 1.8倍</div>
+        <div class="testimonial-date">利用プラン：お試しプラン</div>
       </div>
     </div>
   </section>
