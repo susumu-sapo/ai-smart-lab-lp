@@ -2205,28 +2205,29 @@ body {
   });
 
   if (isTouch) {
+    const loaded = new WeakSet();
     if ('IntersectionObserver' in window) {
       const io = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           const video = entry.target.querySelector('video');
           if (!video) return;
           if (entry.isIntersecting) {
-            video.muted = true;
-            video.load();
+            if (!loaded.has(video)) {
+              video.load();
+              loaded.add(video);
+            }
             const p = video.play();
             if (p && p.catch) p.catch(()=>{});
           } else {
             video.pause();
           }
         });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      }, { threshold: 0.1 });
       thumbs.forEach(t => io.observe(t));
     } else {
-      // IntersectionObserver非対応端末は全部再生
       thumbs.forEach(thumb => {
         const video = thumb.querySelector('video');
         if (!video) return;
-        video.muted = true;
         const p = video.play();
         if (p && p.catch) p.catch(()=>{});
       });
