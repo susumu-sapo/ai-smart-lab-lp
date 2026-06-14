@@ -827,6 +827,32 @@ body {
   box-shadow: 0 6px 28px rgba(212,255,92,0.45);
 }
 
+.plan-price-tiers {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 8px 0 4px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+}
+.plan-price-tier {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+.plan-price-tier-label { color: var(--c-text2); }
+.plan-price-tier-val { font-family: var(--font-num); font-weight: 700; color: var(--c-text); }
+
+.plan-price-old {
+  font-size: 13px;
+  color: var(--c-text3);
+  text-decoration: line-through;
+  margin-bottom: 2px;
+}
+
 .options-box {
   margin-top: 16px;
   padding: 16px 18px;
@@ -1543,7 +1569,7 @@ body {
 
 <!-- URGENCY BANNER -->
 <div class="urgency-banner">
-  🎁 業種別サンプル無料 &nbsp;<span class="ub-fire">🔥</span>先着<strong>4名様限定</strong>｜<strong>¥80,000〜</strong>
+  🎁 業種別サンプル無料 &nbsp;<span class="ub-fire">🔥</span>先着<strong>4名様限定</strong>｜<strong>¥39,800〜</strong>
 </div>
 
 <!-- NAV -->
@@ -2037,14 +2063,15 @@ body {
 
     <div class="plans">
       <div class="plan-card">
-        <div class="plan-name">お試しプラン</div>
-        <div class="plan-price">¥100,000</div>
-        <div class="plan-sub">15秒 1本制作</div>
+        <div class="plan-name">PR動画</div>
+        <div class="plan-price-old">¥49,800</div>
+        <div class="plan-price" style="color:var(--c-accent)">¥39,800</div>
+        <div class="plan-sub">15秒×1本制作 · 先着4社限定価格</div>
         <div class="plan-divider"></div>
-        <div class="plan-desc">撮影ゼロでAI動画の品質を体感。まず1本から始められます。</div>
+        <div class="plan-desc">撮影ゼロでAI動画の品質を体感。まず1本から気軽に始められます。</div>
         <ul class="plan-features">
           <li>15秒動画 1本</li>
-          <li>横型 or 縦型 どちらか1本</li>
+          <li>横型 or 縦型 選択可</li>
           <li>修正1回まで</li>
           <li>納品：最短5営業日</li>
         </ul>
@@ -2055,16 +2082,16 @@ body {
       </div>
 
       <div class="plan-card featured">
-        <div class="plan-badge">人気プラン</div>
-        <div class="plan-name">プロプラン</div>
-        <div class="plan-price">¥200,000</div>
-        <div class="plan-sub">15〜30秒 動画2本制作</div>
+        <div class="plan-badge">人気No.1</div>
+        <div class="plan-name">UGC広告パック</div>
+        <div class="plan-price">¥98,000</div>
+        <div class="plan-sub">15〜30秒×2本 · A/Bテストに最適</div>
         <div class="plan-divider"></div>
-        <div class="plan-desc">最先端AI×最高品質。<br>横型・縦型2本で全SNSに即対応。</div>
+        <div class="plan-desc">広告成果を最大化する2本セット。<br>横型・縦型の組み合わせ自由。</div>
         <ul class="plan-features">
           <li>15〜30秒動画 2本</li>
           <li>横型・縦型の組み合わせ自由</li>
-          <li>最先端AIツール使用・最高品質</li>
+          <li>A/Bテスト用クリエイティブ</li>
           <li>修正2回まで</li>
           <li>納品：最短5営業日</li>
           <li>SNS運用アドバイス付き</li>
@@ -2076,15 +2103,24 @@ body {
       </div>
 
       <div class="plan-card">
-        <div class="plan-name">VIPプラン</div>
-        <div class="plan-price">¥300,000〜</div>
-        <div class="plan-sub">30秒以下2本 or 60秒1本 選択可</div>
+        <div class="plan-name">CM・ブランド動画</div>
+        <div class="plan-price">¥100,000〜</div>
+        <div class="plan-sub">CM品質の本格映像</div>
         <div class="plan-divider"></div>
-        <div class="plan-desc">CM品質のエネルギッシュな本格映像。秒数・本数はニーズに合わせてカスタム。</div>
+        <div class="plan-desc">ブランドの世界観を表現するCM品質の映像。秒数に応じて選べます。</div>
+        <div class="plan-price-tiers">
+          <div class="plan-price-tier">
+            <span class="plan-price-tier-label">15秒以内</span>
+            <span class="plan-price-tier-val">¥100,000</span>
+          </div>
+          <div class="plan-price-tier">
+            <span class="plan-price-tier-label">30〜60秒</span>
+            <span class="plan-price-tier-val">¥148,000</span>
+          </div>
+        </div>
         <ul class="plan-features">
-          <li>30秒以下×2本 or 60秒×1本 選択可</li>
-          <li>横型 or 縦型 どちらか1本</li>
           <li>CM品質・エネルギッシュな演出</li>
+          <li>横型 or 縦型 選択可</li>
           <li>修正2回まで</li>
           <li>納品：最短5営業日</li>
           <li>SNS運用アドバイス付き</li>
@@ -2157,15 +2193,15 @@ body {
       </div>
       <div class="faq-item">
         <div class="faq-q"><span class="faq-q-mark">Q.</span>プランによってクオリティはどう違いますか？</div>
-        <p class="faq-a">お試しプランは基本的なAI動画制作です。プロプランは最先端のAIツールを複数駆使し、広告・SNSで成果が出る最高品質に仕上げます。VIPプランはCMのような躍動感・エネルギッシュな演出の本格映像で、ブランドの世界観を表現します。</p>
+        <p class="faq-a">PR動画はSNS投稿やWebサイト掲載に最適な1本制作です。UGC広告パックはA/Bテスト用の2本セットで広告成果を最大化します。CM・ブランド動画はCMのような躍動感・エネルギッシュな演出の本格映像で、ブランドの世界観を表現します。</p>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span class="faq-q-mark">Q.</span>修正は何回まで対応してもらえますか？</div>
-        <p class="faq-a">お試しプランは修正1回、プロ・VIPプランは修正2回まで対応します。方向性の大幅な変更は別途ご相談ください。</p>
+        <p class="faq-a">PR動画は修正1回、UGC広告パック・CM・ブランド動画は修正2回まで対応します。方向性の大幅な変更は別途ご相談ください。</p>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span class="faq-q-mark">Q.</span>縦型と横型はどう使い分ければいいですか？</div>
-        <p class="faq-a">TikTok・Instagram Reels・YouTube Shortsには縦型（9:16）、YouTubeやWebサイト掲載には横型（16:9）が最適です。プロプランは2本制作のため横型・縦型を1本ずつ組み合わせることも可能です。</p>
+        <p class="faq-a">TikTok・Instagram Reels・YouTube Shortsには縦型（9:16）、YouTubeやWebサイト掲載には横型（16:9）が最適です。UGC広告パックは2本制作のため横型・縦型を1本ずつ組み合わせることも可能です。</p>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span class="faq-q-mark">Q.</span>著作権はどうなりますか？</div>
@@ -2194,9 +2230,9 @@ body {
         <div class="slot"></div>
       </div>
       <div class="slot-label">残り 4 枠</div>
-      <div class="limited-desc">お試しプランを今だけ特別価格でご提供</div>
-      <div class="limited-price-old">通常 ¥100,000</div>
-      <div class="limited-price-new">¥80,000</div>
+      <div class="limited-desc">PR動画プランを今だけ特別価格でご提供</div>
+      <div class="limited-price-old">通常 ¥49,800</div>
+      <div class="limited-price-new">¥39,800</div>
       <div class="limited-price-sub">（税抜）· 撮影不要 · 最短5日納品</div>
       <a class="btn-primary" href="https://page.line.me/977pycyt">
         <div class="line-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg></div>
