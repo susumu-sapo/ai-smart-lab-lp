@@ -1617,7 +1617,7 @@ body {
         <div class="line-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg></div>
         サンプル動画を無料でもらう 🎁
       </a>
-      <span class="btn-sub-text">先着4名様限定 · 完全無料 · 1営業日以内にお届け</span>
+      <span class="btn-sub-text">先着4名様限定 · 完全無料 · 定員到達次第終了</span>
     </div>
 
   </section>
@@ -2164,7 +2164,7 @@ body {
   <section class="sec reveal" id="free-sample">
     <div class="sec-label" style="justify-content:center;">完全無料プレゼント</div>
     <h2 class="sec-title" style="text-align:center;">申込み前に<br><span style="color:var(--c-accent)">業種別サンプル動画</span>を確認できます</h2>
-    <p class="sec-desc" style="text-align:center; margin-top:8px;">クオリティを見てから検討できるので安心。気に入ったらそのまま依頼OK。</p>
+    <p class="sec-desc" style="text-align:center; margin-top:8px;">クオリティを見てから検討できるので安心。<br>気に入ったらそのまま依頼OK。</p>
 
     <div class="sample-offer-box">
       <span class="sample-offer-emoji">🎁</span>
@@ -2182,7 +2182,7 @@ body {
         </div>
         <div class="sample-step">
           <div class="sample-step-num">3</div>
-          <div class="sample-step-text">1営業日以内にサンプル動画をお届け</div>
+          <div class="sample-step-text">最短でサンプル動画をお届け</div>
         </div>
       </div>
       <a class="btn-primary" href="https://forms.gle/JoJYXPFwcgzzzDuB9">
@@ -2261,7 +2261,7 @@ body {
   <section class="final-cta-section reveal" id="final-cta">
     <div class="sec-label" style="justify-content: center;">無料サンプル申込受付中</div>
     <h2 class="final-cta-title">まずは無料サンプルで<br>クオリティを確認</h2>
-    <p class="final-cta-sub">業種を入力するだけ。1営業日以内にサンプルをお届けします。<br>無理な営業は一切ありません。</p>
+    <p class="final-cta-sub">業種を入力するだけ。最短でサンプルをお届けします。<br>無理な営業は一切ありません。</p>
     <a class="btn-primary" href="https://forms.gle/JoJYXPFwcgzzzDuB9">
       <div class="line-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="#d4ff5c"><path d="M12 2C6.48 2 2 5.92 2 10.76c0 2.68 1.36 5.07 3.5 6.72l-.87 3.17 3.35-1.65c1.01.27 2.08.41 3.02.41 5.52 0 10-3.92 10-8.76C22 5.92 17.52 2 12 2z"/></svg></div>
       無料サンプル動画を受け取る 🎁
@@ -2294,6 +2294,10 @@ body {
       // モバイル: 画面内に入ったら自動再生
       video.loop = true;
     } else {
+      // PC: 先頭フレームを静止画ポスターとして表示（黒画面バグ対策）
+      video.addEventListener('loadedmetadata', () => {
+        try { video.currentTime = 0.1; } catch(e){}
+      }, { once: true });
       // PC: ホバーで再生
       thumb.addEventListener('mouseenter', () => {
         const p = video.play();
@@ -2301,7 +2305,7 @@ body {
       });
       thumb.addEventListener('mouseleave', () => {
         video.pause();
-        video.currentTime = 0;
+        video.currentTime = 0.1;
       });
     }
   });
