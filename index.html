@@ -81,7 +81,7 @@ a{color:inherit}
 .sec-desc{font-size:14px;color:var(--ink2);line-height:1.95;margin-top:10px}
 
 /* before/after */
-.ba{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;margin:26px 0 8px;padding:18px;border:1px solid var(--line);border-radius:8px;background:var(--bg2)}
+.ba{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;margin:0 0 8px;padding:18px;border:1px solid var(--line);border-radius:8px;background:var(--bg2)}
 .ba-tag{font-size:10px;font-weight:500;letter-spacing:.06em;color:var(--ink3);margin-bottom:8px;text-align:center}
 .ba-tag.g{color:var(--gold)}
 .ba-before{position:relative;aspect-ratio:16/10;border-radius:4px;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
@@ -89,7 +89,7 @@ a{color:inherit}
 .ba-note{position:relative;z-index:1;font-size:11px;color:var(--ink3)}
 .ba-after{aspect-ratio:16/10}
 .ba-arrow{font-family:var(--en);font-size:26px;color:var(--gold)}
-.ba-cap{text-align:center;font-family:var(--serif);font-weight:600;font-size:15px;margin-top:12px}
+.ba-cap{text-align:center;font-family:var(--serif);font-weight:600;font-size:15px;margin:22px 0 14px}
 .ba-cap b{color:var(--gold);font-weight:600}
 
 /* grids */
@@ -152,7 +152,22 @@ a{color:inherit}
 .voice-stars{color:var(--gold);font-size:13px;letter-spacing:3px;margin-bottom:10px}
 .voice-q{font-family:var(--serif);font-weight:500;font-size:15px;line-height:1.9;margin-bottom:12px}
 .voice-q b{color:var(--gold);font-weight:600}
+.voice-result{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--ink);background:rgba(191,75,46,.07);border:1px solid rgba(191,75,46,.28);border-radius:8px;padding:8px 14px;margin-bottom:14px;line-height:1.5}
+.voice-result b{font-family:var(--num);color:var(--vermil);font-size:14px;font-weight:700;margin-left:1px}
 .voice-m{font-size:11px;color:var(--ink3);letter-spacing:.03em;text-align:right}
+
+/* profile */
+.profile{display:flex;gap:16px;align-items:center;margin-top:24px}
+.profile-photo{width:88px;height:88px;border-radius:50%;overflow:hidden;flex-shrink:0;border:1px solid var(--line);background:var(--bg2)}
+.profile-photo img{width:100%;height:100%;object-fit:cover}
+.profile-name{font-family:var(--serif);font-weight:700;font-size:22px}
+.profile-role{font-size:12px;color:var(--gold);font-weight:500;margin-top:3px;letter-spacing:.02em}
+.profile-bio{font-size:13px;color:var(--ink2);line-height:1.9;margin-top:18px}
+.profile-stats{list-style:none;margin-top:20px}
+.profile-stats li{font-size:13px;color:var(--ink2);padding:11px 2px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:9px}
+.profile-stats li:first-child{border-top:1px solid var(--line)}
+.profile-stats li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.profile-stats b{font-family:var(--num);color:var(--ink);font-weight:700;font-size:15px}
 
 /* final */
 .final{padding:80px 0;border-top:1px solid var(--line);text-align:center}
@@ -201,9 +216,8 @@ a{color:inherit}
     <div class="hero-urg"><span class="badge-urg">先着4名様限定・完全無料</span></div>
 
     <div class="proof reveal">
-      <div class="proof-i"><div class="proof-n">¥39,800〜</div><div class="proof-l">先着特価（通常¥49,800）</div></div>
-      <div class="proof-i"><div class="proof-n">40社+</div><div class="proof-l">法人支援実績</div></div>
-      <div class="proof-i"><div class="proof-n">1,000+</div><div class="proof-l">制作実績</div></div>
+      <div class="proof-i"><div class="proof-n">1,000本+</div><div class="proof-l">制作本数の<br>ノウハウ</div></div>
+      <div class="proof-i"><div class="proof-n">40社+</div><div class="proof-l">累計支援<br>企業数</div></div>
     </div>
 
     <div class="hero-cta-wrap">
@@ -218,8 +232,9 @@ a{color:inherit}
   <div class="wrap">
     <div class="sec-head reveal"><span class="sec-no">01</span><span class="sec-label">Works</span></div>
     <h2 class="sec-title reveal">あなたの業種なら、<br><span class="ac">こんな動画</span>が作れます</h2>
-    <p class="sec-desc reveal">コスメ・飲食・アパレル・EC・ジュエリー…様々な業種の実例。<br>気になる業種が無くても、無料サンプルでお作りします。</p>
+    <p class="sec-desc reveal">コスメ・飲食・アパレル・EC・ジュエリー…<br>様々な業種の実例。<br>気になる業種が無くても、<br>無料サンプルでお作りします。</p>
 
+    <p class="ba-cap reveal">この画像1枚が、こうなります。<b>撮影ゼロ。</b></p>
     <div class="ba reveal">
       <div>
         <div class="ba-tag">入力素材はこれだけ</div>
@@ -231,7 +246,6 @@ a{color:inherit}
         <div class="ba-after vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/accessory.mp4" loop muted playsinline data-v></video></div>
       </div>
     </div>
-    <p class="ba-cap reveal">この画像1枚が、こうなります。<b>撮影ゼロ。</b></p>
 
     <div class="fmt reveal">Ad / Brand film</div>
     <div class="vgrid reveal">
@@ -336,14 +350,37 @@ a{color:inherit}
     <div class="sec-head reveal"><span class="sec-no">04</span><span class="sec-label">Voice</span></div>
     <h2 class="sec-title reveal">お客様の声</h2>
     <div class="voices">
-      <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「撮影の手配が要らないので、思いついた広告を<b>すぐ形にできる</b>。スピードが段違いでした。」</p><p class="voice-m">— アパレルEC ご担当者様</p></div>
-      <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「外注より<b>圧倒的に安く</b>、クオリティは想像以上。まず無料サンプルで確認できたのが決め手でした。」</p><p class="voice-m">— 飲食・店舗 ご担当者様</p></div>
-      <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「縦型のショート動画を<b>量産でき</b>、SNSの運用が一気に回り出しました。」</p><p class="voice-m">— コスメブランド ご担当者様</p></div>
+      <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「TikTokを活用してから、<b>若い方からの問い合わせが増え</b>、採用もしっかり取れています！専門学校でプチブームになっていると聞いて嬉しかったですね。」</p><div class="voice-result">📈 若手採用の問い合わせ <b>0 → 月5件</b></div><p class="voice-m">— 物流・運送業 ／ 某運送会社 代表</p></div>
+      <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「存在を知られていなかったお店が、今はTikTok・Instagramからも沢山ご予約をいただいています。<b>始めていなかったらと思うと恐ろしい</b>です(笑)」</p><div class="voice-result">📈 月商 <b>赤字 → 200万超の黒字</b></div><p class="voice-m">— 飲食業 ／ 某飲食店 オーナー</p></div>
+      <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「商品画像を送るだけで、5日で想像以上のクオリティで納品されてびっくり。Instagram広告に使ったら<b>問い合わせとカート遷移が一気に増えました</b>。」</p><div class="voice-result">📈 ECのCVR <b>1.8倍</b></div><p class="voice-m">— アパレル・EC ／ 某アパレルEC 事業責任者</p></div>
     </div>
   </div>
 </section>
 
-<!-- 05 FINAL -->
+<!-- 05 PROFILE -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-no">05</span><span class="sec-label">Profile</span></div>
+    <h2 class="sec-title reveal">運営者プロフィール</h2>
+    <div class="profile reveal">
+      <div class="profile-photo"><img src="profile.png" alt="すすむ" onerror="this.parentElement.style.display='none'"></div>
+      <div>
+        <div class="profile-name">すすむ</div>
+        <div class="profile-role">AI動画クリエイター ／ SNSコーチ</div>
+      </div>
+    </div>
+    <p class="profile-bio reveal">累計40社以上・動画制作1,000本超の実績を持つAI動画のプロ。ショート動画累計1億再生を自ら達成し、そのノウハウをBtoB向けAI動画制作に転用。撮影不要・最短5日納品を実現しています。</p>
+    <ul class="profile-stats reveal">
+      <li><b>40社+</b>の企業を支援</li>
+      <li>動画制作<b>1,000本+</b>のノウハウと実績</li>
+      <li>ショート動画累計<b>1億再生</b>を自ら達成</li>
+      <li>全SNS総フォロワー<b>20万人</b></li>
+      <li><b>8アカウント</b>で全てフォロワー1万人を達成</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 06 FINAL -->
 <section class="final">
   <div class="wrap reveal">
     <div class="final-flag"><span class="badge-urg">今だけ・先着4名様限定</span></div>
