@@ -103,28 +103,39 @@ a{color:inherit}
 .reason-n{font-family:var(--num);font-weight:700;font-size:24px;color:var(--gold);line-height:1.1;flex-shrink:0;width:42px}
 .reason-t{font-family:var(--serif);font-weight:600;font-size:17px;margin-bottom:5px}
 .reason-d{font-size:13px;color:var(--ink2);line-height:1.85}
-.cost{margin-top:26px;padding:22px;border:1px solid var(--line);border-radius:8px;background:var(--bg2);text-align:center}
-.cost-old{font-size:13px;color:var(--ink3);text-decoration:line-through}
-.cost-arrow{font-family:var(--en);font-style:italic;color:var(--gold);margin:4px 0;font-size:15px}
-.cost-new{font-family:var(--serif);font-weight:700;font-size:26px}
-.cost-new .num{font-family:var(--num);font-style:normal;font-weight:700}
+.cost{margin-top:26px;padding:24px 18px;border:1px solid var(--gold);border-radius:10px;background:linear-gradient(180deg,rgba(154,123,62,.07),var(--bg2));text-align:center}
+.cost-row{display:flex;align-items:center;justify-content:center;gap:12px}
+.cost-col{flex:1}
+.cost-cap{font-size:11px;color:var(--ink3);margin-bottom:6px}
+.cost-cap.g{color:var(--gold);font-weight:700}
+.cost-big{font-family:var(--num);font-weight:700;font-size:clamp(21px,6.5vw,28px);line-height:1.05}
+.cost-big.old{color:var(--ink3)}
+.cost-big.old s{text-decoration:line-through;text-decoration-color:var(--vermil)}
+.cost-big.new{color:var(--vermil)}
+.cost-arrow{font-family:var(--num);font-weight:700;font-size:22px;color:var(--gold);flex-shrink:0}
+.cost-badge{margin-top:16px;display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--vermil);padding:8px 18px;border-radius:100px;letter-spacing:.02em}
 
 /* plans */
 .plans{display:flex;flex-direction:column;gap:12px;margin-top:24px}
-.plan{border:1px solid var(--line);border-radius:8px;padding:22px 22px;background:var(--bg2);display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.plan{border:1px solid var(--line);border-radius:8px;padding:20px 22px;background:var(--bg2)}
 .plan.feat{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
-.plan-name{font-family:var(--serif);font-weight:600;font-size:17px;margin-bottom:4px}
-.plan-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:var(--gold);margin-bottom:6px}
-.plan-desc{font-size:12px;color:var(--ink2);line-height:1.7}
-.plan-price{font-family:var(--num);font-weight:700;font-size:21px;letter-spacing:-.01em;white-space:nowrap;text-align:right}
-.plan-price small{font-size:12px;font-family:var(--sans);color:var(--ink3);display:block;font-weight:400}
+.plan-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.plan-name{font-family:var(--serif);font-weight:600;font-size:18px}
+.plan-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:#fff;background:var(--gold);padding:3px 10px;border-radius:100px;margin-bottom:10px}
+.plan-desc{font-size:12px;color:var(--ink2);line-height:1.75;margin-top:8px}
+.plan-price{font-family:var(--num);font-weight:700;font-size:24px;letter-spacing:-.01em;white-space:nowrap;color:var(--ink)}
+.plan-price .tl{font-size:15px;font-weight:600;margin-left:1px}
+.plan-disc{display:flex;align-items:center;gap:9px;margin-top:12px}
+.plan-disc s{font-family:var(--num);font-size:13px;color:var(--ink3);text-decoration-color:var(--vermil)}
+.plan-disc .off{font-size:11px;font-weight:700;color:#fff;background:var(--vermil);padding:3px 10px;border-radius:100px;letter-spacing:.02em}
 
 /* free sample offer */
 .offer{margin-top:28px;padding:30px 24px;border:1px solid var(--ink);border-radius:10px;background:var(--ink);color:var(--bg);text-align:center}
-.offer-icon{font-size:30px}
-.offer-badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;color:#f0e3c4;border:1px solid rgba(240,227,196,.35);border-radius:100px;padding:6px 14px;margin:12px 0}
-.offer-title{font-family:var(--serif);font-weight:700;font-size:23px;line-height:1.4;margin-bottom:8px}
+.offer-flag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.03em;color:#1c1916;background:linear-gradient(92deg,#e8c982,#caa75f);padding:8px 18px;border-radius:100px;margin-bottom:18px}
+.offer-title{font-family:var(--serif);font-weight:700;font-size:23px;line-height:1.5;margin-bottom:12px}
 .offer-title .ac{color:#e8c982}
+.offer-title .big{font-family:var(--num);font-weight:700;font-size:30px;letter-spacing:-.01em}
+.offer-plus{display:block;font-size:16px;color:rgba(244,241,234,.6);margin:8px 0 4px}
 .offer-sub{font-size:13px;color:rgba(244,241,234,.78);line-height:1.8;margin-bottom:18px}
 .guarantee{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:22px}
 .guarantee span{font-size:11px;font-weight:500;color:#f0e3c4;border:1px solid rgba(240,227,196,.3);border-radius:100px;padding:6px 13px}
@@ -134,14 +145,17 @@ a{color:inherit}
 
 /* testimonials */
 .voices{display:flex;flex-direction:column;gap:14px;margin-top:24px}
-.voice{border-left:2px solid var(--gold);padding:4px 0 4px 18px}
-.voice-q{font-family:var(--serif);font-weight:500;font-size:15px;line-height:1.85;margin-bottom:8px}
-.voice-m{font-size:11px;color:var(--ink3);letter-spacing:.03em}
+.voice{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:20px 22px 18px}
+.voice-stars{color:var(--gold);font-size:13px;letter-spacing:3px;margin-bottom:10px}
+.voice-q{font-family:var(--serif);font-weight:500;font-size:15px;line-height:1.9;margin-bottom:12px}
+.voice-q b{color:var(--gold);font-weight:600}
+.voice-m{font-size:11px;color:var(--ink3);letter-spacing:.03em;text-align:right}
 
 /* final */
-.final{padding:84px 0;border-top:1px solid var(--line);text-align:center}
+.final{padding:80px 0;border-top:1px solid var(--line);text-align:center}
+.final-flag{margin-bottom:18px}
 .final-title{font-family:var(--serif);font-weight:700;font-size:clamp(28px,7vw,42px);line-height:1.35;margin-bottom:14px}
-.final-sub{font-size:14px;color:var(--ink2);line-height:1.9;margin-bottom:28px}
+.final-sub{font-size:14px;color:var(--ink2);line-height:1.9;margin-bottom:26px}
 .final .btn{margin:0 auto}
 
 /* footer */
@@ -260,9 +274,12 @@ a{color:inherit}
       <div class="reason reveal"><div class="reason-n">3</div><div><div class="reason-t">だから、最短5日・従来の1/3以下</div><div class="reason-d">企画から納品まで最短5営業日。制作会社に頼むより圧倒的に低コストで、すぐSNSに投稿できます。</div></div></div>
     </div>
     <div class="cost reveal">
-      <div class="cost-old">制作会社なら 60万円〜</div>
-      <div class="cost-arrow">↓</div>
-      <div class="cost-new">AIスマートLab なら <span class="num">¥39,800</span>〜</div>
+      <div class="cost-row">
+        <div class="cost-col"><div class="cost-cap">制作会社なら</div><div class="cost-big old"><s>60万円〜</s></div></div>
+        <div class="cost-arrow">→</div>
+        <div class="cost-col"><div class="cost-cap g">AIスマートLabなら</div><div class="cost-big new">¥39,800〜</div></div>
+      </div>
+      <div class="cost-badge">撮影ゼロで、コストを大幅カット。</div>
     </div>
   </div>
 </section>
@@ -274,31 +291,41 @@ a{color:inherit}
     <h2 class="sec-title reveal">目的に合わせて、<br><span class="ac">3プラン</span>から</h2>
     <div class="plans">
       <div class="plan reveal">
-        <div><div class="plan-name">PR動画</div><div class="plan-desc">10〜15秒×1本／横・縦選択可／修正1回</div></div>
-        <div class="plan-price">¥39,800<small>通常¥49,800</small></div>
+        <div class="plan-top">
+          <div class="plan-name">PR動画</div>
+          <div class="plan-price">¥39,800</div>
+        </div>
+        <div class="plan-disc"><s>通常¥49,800</s><span class="off">¥10,000 OFF</span></div>
+        <div class="plan-desc">10〜15秒×1本／横・縦選択可／修正1回</div>
       </div>
       <div class="plan feat reveal">
-        <div><div class="plan-badge">人気No.1</div><div class="plan-name">UGC広告パック</div><div class="plan-desc">10〜30秒×2本／A/Bテスト最適／修正2回／運用アドバイス付</div></div>
-        <div class="plan-price">¥98,000<small>〜</small></div>
+        <div class="plan-badge">人気No.1</div>
+        <div class="plan-top">
+          <div class="plan-name">UGC広告パック</div>
+          <div class="plan-price">¥98,000<span class="tl">〜</span></div>
+        </div>
+        <div class="plan-desc">10〜30秒×2本／A/Bテスト最適／修正2回／運用アドバイス付</div>
       </div>
       <div class="plan reveal">
-        <div><div class="plan-name">CM・ブランド動画</div><div class="plan-desc">CM品質の本格映像／修正2回／運用アドバイス付</div></div>
-        <div class="plan-price">¥128,000<small>〜</small></div>
+        <div class="plan-top">
+          <div class="plan-name">CM・ブランド動画</div>
+          <div class="plan-price">¥128,000<span class="tl">〜</span></div>
+        </div>
+        <div class="plan-desc">CM品質の本格映像／修正2回／運用アドバイス付</div>
       </div>
     </div>
 
     <div class="offer reveal">
-      <div class="offer-icon">🎁</div>
-      <div class="offer-badge">先着4名様限定・完全無料</div>
-      <div class="offer-title">申込み前に<br><span class="ac">業種別サンプル動画</span>を確認</div>
+      <div class="offer-flag">🎁 今だけ・先着4名様限定</div>
+      <div class="offer-title">特別価格 <span class="big ac">¥39,800</span><span class="ac">〜</span><span class="offer-plus">＋ 今なら</span><span class="ac">業種別サンプル動画</span>を<br><span class="ac">無料プレゼント</span></div>
       <p class="offer-sub">クオリティを見てから検討できるので安心。<br>気に入ったら、そのまま依頼OK。</p>
       <div class="guarantee">
         <span>完全無料・課金なし</span>
         <span>気に入らなければ依頼不要</span>
         <span>営業は一切なし</span>
       </div>
-      <a class="btn btn-cream btn-block" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=offer">無料サンプルを受け取る<span class="ar">→</span></a>
-      <div class="offer-note">※ 先着4名様限定。定員に達し次第終了します。</div>
+      <a class="btn btn-cream btn-block" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=offer">今すぐ無料サンプルを受け取る<span class="ar">→</span></a>
+      <div class="offer-note">先着4名様限定・定員に達し次第終了。お早めにどうぞ。</div>
     </div>
   </div>
 </section>
@@ -309,9 +336,9 @@ a{color:inherit}
     <div class="sec-head reveal"><span class="sec-no">04</span><span class="sec-label">Voice</span></div>
     <h2 class="sec-title reveal">お客様の声</h2>
     <div class="voices">
-      <div class="voice reveal"><p class="voice-q">「撮影の手配が要らないので、思いついた広告をすぐ形にできる。スピードが段違いでした。」</p><p class="voice-m">アパレルEC ご担当者様</p></div>
-      <div class="voice reveal"><p class="voice-q">「外注より圧倒的に安く、クオリティは想像以上。まず無料サンプルで確認できたのが決め手でした。」</p><p class="voice-m">飲食・店舗 ご担当者様</p></div>
-      <div class="voice reveal"><p class="voice-q">「縦型のショート動画を量産でき、SNSの運用が一気に回り出しました。」</p><p class="voice-m">コスメブランド ご担当者様</p></div>
+      <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「撮影の手配が要らないので、思いついた広告を<b>すぐ形にできる</b>。スピードが段違いでした。」</p><p class="voice-m">— アパレルEC ご担当者様</p></div>
+      <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「外注より<b>圧倒的に安く</b>、クオリティは想像以上。まず無料サンプルで確認できたのが決め手でした。」</p><p class="voice-m">— 飲食・店舗 ご担当者様</p></div>
+      <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「縦型のショート動画を<b>量産でき</b>、SNSの運用が一気に回り出しました。」</p><p class="voice-m">— コスメブランド ご担当者様</p></div>
     </div>
   </div>
 </section>
@@ -319,14 +346,15 @@ a{color:inherit}
 <!-- 05 FINAL -->
 <section class="final">
   <div class="wrap reveal">
+    <div class="final-flag"><span class="badge-urg">今だけ・先着4名様限定</span></div>
     <h2 class="final-title">まずは、<br>無料サンプルで。</h2>
-    <p class="final-sub">業種を入力するだけ。最短でサンプル動画をお届けします。<br>無理な営業は一切ありません。</p>
-    <a class="btn" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=final">無料サンプルを受け取る<span class="ar">→</span></a>
-    <div class="cta-note">先着4名様限定・完全無料・定員到達次第終了</div>
+    <p class="final-sub">業種を入力するだけ。最短でサンプル動画をお届けします。<br>気に入らなければ、依頼は不要です。</p>
+    <a class="btn" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=final">今すぐ無料サンプルを受け取る<span class="ar">→</span></a>
+    <div class="cta-note">特別価格 ¥39,800〜・完全無料・定員到達次第終了</div>
   </div>
 </section>
 
-<footer class="footer">© 2026 AIスマートLab — 累計40社以上・制作1,000本超のノウハウ</footer>
+<footer class="footer">© 2026 AIスマートLab</footer>
 
 <!-- STICKY CTA -->
 <div class="sticky" id="stk">
