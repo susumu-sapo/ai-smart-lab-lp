@@ -7,13 +7,13 @@
 <meta name="description" content="撮影ゼロ・最短5日・¥39,800〜。商品画像を送るだけで広告レベルのAI動画が手に入る。業種別サンプル動画を無料プレゼント中。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bg:#f4f1ea; --bg2:#faf8f3; --ink:#1c1916; --ink2:#5d564c; --ink3:#8a8378;
   --line:#ddd6c8; --gold:#9a7b3e; --vermil:#bf4b2e;
-  --serif:'Shippori Mincho',serif; --en:'Cormorant Garamond',serif; --sans:'Noto Sans JP',sans-serif;
+  --serif:'Shippori Mincho',serif; --en:'Cormorant Garamond',serif; --sans:'Noto Sans JP',sans-serif; --num:'Inter','Noto Sans JP',sans-serif;
   --max:680px;
 }
 html{scroll-behavior:smooth}
@@ -26,7 +26,7 @@ a{color:inherit}
 /* eyebrow / labels */
 .eyebrow{display:inline-flex;align-items:center;gap:11px;font-size:11px;font-weight:500;letter-spacing:.2em;color:var(--ink3);text-transform:uppercase}
 .eyebrow::before{content:'';width:24px;height:1px;background:var(--gold)}
-.sec-no{font-family:var(--en);font-style:italic;font-size:19px;color:var(--gold)}
+.sec-no{font-family:var(--num);font-weight:700;font-size:14px;letter-spacing:.04em;color:var(--gold)}
 .sec-label{font-size:11px;font-weight:500;letter-spacing:.18em;color:var(--ink3);text-transform:uppercase}
 .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
 .sec-title{font-family:var(--serif);font-weight:700;font-size:clamp(26px,6.4vw,38px);line-height:1.3;letter-spacing:.01em}
@@ -61,7 +61,7 @@ a{color:inherit}
 .hero-eyebrow{margin-bottom:26px}
 .hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,10vw,64px);line-height:1.16;letter-spacing:.01em;margin-bottom:24px}
 .hero h1 .ac{color:var(--gold)}
-.hero h1 .num{font-family:var(--en);font-style:italic;font-weight:600}
+.hero h1 .num{font-family:var(--num);font-style:normal;font-weight:700;font-size:.94em;letter-spacing:-.01em;margin:0 .02em}
 .hero-sub{font-size:15px;line-height:2;color:var(--ink2);max-width:450px;margin-bottom:30px}
 .hero-urg{margin-bottom:30px}
 .hero-video{aspect-ratio:16/10;margin-bottom:32px}
@@ -69,7 +69,7 @@ a{color:inherit}
 .proof{display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:34px}
 .proof-i{flex:1;padding:18px 6px;text-align:center;border-right:1px solid var(--line)}
 .proof-i:last-child{border-right:none}
-.proof-n{font-family:var(--en);font-weight:600;font-size:25px;line-height:1;color:var(--ink);margin-bottom:6px}
+.proof-n{font-family:var(--num);font-weight:700;font-size:23px;letter-spacing:-.01em;line-height:1;color:var(--ink);margin-bottom:6px}
 .proof-l{font-size:10px;letter-spacing:.06em;color:var(--ink3)}
 .hero-cta-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
 
@@ -100,14 +100,14 @@ a{color:inherit}
 .reasons{display:flex;flex-direction:column;gap:0;margin-top:26px}
 .reason{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
 .reason:first-child{border-top:1px solid var(--line)}
-.reason-n{font-family:var(--en);font-style:italic;font-size:30px;color:var(--gold);line-height:1;flex-shrink:0;width:42px}
+.reason-n{font-family:var(--num);font-weight:700;font-size:24px;color:var(--gold);line-height:1.1;flex-shrink:0;width:42px}
 .reason-t{font-family:var(--serif);font-weight:600;font-size:17px;margin-bottom:5px}
 .reason-d{font-size:13px;color:var(--ink2);line-height:1.85}
 .cost{margin-top:26px;padding:22px;border:1px solid var(--line);border-radius:8px;background:var(--bg2);text-align:center}
 .cost-old{font-size:13px;color:var(--ink3);text-decoration:line-through}
 .cost-arrow{font-family:var(--en);font-style:italic;color:var(--gold);margin:4px 0;font-size:15px}
 .cost-new{font-family:var(--serif);font-weight:700;font-size:26px}
-.cost-new .num{font-family:var(--en);font-style:italic}
+.cost-new .num{font-family:var(--num);font-style:normal;font-weight:700}
 
 /* plans */
 .plans{display:flex;flex-direction:column;gap:12px;margin-top:24px}
@@ -116,7 +116,7 @@ a{color:inherit}
 .plan-name{font-family:var(--serif);font-weight:600;font-size:17px;margin-bottom:4px}
 .plan-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:var(--gold);margin-bottom:6px}
 .plan-desc{font-size:12px;color:var(--ink2);line-height:1.7}
-.plan-price{font-family:var(--en);font-weight:600;font-size:23px;white-space:nowrap;text-align:right}
+.plan-price{font-family:var(--num);font-weight:700;font-size:21px;letter-spacing:-.01em;white-space:nowrap;text-align:right}
 .plan-price small{font-size:12px;font-family:var(--sans);color:var(--ink3);display:block;font-weight:400}
 
 /* free sample offer */
@@ -255,9 +255,9 @@ a{color:inherit}
     <div class="sec-head reveal"><span class="sec-no">02</span><span class="sec-label">Why</span></div>
     <h2 class="sec-title reveal">なぜ、<span class="ac">撮影ゼロ</span>で<br>作れるのか</h2>
     <div class="reasons">
-      <div class="reason reveal"><div class="reason-n">i</div><div><div class="reason-t">商品画像から、AIが映像を生成</div><div class="reason-d">最新の生成AIで、商品画像やロゴ・訴求ポイントから広告レベルの動画を制作。素材は画像だけでOKです。</div></div></div>
-      <div class="reason reveal"><div class="reason-n">ii</div><div><div class="reason-t">撮影・スタジオ・キャストの工程をカット</div><div class="reason-d">従来の動画制作で最もコストと時間がかかる工程を丸ごと省略。だから速くて、安い。</div></div></div>
-      <div class="reason reveal"><div class="reason-n">iii</div><div><div class="reason-t">だから、最短5日・従来の1/3以下</div><div class="reason-d">企画から納品まで最短5営業日。制作会社に頼むより圧倒的に低コストで、すぐSNSに投稿できます。</div></div></div>
+      <div class="reason reveal"><div class="reason-n">1</div><div><div class="reason-t">商品画像から、AIが映像を生成</div><div class="reason-d">最新の生成AIで、商品画像やロゴ・訴求ポイントから広告レベルの動画を制作。素材は画像だけでOKです。</div></div></div>
+      <div class="reason reveal"><div class="reason-n">2</div><div><div class="reason-t">撮影・スタジオ・キャストの工程をカット</div><div class="reason-d">従来の動画制作で最もコストと時間がかかる工程を丸ごと省略。だから速くて、安い。</div></div></div>
+      <div class="reason reveal"><div class="reason-n">3</div><div><div class="reason-t">だから、最短5日・従来の1/3以下</div><div class="reason-d">企画から納品まで最短5営業日。制作会社に頼むより圧倒的に低コストで、すぐSNSに投稿できます。</div></div></div>
     </div>
     <div class="cost reveal">
       <div class="cost-old">制作会社なら 60万円〜</div>
