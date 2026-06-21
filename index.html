@@ -178,7 +178,7 @@ a{color:inherit}
   <div class="wrap">
     <div class="hero-eyebrow eyebrow">AI Video Studio — 業種別サンプル無料</div>
     <h1>画像<span class="num">1</span>枚が、<br><span class="ac">動画広告</span>になる。</h1>
-    <p class="hero-sub">撮影・スタジオ・出演者は不要。<br>商品画像を送るだけで、最短5日・¥39,800〜で広告レベルの動画が手に入ります。</p>
+    <p class="hero-sub">撮影・スタジオ・出演者は不要。<br>商品画像を送るだけで、最短5日・<span style="white-space:nowrap">¥39,800〜</span>で<span style="white-space:nowrap">広告レベルの動画</span>が手に入ります。</p>
     <div class="hero-urg"><span class="badge-urg">先着4名様限定・完全無料</span></div>
 
     <div class="vframe hero-video reveal">
@@ -354,9 +354,17 @@ a{color:inherit}
     }
   });
   if(touch&&'IntersectionObserver' in window){
-    var loaded=new WeakSet();
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){if(!loaded.has(v)){v.load();loaded.add(v)}var p=v.play();if(p&&p.catch)p.catch(function(){})}else{v.pause()}})},{threshold:.35});
-    vids.forEach(function(v){io.observe(v)});
+    var loaded=new WeakSet();var ratios=new Map();
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ratios.set(e.target,e.isIntersecting?e.intersectionRatio:0)});
+      var top=Array.from(ratios.entries()).filter(function(x){return x[1]>0.5}).sort(function(a,b){return b[1]-a[1]}).slice(0,2).map(function(x){return x[0]});
+      var play=new Set(top);
+      ratios.forEach(function(r,v){
+        if(play.has(v)){if(!loaded.has(v)){v.load();loaded.add(v)}var p=v.play();if(p&&p.catch)p.catch(function(){})}
+        else{v.pause()}
+      });
+    },{threshold:[0,0.5,1]});
+    vids.forEach(function(v){io.observe(v);ratios.set(v,0)});
   }
 })();
 // sticky CTA
