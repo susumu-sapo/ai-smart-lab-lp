@@ -57,12 +57,15 @@ a{color:inherit}
 .nav-cta:hover{background:var(--ink);color:var(--bg)}
 
 /* ============ HERO ============ */
-.hero{padding:118px 0 64px}
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;padding:120px 0 56px}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(244,241,234,.70) 0%,rgba(244,241,234,.72) 52%,rgba(244,241,234,.85) 82%,var(--bg) 100%)}
+.hero-inner{position:relative;z-index:2;width:100%}
 .hero-eyebrow{margin-bottom:26px}
-.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,10vw,64px);line-height:1.16;letter-spacing:.01em;margin-bottom:24px}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(33px,8.8vw,58px);line-height:1.22;letter-spacing:.005em;margin-bottom:22px;text-shadow:0 1px 22px rgba(244,241,234,.92)}
 .hero h1 .ac{color:var(--gold)}
 .hero h1 .num{font-family:var(--num);font-style:normal;font-weight:700;font-size:.94em;letter-spacing:-.01em;margin:0 .02em}
-.hero-sub{font-size:15px;line-height:2;color:var(--ink2);max-width:450px;margin-bottom:30px}
+.hero-sub{font-size:15px;line-height:2;color:var(--ink2);max-width:450px;margin-bottom:30px;text-shadow:0 1px 12px rgba(244,241,234,.85)}
 .hero-urg{margin-bottom:30px}
 .hero-video{aspect-ratio:16/10;margin-bottom:32px}
 .hero-vcap{position:absolute;left:16px;bottom:13px;font-family:var(--en);font-style:italic;font-size:16px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5);z-index:2}
@@ -189,16 +192,13 @@ a{color:inherit}
 
 <!-- HERO -->
 <header class="hero">
-  <div class="wrap">
+  <video class="hero-bg" autoplay loop muted playsinline webkit-playsinline disablepictureinpicture src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/jewelry-1.mp4"></video>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
     <div class="hero-eyebrow eyebrow">AI Video Studio — 業種別サンプル無料</div>
-    <h1>画像<span class="num">1</span>枚が、<br><span class="ac">動画広告</span>になる。</h1>
-    <p class="hero-sub">撮影・スタジオ・出演者は不要。<br>商品画像を送るだけで、最短5日・<span style="white-space:nowrap">¥39,800〜</span>で<span style="white-space:nowrap">広告レベルの動画</span>が手に入ります。</p>
+    <h1>画像<span class="num">1</span>枚が、<br><span class="ac">動画広告</span>になる。<br>撮影不要・最短<span class="num">5</span>日</h1>
+    <p class="hero-sub">撮影・スタジオ・出演者、全部不要。<br>商品画像を送るだけで、<span style="white-space:nowrap">広告レベルの動画</span>が手に入ります。</p>
     <div class="hero-urg"><span class="badge-urg">先着4名様限定・完全無料</span></div>
-
-    <div class="vframe hero-video reveal">
-      <video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/jewelry-1.mp4" loop muted playsinline data-v></video>
-      <span class="hero-vcap">Jewelry — Brand film</span>
-    </div>
 
     <div class="proof reveal">
       <div class="proof-i"><div class="proof-n">¥39,800〜</div><div class="proof-l">先着特価（通常¥49,800）</div></div>
