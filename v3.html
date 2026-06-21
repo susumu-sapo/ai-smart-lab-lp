@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIスマートLab｜画像1枚が、動画広告になる。</title>
+<meta name="description" content="撮影ゼロ・最短5日・¥39,800〜。商品画像を送るだけで広告レベルのAI動画が手に入る。業種別サンプル動画を無料プレゼント中。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#f4f1ea; --bg2:#faf8f3; --ink:#1c1916; --ink2:#5d564c; --ink3:#8a8378;
+  --line:#ddd6c8; --gold:#9a7b3e; --vermil:#bf4b2e;
+  --serif:'Shippori Mincho',serif; --en:'Cormorant Garamond',serif; --sans:'Noto Sans JP',sans-serif;
+  --max:680px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+a{color:inherit}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+.reveal.vis{opacity:1;transform:none}
+
+/* eyebrow / labels */
+.eyebrow{display:inline-flex;align-items:center;gap:11px;font-size:11px;font-weight:500;letter-spacing:.2em;color:var(--ink3);text-transform:uppercase}
+.eyebrow::before{content:'';width:24px;height:1px;background:var(--gold)}
+.sec-no{font-family:var(--en);font-style:italic;font-size:19px;color:var(--gold)}
+.sec-label{font-size:11px;font-weight:500;letter-spacing:.18em;color:var(--ink3);text-transform:uppercase}
+.sec-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.sec-title{font-family:var(--serif);font-weight:700;font-size:clamp(26px,6.4vw,38px);line-height:1.3;letter-spacing:.01em}
+.sec-title .ac{color:var(--gold)}
+
+/* video frame shared */
+.vframe{position:relative;border-radius:4px;overflow:hidden;background:#e6e1d6;box-shadow:0 26px 52px -28px rgba(40,32,20,.42)}
+.vframe video{width:100%;height:100%;object-fit:cover;display:block}
+.vcap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:16px 12px 9px;font-size:11px;font-weight:500;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.vcap b{color:#f0e3c4;font-weight:500}
+
+/* CTA */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--ink);color:var(--bg);text-decoration:none;font-size:15px;font-weight:500;padding:18px 36px;border-radius:100px;transition:.25s;border:none;cursor:pointer}
+.btn:hover{background:var(--gold);transform:translateY(-2px)}
+.btn .ar{transition:.25s}
+.btn:hover .ar{transform:translateX(4px)}
+.btn-block{display:flex;width:100%}
+.cta-note{font-size:12px;color:var(--ink3);margin-top:14px;letter-spacing:.02em}
+.badge-urg{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--vermil);border:1px solid rgba(191,75,46,.35);background:rgba(191,75,46,.06);border-radius:100px;padding:6px 14px}
+.badge-urg::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--vermil)}
+
+/* ============ NAV ============ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(244,241,234,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--max);margin:0 auto;padding:13px 28px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--serif);font-weight:700;font-size:17px;letter-spacing:.02em}
+.logo .en{font-family:var(--en);font-style:italic;color:var(--gold)}
+.nav-cta{font-size:12px;font-weight:500;text-decoration:none;border:1px solid var(--ink);border-radius:100px;padding:8px 16px;transition:.2s}
+.nav-cta:hover{background:var(--ink);color:var(--bg)}
+
+/* ============ HERO ============ */
+.hero{padding:118px 0 64px}
+.hero-eyebrow{margin-bottom:26px}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,10vw,64px);line-height:1.16;letter-spacing:.01em;margin-bottom:24px}
+.hero h1 .ac{color:var(--gold)}
+.hero h1 .num{font-family:var(--en);font-style:italic;font-weight:600}
+.hero-sub{font-size:15px;line-height:2;color:var(--ink2);max-width:450px;margin-bottom:30px}
+.hero-urg{margin-bottom:30px}
+.hero-video{aspect-ratio:16/10;margin-bottom:32px}
+.hero-vcap{position:absolute;left:16px;bottom:13px;font-family:var(--en);font-style:italic;font-size:16px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5);z-index:2}
+.proof{display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:34px}
+.proof-i{flex:1;padding:18px 6px;text-align:center;border-right:1px solid var(--line)}
+.proof-i:last-child{border-right:none}
+.proof-n{font-family:var(--en);font-weight:600;font-size:25px;line-height:1;color:var(--ink);margin-bottom:6px}
+.proof-l{font-size:10px;letter-spacing:.06em;color:var(--ink3)}
+.hero-cta-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+
+/* ============ SECTION base ============ */
+.sec{padding:74px 0;border-top:1px solid var(--line)}
+.sec-desc{font-size:14px;color:var(--ink2);line-height:1.95;margin-top:10px}
+
+/* before/after */
+.ba{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;margin:26px 0 8px;padding:18px;border:1px solid var(--line);border-radius:8px;background:var(--bg2)}
+.ba-tag{font-size:10px;font-weight:500;letter-spacing:.06em;color:var(--ink3);margin-bottom:8px;text-align:center}
+.ba-tag.g{color:var(--gold)}
+.ba-before{position:relative;aspect-ratio:16/10;border-radius:4px;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
+.ba-before img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.ba-note{position:relative;z-index:1;font-size:11px;color:var(--ink3)}
+.ba-after{aspect-ratio:16/10}
+.ba-arrow{font-family:var(--en);font-size:26px;color:var(--gold)}
+.ba-cap{text-align:center;font-family:var(--serif);font-weight:600;font-size:15px;margin-top:12px}
+.ba-cap b{color:var(--gold);font-weight:600}
+
+/* grids */
+.vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px}
+.vgrid .vframe{aspect-ratio:16/9}
+.fmt{font-family:var(--en);font-style:italic;font-size:15px;color:var(--gold);margin:30px 0 0}
+.vgrid.port .vframe{aspect-ratio:9/14}
+.showcase-cta{margin-top:30px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+
+/* reasons */
+.reasons{display:flex;flex-direction:column;gap:0;margin-top:26px}
+.reason{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.reason:first-child{border-top:1px solid var(--line)}
+.reason-n{font-family:var(--en);font-style:italic;font-size:30px;color:var(--gold);line-height:1;flex-shrink:0;width:42px}
+.reason-t{font-family:var(--serif);font-weight:600;font-size:17px;margin-bottom:5px}
+.reason-d{font-size:13px;color:var(--ink2);line-height:1.85}
+.cost{margin-top:26px;padding:22px;border:1px solid var(--line);border-radius:8px;background:var(--bg2);text-align:center}
+.cost-old{font-size:13px;color:var(--ink3);text-decoration:line-through}
+.cost-arrow{font-family:var(--en);font-style:italic;color:var(--gold);margin:4px 0;font-size:15px}
+.cost-new{font-family:var(--serif);font-weight:700;font-size:26px}
+.cost-new .num{font-family:var(--en);font-style:italic}
+
+/* plans */
+.plans{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.plan{border:1px solid var(--line);border-radius:8px;padding:22px 22px;background:var(--bg2);display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.plan.feat{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.plan-name{font-family:var(--serif);font-weight:600;font-size:17px;margin-bottom:4px}
+.plan-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:var(--gold);margin-bottom:6px}
+.plan-desc{font-size:12px;color:var(--ink2);line-height:1.7}
+.plan-price{font-family:var(--en);font-weight:600;font-size:23px;white-space:nowrap;text-align:right}
+.plan-price small{font-size:12px;font-family:var(--sans);color:var(--ink3);display:block;font-weight:400}
+
+/* free sample offer */
+.offer{margin-top:28px;padding:30px 24px;border:1px solid var(--ink);border-radius:10px;background:var(--ink);color:var(--bg);text-align:center}
+.offer-icon{font-size:30px}
+.offer-badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;color:#f0e3c4;border:1px solid rgba(240,227,196,.35);border-radius:100px;padding:6px 14px;margin:12px 0}
+.offer-title{font-family:var(--serif);font-weight:700;font-size:23px;line-height:1.4;margin-bottom:8px}
+.offer-title .ac{color:#e8c982}
+.offer-sub{font-size:13px;color:rgba(244,241,234,.78);line-height:1.8;margin-bottom:18px}
+.guarantee{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:22px}
+.guarantee span{font-size:11px;font-weight:500;color:#f0e3c4;border:1px solid rgba(240,227,196,.3);border-radius:100px;padding:6px 13px}
+.btn-cream{background:var(--bg);color:var(--ink)}
+.btn-cream:hover{background:#fff}
+.offer-note{font-size:11px;color:rgba(244,241,234,.6);margin-top:14px}
+
+/* testimonials */
+.voices{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.voice{border-left:2px solid var(--gold);padding:4px 0 4px 18px}
+.voice-q{font-family:var(--serif);font-weight:500;font-size:15px;line-height:1.85;margin-bottom:8px}
+.voice-m{font-size:11px;color:var(--ink3);letter-spacing:.03em}
+
+/* final */
+.final{padding:84px 0;border-top:1px solid var(--line);text-align:center}
+.final-title{font-family:var(--serif);font-weight:700;font-size:clamp(28px,7vw,42px);line-height:1.35;margin-bottom:14px}
+.final-sub{font-size:14px;color:var(--ink2);line-height:1.9;margin-bottom:28px}
+.final .btn{margin:0 auto}
+
+/* footer */
+.footer{padding:40px 28px 120px;text-align:center;border-top:1px solid var(--line);font-size:11px;color:var(--ink3);letter-spacing:.03em}
+
+/* sticky CTA */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:200;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(244,241,234,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);transform:translateY(130%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.sticky.show{transform:translateY(0)}
+.sticky a{display:flex;flex-direction:column;align-items:center;gap:1px;width:100%;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:500;font-size:15px;padding:13px;border-radius:100px}
+.sticky a span{font-size:10.5px;color:rgba(244,241,234,.7);font-weight:400}
+
+@media(min-width:601px){.sticky{display:none}}
+@media(max-width:600px){
+  .hero-cta-wrap{align-items:stretch}
+  .hero-cta-wrap .btn{width:100%}
+  .ba{grid-template-columns:1fr}
+  .ba-arrow{transform:rotate(90deg);margin:0 auto}
+  body{padding-bottom:78px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-in">
+    <div class="logo">AI<span class="en">Smart</span>Lab</div>
+    <a class="nav-cta" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=nav">無料サンプル</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow eyebrow">AI Video Studio — 業種別サンプル無料</div>
+    <h1>画像<span class="num">1</span>枚が、<br><span class="ac">動画広告</span>になる。</h1>
+    <p class="hero-sub">撮影・スタジオ・出演者は不要。<br>商品画像を送るだけで、最短5日・¥39,800〜で広告レベルの動画が手に入ります。</p>
+    <div class="hero-urg"><span class="badge-urg">先着4名様限定・完全無料</span></div>
+
+    <div class="vframe hero-video reveal">
+      <video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/jewelry-1.mp4" loop muted playsinline data-v></video>
+      <span class="hero-vcap">Jewelry — Brand film</span>
+    </div>
+
+    <div class="proof reveal">
+      <div class="proof-i"><div class="proof-n">¥39,800〜</div><div class="proof-l">先着特価（通常¥49,800）</div></div>
+      <div class="proof-i"><div class="proof-n">100M+</div><div class="proof-l">ショート累計再生</div></div>
+      <div class="proof-i"><div class="proof-n">1,000+</div><div class="proof-l">制作実績</div></div>
+    </div>
+
+    <div class="hero-cta-wrap">
+      <a class="btn" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=hero">無料サンプルを受け取る<span class="ar">→</span></a>
+      <span class="cta-note">入力は業種だけ・営業電話なし・フォーム30秒で完了</span>
+    </div>
+  </div>
+</header>
+
+<!-- 01 SHOWCASE -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-no">01</span><span class="sec-label">Works</span></div>
+    <h2 class="sec-title reveal">あなたの業種なら、<br><span class="ac">こんな動画</span>が作れます</h2>
+    <p class="sec-desc reveal">コスメ・飲食・アパレル・EC・ジュエリー…様々な業種の実例。<br>気になる業種が無くても、無料サンプルでお作りします。</p>
+
+    <div class="ba reveal">
+      <div>
+        <div class="ba-tag">入力素材はこれだけ</div>
+        <div class="ba-before"><img src="headphone-before.jpg" alt="商品画像" onerror="this.style.opacity=0"><span class="ba-note">商品画像 1枚</span></div>
+      </div>
+      <div class="ba-arrow">→</div>
+      <div>
+        <div class="ba-tag g">AIが生成した動画</div>
+        <div class="ba-after vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/accessory.mp4" loop muted playsinline data-v></video></div>
+      </div>
+    </div>
+    <p class="ba-cap reveal">この画像1枚が、こうなります。<b>撮影ゼロ。</b></p>
+
+    <div class="fmt reveal">Ad / Brand film</div>
+    <div class="vgrid reveal">
+      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/cosmetics.mov" loop muted playsinline data-v></video><span class="vcap">コスメ｜<b>Instagram広告</b></span></div>
+      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/travel.mp4" loop muted playsinline data-v></video><span class="vcap">旅行・宿泊｜<b>サービス紹介</b></span></div>
+      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/drink-1.mp4" loop muted playsinline data-v></video><span class="vcap">ドリンク｜<b>UGC広告</b></span></div>
+      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/shoes.mp4" loop muted playsinline data-v></video><span class="vcap">シューズ｜<b>EC商品</b></span></div>
+      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/gadget.mp4" loop muted playsinline data-v></video><span class="vcap">ガジェット｜<b>Unboxing</b></span></div>
+      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/jewelry-2.mp4" loop muted playsinline data-v></video><span class="vcap">ジュエリー｜<b>ブランド訴求</b></span></div>
+    </div>
+
+    <div class="fmt reveal">UGC / Review</div>
+    <div class="vgrid port reveal">
+      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/ugc-karaage.mp4" loop muted playsinline data-v></video><span class="vcap">食品｜<b>唐揚げレビュー</b></span></div>
+      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/ugc-fan.mp4" loop muted playsinline data-v></video><span class="vcap">季節家電｜<b>扇風機レビュー</b></span></div>
+      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/ugc-lip.mp4" loop muted playsinline data-v></video><span class="vcap">コスメ｜<b>リップレビュー</b></span></div>
+    </div>
+
+    <div class="fmt reveal">Vertical — TikTok / Reels / Shorts</div>
+    <div class="vgrid port reveal">
+      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/short-1.mp4" loop muted playsinline data-v></video><span class="vcap">ショート｜<b>TikTok広告</b></span></div>
+      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/short-2.mp4" loop muted playsinline data-v></video><span class="vcap">ショート｜<b>Instagram Reels</b></span></div>
+      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/short-3.mp4" loop muted playsinline data-v></video><span class="vcap">ショート｜<b>YouTube Shorts</b></span></div>
+    </div>
+
+    <div class="showcase-cta reveal">
+      <a class="btn" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=works">この品質を、あなたの業種でも<span class="ar">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 02 WHY -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-no">02</span><span class="sec-label">Why</span></div>
+    <h2 class="sec-title reveal">なぜ、<span class="ac">撮影ゼロ</span>で<br>作れるのか</h2>
+    <div class="reasons">
+      <div class="reason reveal"><div class="reason-n">i</div><div><div class="reason-t">商品画像から、AIが映像を生成</div><div class="reason-d">最新の生成AIで、商品画像やロゴ・訴求ポイントから広告レベルの動画を制作。素材は画像だけでOKです。</div></div></div>
+      <div class="reason reveal"><div class="reason-n">ii</div><div><div class="reason-t">撮影・スタジオ・キャストの工程をカット</div><div class="reason-d">従来の動画制作で最もコストと時間がかかる工程を丸ごと省略。だから速くて、安い。</div></div></div>
+      <div class="reason reveal"><div class="reason-n">iii</div><div><div class="reason-t">だから、最短5日・従来の1/3以下</div><div class="reason-d">企画から納品まで最短5営業日。制作会社に頼むより圧倒的に低コストで、すぐSNSに投稿できます。</div></div></div>
+    </div>
+    <div class="cost reveal">
+      <div class="cost-old">制作会社なら 60万円〜</div>
+      <div class="cost-arrow">↓</div>
+      <div class="cost-new">AIスマートLab なら <span class="num">¥39,800</span>〜</div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 PRICE + OFFER -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-no">03</span><span class="sec-label">Price</span></div>
+    <h2 class="sec-title reveal">目的に合わせて、<br><span class="ac">3プラン</span>から</h2>
+    <div class="plans">
+      <div class="plan reveal">
+        <div><div class="plan-name">PR動画</div><div class="plan-desc">10〜15秒×1本／横・縦選択可／修正1回</div></div>
+        <div class="plan-price">¥39,800<small>通常¥49,800</small></div>
+      </div>
+      <div class="plan feat reveal">
+        <div><div class="plan-badge">人気No.1</div><div class="plan-name">UGC広告パック</div><div class="plan-desc">10〜30秒×2本／A/Bテスト最適／修正2回／運用アドバイス付</div></div>
+        <div class="plan-price">¥98,000<small>〜</small></div>
+      </div>
+      <div class="plan reveal">
+        <div><div class="plan-name">CM・ブランド動画</div><div class="plan-desc">CM品質の本格映像／修正2回／運用アドバイス付</div></div>
+        <div class="plan-price">¥128,000<small>〜</small></div>
+      </div>
+    </div>
+
+    <div class="offer reveal">
+      <div class="offer-icon">🎁</div>
+      <div class="offer-badge">先着4名様限定・完全無料</div>
+      <div class="offer-title">申込み前に<br><span class="ac">業種別サンプル動画</span>を確認</div>
+      <p class="offer-sub">クオリティを見てから検討できるので安心。<br>気に入ったら、そのまま依頼OK。</p>
+      <div class="guarantee">
+        <span>完全無料・課金なし</span>
+        <span>気に入らなければ依頼不要</span>
+        <span>営業は一切なし</span>
+      </div>
+      <a class="btn btn-cream btn-block" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=offer">無料サンプルを受け取る<span class="ar">→</span></a>
+      <div class="offer-note">※ 先着4名様限定。定員に達し次第終了します。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 VOICES -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-no">04</span><span class="sec-label">Voice</span></div>
+    <h2 class="sec-title reveal">お客様の声</h2>
+    <div class="voices">
+      <div class="voice reveal"><p class="voice-q">「撮影の手配が要らないので、思いついた広告をすぐ形にできる。スピードが段違いでした。」</p><p class="voice-m">アパレルEC ご担当者様</p></div>
+      <div class="voice reveal"><p class="voice-q">「外注より圧倒的に安く、クオリティは想像以上。まず無料サンプルで確認できたのが決め手でした。」</p><p class="voice-m">飲食・店舗 ご担当者様</p></div>
+      <div class="voice reveal"><p class="voice-q">「縦型のショート動画を量産でき、SNSの運用が一気に回り出しました。」</p><p class="voice-m">コスメブランド ご担当者様</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 FINAL -->
+<section class="final">
+  <div class="wrap reveal">
+    <h2 class="final-title">まずは、<br>無料サンプルで。</h2>
+    <p class="final-sub">業種を入力するだけ。最短でサンプル動画をお届けします。<br>無理な営業は一切ありません。</p>
+    <a class="btn" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=final">無料サンプルを受け取る<span class="ar">→</span></a>
+    <div class="cta-note">先着4名様限定・完全無料・定員到達次第終了</div>
+  </div>
+</section>
+
+<footer class="footer">© 2026 AIスマートLab — 累計40社以上・制作1,000本超のノウハウ</footer>
+
+<!-- STICKY CTA -->
+<div class="sticky" id="stk">
+  <a href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=sticky">無料サンプルを受け取る<span>先着4名・完全無料・フォーム30秒</span></a>
+</div>
+
+<script>
+// reveal
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+// video: PC=hover / mobile=画面内自動再生
+(function(){
+  var touch=window.matchMedia('(hover: none)').matches||'ontouchstart' in window;
+  var vids=document.querySelectorAll('video[data-v]');
+  vids.forEach(function(v){
+    v.muted=true;v.playsInline=true;v.setAttribute('muted','');v.setAttribute('playsinline','');v.setAttribute('webkit-playsinline','');v.preload='metadata';
+    if(touch){v.loop=true;}
+    else{
+      v.addEventListener('loadedmetadata',function(){try{v.currentTime=0.1}catch(e){}},{once:true});
+      var f=v.closest('.vframe')||v.parentElement;
+      f.addEventListener('mouseenter',function(){var p=v.play();if(p&&p.catch)p.catch(function(){})});
+      f.addEventListener('mouseleave',function(){v.pause();v.currentTime=0.1});
+    }
+  });
+  if(touch&&'IntersectionObserver' in window){
+    var loaded=new WeakSet();
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){if(!loaded.has(v)){v.load();loaded.add(v)}var p=v.play();if(p&&p.catch)p.catch(function(){})}else{v.pause()}})},{threshold:.35});
+    vids.forEach(function(v){io.observe(v)});
+  }
+})();
+// sticky CTA
+(function(){
+  var bar=document.getElementById('stk');if(!bar)return;
+  var hero=document.querySelector('.hero');var fin=document.querySelector('.final');
+  var past=false,atEnd=false;
+  function up(){if(past&&!atEnd)bar.classList.add('show');else bar.classList.remove('show')}
+  if(hero){new IntersectionObserver(function(e){past=!e[0].isIntersecting;up()},{threshold:0}).observe(hero)}else{past=true}
+  if(fin){new IntersectionObserver(function(e){atEnd=e[0].isIntersecting;up()},{threshold:.2}).observe(fin)}
+})();
+</script>
+</body>
+</html>
