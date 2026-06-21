@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>v3 デザイン方向プレビュー｜AIスマートLab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;-webkit-font-smoothing:antialiased}
+.tag{position:absolute;top:16px;left:16px;z-index:20;font-size:11px;font-weight:700;letter-spacing:.04em;padding:7px 14px;border-radius:100px;font-family:'Noto Sans JP',sans-serif}
+
+/* ============ 案① 明るい上質エディトリアル ============ */
+.ed{position:relative;min-height:100vh;background:#f4f1ea;color:#1c1916;display:flex;align-items:center;overflow:hidden;padding:96px 0 72px}
+.ed .tag{background:#1c1916;color:#f4f1ea}
+.ed-inner{max-width:680px;margin:0 auto;padding:0 28px;width:100%}
+.ed-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.22em;color:#8a8378;margin-bottom:30px;text-transform:uppercase}
+.ed-eyebrow::before{content:'';width:26px;height:1px;background:#b8a068}
+.ed-h1{font-family:'Shippori Mincho',serif;font-weight:700;font-size:clamp(38px,9.5vw,62px);line-height:1.16;letter-spacing:.01em;margin-bottom:26px}
+.ed-h1 .ac{color:#9a7b3e;font-style:normal}
+.ed-h1 .en{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500}
+.ed-sub{font-size:15px;line-height:2;color:#5d564c;max-width:440px;margin-bottom:40px;font-weight:300}
+.ed-video{position:relative;aspect-ratio:16/10;border-radius:4px;overflow:hidden;margin-bottom:36px;box-shadow:0 30px 60px -28px rgba(40,32,20,.4);background:#e6e1d6}
+.ed-video video{width:100%;height:100%;object-fit:cover;display:block}
+.ed-vcap{position:absolute;left:16px;bottom:14px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.ed-proof{display:flex;gap:0;border-top:1px solid #d9d2c4;border-bottom:1px solid #d9d2c4;margin-bottom:38px}
+.ed-pi{flex:1;padding:20px 8px;text-align:center;border-right:1px solid #d9d2c4}
+.ed-pi:last-child{border-right:none}
+.ed-pn{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:26px;line-height:1;color:#1c1916;margin-bottom:6px}
+.ed-pl{font-size:10px;letter-spacing:.08em;color:#8a8378}
+.ed-cta{display:inline-flex;align-items:center;gap:12px;background:#1c1916;color:#f4f1ea;text-decoration:none;font-size:15px;font-weight:500;padding:18px 36px;border-radius:100px;transition:.25s}
+.ed-cta:hover{background:#9a7b3e;transform:translateY(-2px)}
+.ed-cta .ar{transition:.25s}
+.ed-cta:hover .ar{transform:translateX(4px)}
+.ed-note{margin-top:16px;font-size:12px;color:#8a8378}
+
+/* ============ 案② ガラス×グラデーション ============ */
+.gl{position:relative;min-height:100vh;background:#080a1a;color:#fff;display:flex;align-items:center;overflow:hidden;padding:96px 0 72px}
+.gl .tag{background:rgba(255,255,255,.16);color:#fff;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25)}
+.gl-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.gl-orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.85;animation:drift 14s ease-in-out infinite}
+.gl-o1{width:340px;height:340px;background:#7c3aed;top:-60px;left:-40px}
+.gl-o2{width:300px;height:300px;background:#2563eb;top:30%;right:-70px;animation-delay:-4s}
+.gl-o3{width:320px;height:320px;background:#db2777;bottom:-60px;left:20%;animation-delay:-8s}
+.gl-o4{width:240px;height:240px;background:#06b6d4;top:10%;left:40%;animation-delay:-6s}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(28px,-30px) scale(1.12)}66%{transform:translate(-22px,20px) scale(.92)}}
+.gl-inner{position:relative;z-index:2;max-width:680px;margin:0 auto;padding:0 22px;width:100%}
+.gl-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:28px;padding:34px 26px;backdrop-filter:blur(26px) saturate(160%);-webkit-backdrop-filter:blur(26px) saturate(160%);box-shadow:0 30px 80px -30px rgba(0,0,0,.6)}
+.gl-eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.02em;padding:7px 14px;border-radius:100px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);margin-bottom:22px}
+.gl-h1{font-family:'Plus Jakarta Sans','Noto Sans JP',sans-serif;font-weight:800;font-size:clamp(34px,8.6vw,52px);line-height:1.14;letter-spacing:-.02em;margin-bottom:18px}
+.gl-h1 span{background:linear-gradient(92deg,#a5b4fc,#f0abfc,#67e8f9);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.gl-sub{font-size:14px;line-height:1.95;color:rgba(255,255,255,.82);font-weight:300;margin-bottom:24px}
+.gl-video{position:relative;aspect-ratio:16/10;border-radius:18px;overflow:hidden;margin-bottom:24px;border:1px solid rgba(255,255,255,.18)}
+.gl-video video{width:100%;height:100%;object-fit:cover;display:block}
+.gl-cta{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:#fff;color:#0b1020;text-decoration:none;font-weight:800;font-size:15px;padding:17px;border-radius:16px;transition:.25s}
+.gl-cta:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(124,58,237,.5)}
+.gl-proof{display:flex;gap:10px;margin-top:18px}
+.gl-pi{flex:1;text-align:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:14px 6px;backdrop-filter:blur(10px)}
+.gl-pn{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:20px;line-height:1;margin-bottom:5px;background:linear-gradient(92deg,#a5b4fc,#f0abfc);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.gl-pl{font-size:10px;color:rgba(255,255,255,.6);letter-spacing:.04em}
+.gl-note{margin-top:16px;text-align:center;font-size:12px;color:rgba(255,255,255,.6)}
+
+/* scroll hint between */
+.divider{position:relative;background:#080a1a;text-align:center;padding:0}
+</style>
+</head>
+<body>
+
+<!-- ============ 案① 明るい上質エディトリアル ============ -->
+<section class="ed">
+  <div class="tag">案① 明るい上質エディトリアル</div>
+  <div class="ed-inner">
+    <span class="ed-eyebrow">AI Video Studio — 業種別サンプル無料</span>
+    <h1 class="ed-h1">画像<span class="en">1</span>枚が、<br><span class="ac">動画広告</span>になる。</h1>
+    <p class="ed-sub">撮影・スタジオ・出演者は不要。<br>最短5日・¥39,800〜で、広告レベルの映像を。</p>
+    <div class="ed-video">
+      <video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/jewelry-1.mp4" autoplay muted loop playsinline></video>
+      <span class="ed-vcap">Jewelry — Brand film</span>
+    </div>
+    <div class="ed-proof">
+      <div class="ed-pi"><div class="ed-pn">100M+</div><div class="ed-pl">累計再生</div></div>
+      <div class="ed-pi"><div class="ed-pn">1,000+</div><div class="ed-pl">制作実績</div></div>
+      <div class="ed-pi"><div class="ed-pn">40+</div><div class="ed-pl">支援企業</div></div>
+    </div>
+    <a class="ed-cta" href="https://forms.gle/JoJYXPFwcgzzzDuB9">無料サンプルを受け取る<span class="ar">→</span></a>
+    <div class="ed-note">先着4名様限定・完全無料・営業電話なし</div>
+  </div>
+</section>
+
+<!-- ============ 案② ガラス×グラデーション ============ -->
+<section class="gl">
+  <div class="tag">案② ガラス×グラデーション</div>
+  <div class="gl-bg">
+    <div class="gl-orb gl-o1"></div>
+    <div class="gl-orb gl-o2"></div>
+    <div class="gl-orb gl-o3"></div>
+    <div class="gl-orb gl-o4"></div>
+  </div>
+  <div class="gl-inner">
+    <div class="gl-card">
+      <span class="gl-eyebrow">🎁 業種別サンプル動画 無料プレゼント中</span>
+      <h1 class="gl-h1">画像1枚が、<br><span>動画広告</span>になる。</h1>
+      <p class="gl-sub">撮影ゼロ・最短5日・¥39,800〜。<br>商品画像を送るだけで、広告レベルの動画が手に入る。</p>
+      <div class="gl-video">
+        <video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/travel.mp4" autoplay muted loop playsinline></video>
+      </div>
+      <a class="gl-cta" href="https://forms.gle/JoJYXPFwcgzzzDuB9">🎁 無料サンプルを受け取る</a>
+      <div class="gl-proof">
+        <div class="gl-pi"><div class="gl-pn">100M+</div><div class="gl-pl">累計再生</div></div>
+        <div class="gl-pi"><div class="gl-pn">1,000+</div><div class="gl-pl">制作実績</div></div>
+        <div class="gl-pi"><div class="gl-pn">¥39,800〜</div><div class="gl-pl">先着特価</div></div>
+      </div>
+      <div class="gl-note">先着4名様限定・完全無料・フォーム30秒</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
