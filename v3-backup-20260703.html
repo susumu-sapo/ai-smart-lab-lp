@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AIスマートLab｜商品写真1枚で、広告レベルの画像と動画を。</title>
-<meta name="description" content="撮影ゼロ・最短5日。商品写真1枚から、広告レベルの動画とプロ品質の商品画像を制作。無料サンプル（画像 or 動画）プレゼント中。">
+<title>AIスマートLab｜画像1枚が、動画広告になる。</title>
+<meta name="description" content="撮影ゼロ・最短5日・¥39,800〜。商品画像を送るだけで広告レベルのAI動画が手に入る。業種別サンプル動画を無料プレゼント中。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
@@ -20,7 +20,6 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
 a{color:inherit}
-img{max-width:100%;display:block}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
 .reveal.vis{opacity:1;transform:none}
 
@@ -56,7 +55,7 @@ img{max-width:100%;display:block}
 .nav-in{max-width:var(--max);margin:0 auto;padding:13px 28px;display:flex;align-items:center;justify-content:space-between}
 .logo{font-family:var(--serif);font-weight:700;font-size:17px;letter-spacing:.02em}
 .logo .en{font-family:var(--en);font-style:italic;color:var(--gold)}
-.nav-cta{font-size:12px;font-weight:500;text-decoration:none;border:1px solid var(--ink);border-radius:100px;padding:8px 16px;transition:.2s;white-space:nowrap}
+.nav-cta{font-size:12px;font-weight:500;text-decoration:none;border:1px solid var(--ink);border-radius:100px;padding:8px 16px;transition:.2s}
 .nav-cta:hover{background:var(--ink);color:var(--bg)}
 
 /* ============ HERO ============ */
@@ -65,15 +64,17 @@ img{max-width:100%;display:block}
 .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(244,241,234,.5) 0%,rgba(244,241,234,.56) 50%,rgba(244,241,234,.82) 82%,var(--bg) 100%)}
 .hero-inner{position:relative;z-index:2;width:100%}
 .hero-eyebrow{margin-bottom:26px}
-.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(32px,8.4vw,56px);line-height:1.24;letter-spacing:.005em;margin-bottom:22px;text-shadow:0 1px 3px rgba(244,241,234,.95),0 2px 30px rgba(244,241,234,.98)}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(33px,8.8vw,58px);line-height:1.22;letter-spacing:.005em;margin-bottom:22px;text-shadow:0 1px 3px rgba(244,241,234,.95),0 2px 30px rgba(244,241,234,.98)}
 .hero h1 .ac{color:var(--gold)}
 .hero h1 .num{font-family:var(--num);font-style:normal;font-weight:700;font-size:.94em;letter-spacing:-.01em;margin:0 .02em}
-.hero-sub{font-size:15px;line-height:2;color:var(--ink2);max-width:460px;margin-bottom:30px;text-shadow:0 1px 12px rgba(244,241,234,.85)}
+.hero-sub{font-size:15px;line-height:2;color:var(--ink2);max-width:450px;margin-bottom:30px;text-shadow:0 1px 12px rgba(244,241,234,.85)}
 .hero-urg{margin-bottom:30px}
+.hero-video{aspect-ratio:16/10;margin-bottom:32px}
+.hero-vcap{position:absolute;left:16px;bottom:13px;font-family:var(--en);font-style:italic;font-size:16px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5);z-index:2}
 .proof{display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:34px}
 .proof-i{flex:1;padding:18px 6px;text-align:center;border-right:1px solid var(--line)}
 .proof-i:last-child{border-right:none}
-.proof-n{font-family:var(--num);font-weight:700;font-size:clamp(17px,5.4vw,23px);letter-spacing:-.01em;line-height:1;color:var(--ink);margin-bottom:6px;white-space:nowrap}
+.proof-n{font-family:var(--num);font-weight:700;font-size:23px;letter-spacing:-.01em;line-height:1;color:var(--ink);margin-bottom:6px}
 .proof-l{font-size:10px;letter-spacing:.06em;color:var(--ink3)}
 .hero-cta-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
 
@@ -81,33 +82,17 @@ img{max-width:100%;display:block}
 .sec{padding:74px 0;border-top:1px solid var(--line)}
 .sec-desc{font-size:14px;color:var(--ink2);line-height:1.95;margin-top:10px}
 
-/* pain list */
-.reasons{display:flex;flex-direction:column;gap:0;margin-top:26px}
-.reason{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
-.reason:first-child{border-top:1px solid var(--line)}
-.reason-n{font-family:var(--num);font-weight:700;font-size:24px;color:var(--gold);line-height:1.1;flex-shrink:0;width:42px}
-.reason-t{font-family:var(--serif);font-weight:600;font-size:17px;margin-bottom:5px}
-.reason-d{font-size:13px;color:var(--ink2);line-height:1.85}
-.pain-close{margin-top:26px;font-family:var(--serif);font-weight:600;font-size:17px;color:var(--ink);text-align:center}
-.pain-close .ac{color:var(--gold)}
-
-/* ============ BA SLIDER ============ */
-.bas{position:relative;border-radius:6px;overflow:hidden;box-shadow:0 26px 52px -28px rgba(40,32,20,.42);touch-action:pan-y;cursor:ew-resize;user-select:none;-webkit-user-select:none}
-.bas img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
-.bas .bas-before{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
-.bas-handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:#fff;z-index:3;pointer-events:none;box-shadow:0 0 12px rgba(0,0,0,.35)}
-.bas-grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;gap:3px;font-size:10px;color:var(--ink);box-shadow:0 4px 16px rgba(0,0,0,.3);font-family:var(--num);font-weight:700;letter-spacing:0}
-.bas-hint{text-align:center;font-size:11px;color:var(--ink3);letter-spacing:.08em;margin-top:12px}
-.bas-tag{position:absolute;top:12px;z-index:2;font-family:var(--num);font-weight:700;font-size:10px;letter-spacing:.14em;color:#fff;background:rgba(28,25,22,.66);padding:5px 12px;border-radius:100px;pointer-events:none}
-.bas-tag-b{left:12px}
-.bas-tag-a{right:12px}
-.ba-item{margin-top:34px}
-.ba-item:first-of-type{margin-top:26px}
-.ba-itemcap{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
-.ba-genre{font-family:var(--serif);font-weight:600;font-size:15px;white-space:nowrap;flex-shrink:0}
-.ba-use{font-size:11px;color:var(--gold);font-weight:500;letter-spacing:.04em}
-.ba-static{border-radius:6px;overflow:hidden;box-shadow:0 26px 52px -28px rgba(40,32,20,.42)}
-.ba-note{font-size:10.5px;color:var(--ink3);line-height:1.7;margin-top:22px;padding-top:14px;border-top:1px solid var(--line)}
+/* before/after */
+.ba{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;margin:0 0 8px;padding:18px;border:1px solid var(--line);border-radius:8px;background:var(--bg2)}
+.ba-tag{font-size:10px;font-weight:500;letter-spacing:.06em;color:var(--ink3);margin-bottom:8px;text-align:center}
+.ba-tag.g{color:var(--gold)}
+.ba-before{position:relative;aspect-ratio:16/10;border-radius:4px;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
+.ba-before img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.ba-note{position:relative;z-index:1;font-size:11px;color:var(--ink3)}
+.ba-after{aspect-ratio:16/10}
+.ba-arrow{font-family:var(--en);font-size:26px;color:var(--gold)}
+.ba-cap{text-align:center;font-family:var(--serif);font-weight:600;font-size:15px;margin:22px 0 14px}
+.ba-cap b{color:var(--gold);font-weight:600}
 
 /* grids */
 .vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px}
@@ -116,7 +101,13 @@ img{max-width:100%;display:block}
 .vgrid.port .vframe{aspect-ratio:9/14}
 .showcase-cta{margin-top:30px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
 
-/* why + cost */
+/* reasons */
+.reasons{display:flex;flex-direction:column;gap:0;margin-top:26px}
+.reason{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.reason:first-child{border-top:1px solid var(--line)}
+.reason-n{font-family:var(--num);font-weight:700;font-size:24px;color:var(--gold);line-height:1.1;flex-shrink:0;width:42px}
+.reason-t{font-family:var(--serif);font-weight:600;font-size:17px;margin-bottom:5px}
+.reason-d{font-size:13px;color:var(--ink2);line-height:1.85}
 .cost{margin-top:26px;padding:24px 18px;border:1px solid var(--gold);border-radius:10px;background:linear-gradient(180deg,rgba(154,123,62,.07),var(--bg2));text-align:center}
 .cost-row{display:flex;align-items:center;justify-content:center;gap:12px}
 .cost-col{flex:1}
@@ -136,17 +127,22 @@ img{max-width:100%;display:block}
 .plan-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .plan-name{font-family:var(--serif);font-weight:600;font-size:17px;white-space:nowrap}
 .plan-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:#fff;background:var(--gold);padding:3px 10px;border-radius:100px;margin-bottom:10px}
-.plan-hook{font-family:var(--serif);font-weight:600;font-size:14.5px;line-height:1.6;margin-top:10px;color:var(--ink)}
-.plan-desc{font-size:11.5px;color:var(--ink3);line-height:1.75;margin-top:8px}
+.plan-desc{font-size:12px;color:var(--ink2);line-height:1.75;margin-top:8px}
 .plan-price{font-family:var(--num);font-weight:700;font-size:21px;letter-spacing:-.01em;white-space:nowrap;color:var(--ink)}
+.plan-price .was{font-size:13px;font-weight:600;color:var(--ink3);text-decoration:line-through;text-decoration-color:var(--vermil);margin-right:8px}
 .plan-price .tl{font-size:15px;font-weight:600;margin-left:1px}
-.plan-note{font-size:11px;color:var(--ink3);margin-top:14px;text-align:center}
+.plan-disc{display:flex;align-items:center;gap:9px;margin-top:12px}
+.plan-disc s{font-family:var(--num);font-size:13px;color:var(--ink3);text-decoration-color:var(--vermil)}
+.plan-disc .off{font-size:12px;font-weight:700;color:#fff;background:var(--vermil);padding:4px 11px;border-radius:100px;letter-spacing:.02em}
+.plan-disc .off-sub{font-size:11px;font-weight:700;color:var(--vermil)}
 
 /* free sample offer */
 .offer{margin-top:28px;padding:30px 24px;border:1px solid var(--ink);border-radius:10px;background:var(--ink);color:var(--bg);text-align:center}
 .offer-flag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.03em;color:#1c1916;background:linear-gradient(92deg,#e8c982,#caa75f);padding:8px 18px;border-radius:100px;margin-bottom:18px}
 .offer-title{font-family:var(--serif);font-weight:700;font-size:23px;line-height:1.5;margin-bottom:12px}
 .offer-title .ac{color:#e8c982}
+.offer-title .big{font-family:var(--num);font-weight:700;font-size:30px;letter-spacing:-.01em}
+.offer-plus{display:block;font-size:16px;color:rgba(244,241,234,.6);margin:8px 0 4px}
 .offer-sub{font-size:13px;color:rgba(244,241,234,.78);line-height:1.8;margin-bottom:18px}
 .guarantee{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:22px}
 .guarantee span{font-size:11px;font-weight:500;color:#f0e3c4;border:1px solid rgba(240,227,196,.3);border-radius:100px;padding:6px 13px}
@@ -187,17 +183,12 @@ img{max-width:100%;display:block}
 .faq-a{font-size:13px;color:var(--ink2);line-height:1.85;margin-top:0;padding-left:18px;max-height:0;overflow:hidden;transition:max-height .35s ease,margin .35s ease}
 .faq-item.open .faq-a{max-height:200px;margin-top:8px}
 
-/* flow */
-.flow-steps{display:flex;flex-direction:column;gap:0;margin-top:26px}
-.flow-step{display:flex;gap:18px;padding:26px 0;border-bottom:1px solid var(--line)}
-.flow-step:first-child{border-top:1px solid var(--line)}
-.flow-icon{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,rgba(154,123,62,.12),rgba(154,123,62,.05));border:1px solid rgba(154,123,62,.25);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
-.flow-n{font-family:var(--num);font-weight:700;font-size:11px;color:var(--gold);letter-spacing:.08em;margin-bottom:4px}
-.flow-t{font-family:var(--serif);font-weight:600;font-size:17px;margin-bottom:5px}
-.flow-d{font-size:13px;color:var(--ink2);line-height:1.85}
-
 /* final */
 .final{padding:80px 0;border-top:1px solid var(--line);text-align:center}
+.final-flag{margin-bottom:18px}
+.final-title{font-family:var(--serif);font-weight:700;font-size:clamp(28px,7vw,42px);line-height:1.35;margin-bottom:14px}
+.final-sub{font-size:14px;color:var(--ink2);line-height:1.9;margin-bottom:26px}
+.final .btn{margin:0 auto}
 
 /* footer */
 .footer{padding:40px 28px 120px;text-align:center;border-top:1px solid var(--line);font-size:11px;color:var(--ink3);letter-spacing:.03em}
@@ -212,10 +203,27 @@ img{max-width:100%;display:block}
 .btn-gold{background:var(--gold);color:#fff}
 .btn-gold:hover{background:#b8923f;transform:translateY(-2px)}
 
+/* industries */
+.industries{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.ind{flex:1 1 calc(33.33% - 10px);min-width:90px;text-align:center;padding:18px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg2);font-size:12px;line-height:1.5}
+.ind-icon{font-size:24px;margin-bottom:6px;display:block}
+.ind-name{font-weight:500;color:var(--ink)}
+
+/* visual flow */
+.flow-steps{display:flex;flex-direction:column;gap:0;margin-top:26px}
+.flow-step{display:flex;gap:18px;padding:26px 0;border-bottom:1px solid var(--line)}
+.flow-step:first-child{border-top:1px solid var(--line)}
+.flow-icon{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,rgba(154,123,62,.12),rgba(154,123,62,.05));border:1px solid rgba(154,123,62,.25);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.flow-n{font-family:var(--num);font-weight:700;font-size:11px;color:var(--gold);letter-spacing:.08em;margin-bottom:4px}
+.flow-t{font-family:var(--serif);font-weight:600;font-size:17px;margin-bottom:5px}
+.flow-d{font-size:13px;color:var(--ink2);line-height:1.85}
+
 @media(min-width:601px){.sticky{display:none}}
 @media(max-width:600px){
   .hero-cta-wrap{align-items:stretch}
   .hero-cta-wrap .btn{width:100%}
+  .ba{grid-template-columns:1fr}
+  .ba-arrow{transform:rotate(90deg);margin:0 auto}
   body{padding-bottom:78px}
   .vgrid{gap:8px}
 }
@@ -224,13 +232,13 @@ img{max-width:100%;display:block}
 <body>
 
 <!-- TOP BANNER -->
-<div class="topbar">🎁 <strong>先着4名</strong> 商品画像 or 動画、どちらか無料プレゼント</div>
+<div class="topbar">🎁 <strong>先着4名</strong> 業種別サンプル動画を無料プレゼント</div>
 
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-in">
     <div class="logo">AI<span class="en">Smart</span>Lab</div>
-    <a class="nav-cta" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=v4-nav">無料サンプルを受け取る</a>
+    <a class="nav-cta" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=nav">無料サンプルを受け取る</a>
   </div>
 </nav>
 
@@ -239,103 +247,51 @@ img{max-width:100%;display:block}
   <video class="hero-bg" autoplay loop muted playsinline webkit-playsinline disablepictureinpicture src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/jewelry-1.mp4"></video>
   <div class="hero-scrim"></div>
   <div class="wrap hero-inner">
-    <div class="hero-eyebrow eyebrow">AI Creative Studio — 画像・動画 サンプル無料</div>
-    <h1>最先端の<span class="ac">AI</span>が、<br>あなたの商品を<br>"売れる顔"に変える。</h1>
-    <p class="hero-sub">撮影もデザインも、もう外注しなくていい。<br>広告・ECページ・SNS、どこでも使える<span style="white-space:nowrap">画像と動画を、最短5日で。</span></p>
+    <div class="hero-eyebrow eyebrow">AI Video Studio — 業種別サンプル無料</div>
+    <h1>画像<span class="num">1</span>枚が、<br><span class="ac">動画広告</span>になる。<br>撮影不要・最短<span class="num">5</span>日</h1>
+    <p class="hero-sub">撮影・スタジオ・出演者、全部不要。<br>商品画像を送るだけで、<span style="white-space:nowrap">広告レベルの動画</span>が手に入ります。</p>
     <div class="hero-urg"><span class="badge-urg">先着4名様限定・完全無料</span></div>
 
     <div class="proof reveal">
-      <div class="proof-i"><div class="proof-n" data-count="98000" data-prefix="¥" data-suffix="〜" data-comma>¥98,000〜</div><div class="proof-l">動画+画像<br>一式パッケージ</div></div>
+      <div class="proof-i"><div class="proof-n" data-count="39800" data-prefix="¥" data-suffix="〜" data-comma>¥39,800〜</div><div class="proof-l">先着特価<br>（通常¥49,800）</div></div>
       <div class="proof-i"><div class="proof-n" data-count="1000" data-suffix="本+" data-comma>1,000本+</div><div class="proof-l">制作本数の<br>ノウハウ</div></div>
       <div class="proof-i"><div class="proof-n" data-count="40" data-suffix="社+">40社+</div><div class="proof-l">累計支援<br>企業数</div></div>
     </div>
 
     <div class="hero-cta-wrap">
-      <a class="btn" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=v4-hero">無料サンプルを受け取る<span class="ar">→</span></a>
-      <span class="cta-note">画像でも動画でもOK・営業電話なし・フォーム30秒</span>
+      <a class="btn" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=hero">無料サンプルを受け取る<span class="ar">→</span></a>
+      <span class="cta-note">入力は業種だけ・営業電話なし・フォーム30秒で完了</span>
     </div>
   </div>
 </header>
 
-<!-- 00 PAIN -->
+<!-- 01 SHOWCASE -->
 <section class="sec">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-no">00</span><span class="sec-label">Pain</span></div>
-    <h2 class="sec-title reveal">こんなお悩みは<br>ありませんか？</h2>
-    <div class="reasons">
-      <div class="reason reveal"><div class="reason-n">1</div><div><div class="reason-t">商品ページや広告に、動画が全然ない</div><div class="reason-d">競合はもう動画で見せている時代。静止画だけだと、比較された瞬間に見劣りしてしまいます。</div></div></div>
-      <div class="reason reveal"><div class="reason-n">2</div><div><div class="reason-t">商品写真が、正直「素人っぽい」と感じている</div><div class="reason-d">スマホでサッと撮った写真のまま。プロに頼むほどではないけど、なんとかしたい…という悩み。</div></div></div>
-      <div class="reason reveal"><div class="reason-n">3</div><div><div class="reason-t">撮影もデザインも、時間もコストもかけられない</div><div class="reason-d">撮影・カメラマン・スタジオ・デザイナー…従来の方法では、全部揃えるのは現実的じゃない。</div></div></div>
-    </div>
-    <p class="pain-close reveal">その全部を、<span class="ac">撮影ゼロ</span>で解決します。</p>
-  </div>
-</section>
+    <div class="sec-head reveal"><span class="sec-no">01</span><span class="sec-label">Works</span></div>
+    <h2 class="sec-title reveal">あなたの業種なら、<br><span class="ac">こんな動画</span>が作れます</h2>
+    <p class="sec-desc reveal">コスメ・飲食・アパレル・EC・ジュエリー…<br>様々な業種の実例。<br>気になる業種が無くても、<br>無料サンプルでお作りします。</p>
 
-<!-- 01 IMAGE WORKS -->
-<section class="sec">
-  <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-no">01</span><span class="sec-label">Image Works</span></div>
-    <h2 class="sec-title reveal">“見せ方”だけで、<br><span class="ac">ここまで変わる</span>。</h2>
-    <p class="sec-desc reveal">同じ商品、同じ情報。デザインを再設計するだけで印象は一変します。<br><b>スライダーを左右に動かして</b>、その差をご覧ください。</p>
-
-    <div class="ba-item reveal">
-      <div class="ba-itemcap"><span class="ba-genre">コスメ</span><span class="ba-use">ブランドポスター・広告ビジュアル</span></div>
-      <div class="bas" style="aspect-ratio:893/961" data-bas>
-        <img src="ba-cosme-poster-a.jpg" alt="コスメ広告 After">
-        <img class="bas-before" src="ba-cosme-poster-b.jpg" alt="コスメ広告 Before">
-        <span class="bas-tag bas-tag-b">BEFORE</span><span class="bas-tag bas-tag-a">AFTER</span>
-        <div class="bas-handle"><span class="bas-grip">◀▶</span></div>
+    <p class="ba-cap reveal">この画像1枚が、こうなります。<b>撮影ゼロ。</b></p>
+    <div class="ba reveal">
+      <div>
+        <div class="ba-tag">入力素材はこれだけ</div>
+        <div class="ba-before"><img src="headphone-before.jpg" alt="商品画像" onerror="this.style.opacity=0"><span class="ba-note">商品画像 1枚</span></div>
       </div>
-      <div class="bas-hint">← スライドして Before / After を比較 →</div>
-    </div>
-
-    <div class="ba-item reveal">
-      <div class="ba-itemcap"><span class="ba-genre">食品・サプリ</span><span class="ba-use">ECメインビジュアル・広告クリエイティブ</span></div>
-      <div class="bas" style="aspect-ratio:916/838" data-bas>
-        <img src="ba-food-coffee-a.jpg" alt="食品広告 After">
-        <img class="bas-before" src="ba-food-coffee-b.jpg" alt="食品広告 Before">
-        <span class="bas-tag bas-tag-b">BEFORE</span><span class="bas-tag bas-tag-a">AFTER</span>
-        <div class="bas-handle"><span class="bas-grip">◀▶</span></div>
+      <div class="ba-arrow">→</div>
+      <div>
+        <div class="ba-tag g">AIが生成した動画</div>
+        <div class="ba-after vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/accessory.mp4" loop muted playsinline data-v></video></div>
       </div>
     </div>
-
-    <div class="ba-item reveal">
-      <div class="ba-itemcap"><span class="ba-genre">アパレル</span><span class="ba-use">商品ページ・ブランドビジュアル</span></div>
-      <div class="bas" style="aspect-ratio:842/859" data-bas>
-        <img src="ba-apparel-scene-a.jpg" alt="アパレル After">
-        <img class="bas-before" src="ba-apparel-scene-b.jpg" alt="アパレル Before">
-        <span class="bas-tag bas-tag-b">BEFORE</span><span class="bas-tag bas-tag-a">AFTER</span>
-        <div class="bas-handle"><span class="bas-grip">◀▶</span></div>
-      </div>
-    </div>
-
-    <div class="ba-item reveal">
-      <div class="ba-itemcap"><span class="ba-genre">コスメ</span><span class="ba-use">商品ページ・セクションデザイン</span></div>
-      <div class="ba-static"><img src="ba-cosme-section-2.jpg" alt="商品ページ Before/After"></div>
-    </div>
-
-    <p class="ba-note reveal">※掲載のBefore/Afterは、当ラボによるデザイン再構成例（イメージ）です。実在ブランドの公式クリエイティブではありません。</p>
-
-    <div class="showcase-cta reveal">
-      <a class="btn btn-gold" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=v4-imageworks">あなたの商品でも、無料で試す<span class="ar">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- 02 VIDEO WORKS -->
-<section class="sec">
-  <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-no">02</span><span class="sec-label">Video Works</span></div>
-    <h2 class="sec-title reveal">動画も、<span class="ac">撮影ゼロ</span>で<br>ここまで作れます</h2>
-    <p class="sec-desc reveal">商品画像1枚から、広告・SNS・商品ページに使える動画を制作。<br>コスメ・食品・アパレル・EC・ジュエリー、幅広い業種の実例。</p>
 
     <div class="fmt reveal">Ad / Brand film</div>
     <div class="vgrid reveal">
       <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/cosmetics.mov" loop muted playsinline data-v></video><span class="vcap">コスメ｜<b>Instagram広告</b></span></div>
-      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/cosmetics-3.mp4" loop muted playsinline data-v></video><span class="vcap">コスメ｜<b>商品紹介</b></span></div>
       <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/travel.mp4" loop muted playsinline data-v></video><span class="vcap">旅行・宿泊｜<b>サービス紹介</b></span></div>
       <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/drink-3.mp4" loop muted playsinline data-v></video><span class="vcap">ドリンク｜<b>UGC広告</b></span></div>
-      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/jewelry-1.mp4" loop muted playsinline data-v></video><span class="vcap">ジュエリー｜<b>ブランド訴求</b></span></div>
+      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/jewelry-1.mp4" loop muted playsinline data-v></video><span class="vcap">美容｜<b>ブランド訴求</b></span></div>
+      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/cosmetics-3.mp4" loop muted playsinline data-v></video><span class="vcap">コスメ｜<b>商品紹介</b></span></div>
       <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/jewelry-2.mp4" loop muted playsinline data-v></video><span class="vcap">ジュエリー｜<b>ブランド訴求</b></span></div>
     </div>
 
@@ -350,41 +306,61 @@ img{max-width:100%;display:block}
     </div>
 
     <div class="showcase-cta reveal">
-      <a class="btn btn-gold" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=v4-videoworks">この品質を、あなたの業種でも<span class="ar">→</span></a>
+      <a class="btn btn-gold" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=works">この品質を、あなたの業種でも<span class="ar">→</span></a>
     </div>
   </div>
 </section>
 
-<!-- 03 WHY -->
+<!-- 02 WHY -->
 <section class="sec">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-no">03</span><span class="sec-label">Why</span></div>
+    <div class="sec-head reveal"><span class="sec-no">02</span><span class="sec-label">Why</span></div>
     <h2 class="sec-title reveal">なぜ、<span class="ac">撮影ゼロ</span>で<br>作れるのか</h2>
     <div class="reasons">
-      <div class="reason reveal"><div class="reason-n">1</div><div><div class="reason-t">商品画像から、AIが映像とビジュアルを生成</div><div class="reason-d">最新の生成AIで、商品画像やロゴ・訴求ポイントから広告レベルの動画・画像を制作。素材は写真1枚でOKです。</div></div></div>
-      <div class="reason reveal"><div class="reason-n">2</div><div><div class="reason-t">撮影・スタジオ・キャストの工程をカット</div><div class="reason-d">従来の制作で最もコストと時間がかかる工程を丸ごと省略。だから速くて、安い。</div></div></div>
-      <div class="reason reveal"><div class="reason-n">3</div><div><div class="reason-t">最短5日・制作会社の数分の一のコスト</div><div class="reason-d">企画から納品まで最短5営業日。動画と画像を一式で揃えても、従来の1本分以下の費用です。</div></div></div>
+      <div class="reason reveal"><div class="reason-n">1</div><div><div class="reason-t">商品画像から、AIが映像を生成</div><div class="reason-d">最新の生成AIで、商品画像やロゴ・訴求ポイントから広告レベルの動画を制作。素材は画像だけでOKです。</div></div></div>
+      <div class="reason reveal"><div class="reason-n">2</div><div><div class="reason-t">撮影・スタジオ・キャストの工程をカット</div><div class="reason-d">従来の動画制作で最もコストと時間がかかる工程を丸ごと省略。だから速くて、安い。</div></div></div>
+      <div class="reason reveal"><div class="reason-n">3</div><div><div class="reason-t">最短5日・コスト約1/15</div><div class="reason-d">企画から納品まで最短5営業日。制作会社に頼むより圧倒的に低コストで、すぐSNSに投稿できます。</div></div></div>
     </div>
     <div class="cost reveal">
       <div class="cost-row">
         <div class="cost-col"><div class="cost-cap">制作会社なら</div><div class="cost-big old"><s>60万円〜</s></div></div>
         <div class="cost-arrow">→</div>
-        <div class="cost-col"><div class="cost-cap g">AIスマートLabなら</div><div class="cost-big new">¥98,000〜</div></div>
+        <div class="cost-col"><div class="cost-cap g">AIスマートLabなら</div><div class="cost-big new">¥39,800〜</div></div>
       </div>
-      <div class="cost-badge">約84%OFF — 動画+画像一式でこの価格</div>
+      <div class="cost-badge">約93%OFF — 撮影ゼロでコスト1/15</div>
     </div>
   </div>
 </section>
 
-<!-- 04 VOICE -->
+<!-- 03 VOICE -->
 <section class="sec">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-no">04</span><span class="sec-label">Voice</span></div>
+    <div class="sec-head reveal"><span class="sec-no">03</span><span class="sec-label">Voice</span></div>
     <h2 class="sec-title reveal">お客様の声</h2>
     <div class="voices">
       <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「TikTokを活用してから、<b>若い方からの問い合わせが増え</b>、採用もしっかり取れています！専門学校でプチブームになっていると聞いて嬉しかったですね。」</p><div class="voice-result">📈 若手採用の問い合わせ <b>0 → 月5件</b></div><p class="voice-m">— 物流・運送業 ／ 某運送会社 代表</p></div>
       <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「存在を知られていなかったお店が、今はTikTok・Instagramからも沢山ご予約をいただいています。<b>始めていなかったらと思うと恐ろしい</b>です(笑)」</p><div class="voice-result">📈 月商 <b>赤字 → 200万超の黒字</b></div><p class="voice-m">— 飲食業 ／ 某飲食店 オーナー</p></div>
       <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「商品画像を送るだけで、5日で想像以上のクオリティで納品されてびっくり。Instagram広告に使ったら<b>問い合わせとカート遷移が一気に増えました</b>。」</p><div class="voice-result">📈 ECのCVR <b>1.8倍</b></div><p class="voice-m">— アパレル・EC ／ 某アパレルEC 事業責任者</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 INDUSTRY -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-no">04</span><span class="sec-label">Industry</span></div>
+    <h2 class="sec-title reveal">幅広い<span class="ac">業種</span>に対応</h2>
+    <p class="sec-desc reveal">お客様の業種に合わせた動画を制作。<br>掲載のない業種もお気軽にご相談ください。</p>
+    <div class="industries reveal">
+      <div class="ind"><span class="ind-icon">💄</span><span class="ind-name">コスメ</span></div>
+      <div class="ind"><span class="ind-icon">🍽</span><span class="ind-name">飲食</span></div>
+      <div class="ind"><span class="ind-icon">👗</span><span class="ind-name">アパレル</span></div>
+      <div class="ind"><span class="ind-icon">🏠</span><span class="ind-name">不動産</span></div>
+      <div class="ind"><span class="ind-icon">🛒</span><span class="ind-name">EC</span></div>
+      <div class="ind"><span class="ind-icon">📱</span><span class="ind-name">ガジェット</span></div>
+      <div class="ind"><span class="ind-icon">💎</span><span class="ind-name">ジュエリー</span></div>
+      <div class="ind"><span class="ind-icon">✈️</span><span class="ind-name">旅行・宿泊</span></div>
+      <div class="ind"><span class="ind-icon">＋</span><span class="ind-name">その他</span></div>
     </div>
   </div>
 </section>
@@ -398,7 +374,7 @@ img{max-width:100%;display:block}
     <div class="flow-steps">
       <div class="flow-step reveal">
         <div class="flow-icon">📋</div>
-        <div><div class="flow-n">STEP 1</div><div class="flow-t">フォームで無料サンプル申込み</div><div class="flow-d">業種・商品ジャンルを入力するだけ。画像か動画、お好きな方をお選びください。</div></div>
+        <div><div class="flow-n">STEP 1</div><div class="flow-t">フォームで無料サンプル申込み</div><div class="flow-d">業種・商品ジャンルを入力するだけ。まずはクオリティをご確認ください。</div></div>
       </div>
       <div class="flow-step reveal">
         <div class="flow-icon">📤</div>
@@ -406,7 +382,7 @@ img{max-width:100%;display:block}
       </div>
       <div class="flow-step reveal">
         <div class="flow-icon">🎬</div>
-        <div><div class="flow-n">STEP 3</div><div class="flow-t">制作〜納品（〜5営業日）</div><div class="flow-d">広告レベルの動画・画像を制作し納品。即日、広告・商品ページ・SNSでお使いいただけます。</div></div>
+        <div><div class="flow-n">STEP 3</div><div class="flow-t">制作〜納品（〜5営業日）</div><div class="flow-d">最新AIツールで動画を制作し納品。即日SNS投稿が可能です。</div></div>
       </div>
     </div>
   </div>
@@ -420,41 +396,38 @@ img{max-width:100%;display:block}
     <div class="plans">
       <div class="plan reveal">
         <div class="plan-top">
-          <div class="plan-name">ライトパック</div>
-          <div class="plan-price">¥98,000</div>
+          <div class="plan-name">PR動画</div>
+          <div class="plan-price"><span class="was">¥49,800</span>¥39,800</div>
         </div>
-        <div class="plan-hook">最先端のAI技術で、あなたの商品を"広告レベル"の武器に。</div>
-        <div class="plan-desc">商品動画2本／商品画像リニューアル3枚／横・縦選択可／修正2回</div>
+        <div class="plan-disc"><span class="off">¥10,000 OFF</span><span class="off-sub">先着4社限定価格・20%OFF</span></div>
+        <div class="plan-desc">10〜15秒×1本／横・縦選択可／修正1回</div>
       </div>
       <div class="plan feat reveal">
         <div class="plan-badge">人気No.1</div>
         <div class="plan-top">
-          <div class="plan-name">スタンダードパック</div>
-          <div class="plan-price">¥148,000</div>
+          <div class="plan-name">UGC広告パック</div>
+          <div class="plan-price">¥98,000<span class="tl">〜</span></div>
         </div>
-        <div class="plan-hook">複数パターンで検証し、"勝ちクリエイティブ"を見つけ出す。</div>
-        <div class="plan-desc">商品動画3本／商品画像リニューアル5枚／A/Bテスト対応／修正3回</div>
+        <div class="plan-desc">10〜30秒×2本／A/Bテスト最適／修正2回</div>
       </div>
       <div class="plan reveal">
         <div class="plan-top">
-          <div class="plan-name">クリエイティブ自走化プログラム</div>
-          <div class="plan-price">¥298,000<span class="tl">〜</span></div>
+          <div class="plan-name">CM・ブランド動画</div>
+          <div class="plan-price">¥128,000<span class="tl">〜</span></div>
         </div>
-        <div class="plan-hook">外注に頼らず、自社でAI動画・AIチラシを作れる会社になる。</div>
-        <div class="plan-desc">90分伴走コンサル×計4回（2ヶ月）／AIツールの使い方を体得</div>
+        <div class="plan-desc">CM品質の本格映像／修正2回</div>
       </div>
     </div>
-    <p class="plan-note reveal">SNS運用代行・LP制作・チラシデザインなど、他にもご相談があればお気軽にどうぞ。</p>
 
     <div class="offer reveal">
       <div class="offer-flag">🎁 今だけ・先着4名様限定</div>
-      <div class="offer-title"><span class="ac">商品画像リニューアル</span>か<span class="ac">動画</span>、<br>どちらか<span class="ac">無料プレゼント</span></div>
+      <div class="offer-title">特別価格 <span class="big ac">¥39,800</span><span class="ac">〜</span><span class="offer-plus">＋ 今なら</span><span class="ac">業種別サンプル動画</span>を<br><span class="ac">無料プレゼント</span></div>
       <p class="offer-sub">クオリティを見てから検討できるので安心。</p>
       <div class="guarantee">
         <span>完全無料・課金なし</span>
         <span>営業は一切なし</span>
       </div>
-      <a class="btn btn-cream btn-block" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=v4-offer">今すぐ無料サンプルを受け取る<span class="ar">→</span></a>
+      <a class="btn btn-cream btn-block" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=offer">今すぐ無料サンプルを受け取る<span class="ar">→</span></a>
       <div class="offer-note">先着4名様限定・定員に達し次第終了。お早めにどうぞ。</div>
     </div>
   </div>
@@ -469,10 +442,10 @@ img{max-width:100%;display:block}
       <div class="profile-photo"><img src="profile.png" alt="すすむ" onerror="this.parentElement.style.display='none'"></div>
       <div>
         <div class="profile-name">すすむ</div>
-        <div class="profile-role">AIクリエイター ／ SNSコーチ</div>
+        <div class="profile-role">AI動画クリエイター ／ SNSコーチ</div>
       </div>
     </div>
-    <p class="profile-bio reveal">累計40社以上・動画制作1,000本超の実績を持つAIクリエイティブのプロ。ショート動画累計1億再生を自ら達成し、そのノウハウをBtoB向けのAI動画・画像制作に転用。撮影不要・最短5日納品を実現しています。</p>
+    <p class="profile-bio reveal">累計40社以上・動画制作1,000本超の実績を持つAI動画のプロ。ショート動画累計1億再生を自ら達成し、そのノウハウをBtoB向けAI動画制作に転用。撮影不要・最短5日納品を実現しています。</p>
     <ul class="profile-stats reveal">
       <li><b>40社+</b>の企業を支援</li>
       <li>動画制作<b>1,000本+</b>のノウハウと実績</li>
@@ -490,22 +463,21 @@ img{max-width:100%;display:block}
     <h2 class="sec-title reveal">よくあるご質問</h2>
     <div class="faq reveal">
       <div class="faq-item"><div class="faq-q">どんな素材があれば作れますか？</div><p class="faq-a">商品・サービスの画像やロゴ、訴求ポイントのテキストがあれば制作できます。撮影は一切不要です。素材が少ない場合もご相談ください。</p></div>
-      <div class="faq-item"><div class="faq-q">動画と商品画像、どちらか一方だけ頼めますか？</div><p class="faq-a">はい。動画だけ、画像リニューアルだけのご依頼も可能です。無料サンプルもどちらか一方からお選びいただけます。</p></div>
-      <div class="faq-item"><div class="faq-q">飲食・コスメ以外の業界でも対応できますか？</div><p class="faq-a">はい。アパレル・食品・不動産・EC・ガジェット・旅行など幅広い業種に対応しています。まずは無料サンプルでご確認ください。</p></div>
-      <div class="faq-item"><div class="faq-q">修正には対応してもらえますか？</div><p class="faq-a">ライトパックは2回、スタンダードパックは3回まで修正に対応します。イメージに合うよう仕上げます。</p></div>
+      <div class="faq-item"><div class="faq-q">飲食・IT以外の業界でも対応できますか？</div><p class="faq-a">はい。アパレル・コスメ・不動産・EC・ガジェット・旅行など幅広い業種に対応しています。まずは無料サンプルでご確認ください。</p></div>
+      <div class="faq-item"><div class="faq-q">修正には対応してもらえますか？</div><p class="faq-a">PR動画は1回、UGC広告パック・CM動画は2回まで修正に対応します。イメージに合うよう仕上げます。</p></div>
       <div class="faq-item"><div class="faq-q">納品までどのくらいかかりますか？</div><p class="faq-a">最短5営業日で納品します。素材のご共有が早いほど、スピーディーに対応できます。</p></div>
     </div>
   </div>
 </section>
 
-<!-- FINAL -->
+<!-- 08 FINAL -->
 <section class="final">
   <div class="wrap">
     <div class="offer reveal" style="margin-top:0">
       <div class="offer-flag">🎁 今だけ・先着4名様限定</div>
-      <div class="offer-title">まずは、<span class="ac">無料サンプル</span>で。</div>
-      <p class="offer-sub">画像でも、動画でも。無理な営業は一切ありません。</p>
-      <a class="btn btn-cream btn-block" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=v4-final">今すぐ無料サンプルを受け取る<span class="ar">→</span></a>
+      <div class="offer-title">まずは、<span class="ac">無料サンプル</span>で。<span class="offer-plus">特別価格 <span class="big ac">¥39,800</span><span class="ac">〜</span></span></div>
+      <p class="offer-sub">無理な営業は一切ありません。</p>
+      <a class="btn btn-cream btn-block" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=final">今すぐ無料サンプルを受け取る<span class="ar">→</span></a>
       <div class="offer-note">完全無料・定員に達し次第終了。お早めにどうぞ。</div>
     </div>
   </div>
@@ -515,7 +487,7 @@ img{max-width:100%;display:block}
 
 <!-- STICKY CTA -->
 <div class="sticky" id="stk">
-  <a href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=v4-sticky">無料サンプルを受け取る<span>画像 or 動画・先着4名・フォーム30秒</span></a>
+  <a href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=sticky">無料サンプルを受け取る<span>先着4名・完全無料・フォーム30秒</span></a>
 </div>
 
 <script>
@@ -523,38 +495,6 @@ img{max-width:100%;display:block}
 (function(){
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-})();
-// BA slider
-(function(){
-  document.querySelectorAll('[data-bas]').forEach(function(el){
-    var dragging=false;
-    function setPos(clientX){
-      var r=el.getBoundingClientRect();
-      var pct=(clientX-r.left)/r.width*100;
-      pct=Math.max(4,Math.min(96,pct));
-      el.style.setProperty('--pos',pct+'%');
-    }
-    el.addEventListener('pointerdown',function(e){dragging=true;el.setPointerCapture(e.pointerId);setPos(e.clientX)});
-    el.addEventListener('pointermove',function(e){if(dragging)setPos(e.clientX)});
-    el.addEventListener('pointerup',function(){dragging=false});
-    el.addEventListener('pointercancel',function(){dragging=false});
-    // teaser animation on first reveal
-    var teased=false;
-    new IntersectionObserver(function(es,io2){
-      if(!es[0].isIntersecting||teased)return;
-      teased=true;io2.disconnect();
-      var start=null;
-      function anim(ts){
-        if(!start)start=ts;
-        var t=(ts-start)/1200;
-        if(t>=1){el.style.setProperty('--pos','50%');return}
-        var p=50+Math.sin(t*Math.PI*2)*14*(1-t);
-        el.style.setProperty('--pos',p+'%');
-        requestAnimationFrame(anim);
-      }
-      requestAnimationFrame(anim);
-    },{threshold:.4}).observe(el);
-  });
 })();
 // video: PC=hover / mobile=画面内自動再生
 (function(){
