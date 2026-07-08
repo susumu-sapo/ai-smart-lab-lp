@@ -141,7 +141,9 @@ img{max-width:100%;display:block}
 .cost-big.old s{text-decoration:line-through;text-decoration-color:var(--vermil)}
 .cost-big.new{color:var(--vermil)}
 .cost-arrow{font-family:var(--num);font-weight:700;font-size:22px;color:var(--gold);flex-shrink:0}
-.cost-badge{margin-top:16px;display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--vermil);padding:8px 18px;border-radius:100px;letter-spacing:.02em}
+.cost-badge{margin-top:18px;display:inline-flex;align-items:baseline;gap:8px;color:#fff;background:linear-gradient(135deg,var(--vermil),#a83c22);padding:12px 24px;border-radius:100px;letter-spacing:.02em;box-shadow:0 10px 26px -10px rgba(191,75,46,.55)}
+.cost-badge .pct{font-family:var(--num);font-weight:700;font-size:clamp(20px,5.6vw,26px);line-height:1}
+.cost-badge .sub{font-size:12px;font-weight:500;opacity:.92}
 
 /* plans */
 .plans{display:flex;flex-direction:column;gap:12px;margin-top:24px}
@@ -333,6 +335,11 @@ img{max-width:100%;display:block}
     </div>
 
     <div class="ba-item reveal">
+      <div class="ba-itemcap"><span class="ba-genre">コスメ</span><span class="ba-use">商品説明ページ・LP全体構成</span></div>
+      <div class="ba-static"><img src="ba-cosme-fullpage.jpg" alt="コスメ商品説明ページ Before/After"></div>
+    </div>
+
+    <div class="ba-item reveal">
       <div class="ba-itemcap"><span class="ba-genre">食品・サプリ</span><span class="ba-use">ECメインビジュアル・広告クリエイティブ</span></div>
       <div class="bas" style="aspect-ratio:916/838" data-bas>
         <img src="ba-food-coffee-a.jpg" alt="食品広告 After">
@@ -419,7 +426,7 @@ img{max-width:100%;display:block}
         <div class="cost-arrow">→</div>
         <div class="cost-col"><div class="cost-cap g">AIスマートLabなら</div><div class="cost-big new">¥48,000〜</div></div>
       </div>
-      <div class="cost-badge"><span class="nb">約92%OFF</span> — <span class="nb">動画+画像一式でこの価格</span></div>
+      <div class="cost-badge"><span class="pct nb">約92%OFF</span><span class="sub nb">動画+画像一式でこの価格</span></div>
     </div>
   </div>
 </section>
