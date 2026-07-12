@@ -85,9 +85,11 @@ img{max-width:100%;display:block}
 .hb-in{display:flex;align-items:center;gap:12px}
 .hb-col{flex:1;min-width:0;text-align:center}
 .hb-fr{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:893/961;box-shadow:0 18px 38px -24px rgba(40,32,20,.5)}
-.hb-fr img{width:100%;height:100%;object-fit:cover;display:block}
-.hb-fr .hb-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:hbswap 10s ease-in-out infinite;pointer-events:none}
-@keyframes hbswap{0%,44%{opacity:0}52%,94%{opacity:1}100%{opacity:0}}
+.hb-fr img,.hb-fr video{width:100%;height:100%;object-fit:cover;display:block}
+.hb-in+.hb-in{margin-top:18px}
+.hb-in.vidrow .hb-col.photo{flex:0 0 32%}
+.hb-in.vidrow .hb-col.photo .hb-fr{aspect-ratio:1/1}
+.hb-in.vidrow .hb-col.after .hb-fr{aspect-ratio:16/9}
 .hb-medialbl{position:absolute;top:8px;right:8px;z-index:2;font-size:9.5px;font-weight:700;letter-spacing:.06em;color:#fff;background:rgba(28,25,22,.72);padding:4px 10px;border-radius:100px;backdrop-filter:blur(4px)}
 .hb-tag{margin-top:9px;font-size:11.5px;letter-spacing:.04em;color:var(--ink2);line-height:1.4}
 .hb-col.after .hb-tag{color:var(--gold);font-weight:700}
@@ -315,7 +317,12 @@ img{max-width:100%;display:block}
     <div class="hb-in reveal">
       <div class="hb-col"><div class="hb-fr"><img src="ba-cosme-poster-b.jpg" alt="あなたが送る商品写真"></div><div class="hb-tag">あなたが送る<br>商品写真</div></div>
       <div class="hb-arrow">→</div>
-      <div class="hb-col after"><div class="hb-fr"><img src="ba-cosme-poster-a.jpg" alt="AIが制作した広告クリエイティブ"><video class="hb-vid" src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/cosmetics.mov" autoplay loop muted playsinline webkit-playsinline disablepictureinpicture></video><span class="hb-medialbl">画像も動画も</span></div><div class="hb-tag">AIが制作した<br>広告画像＆動画</div></div>
+      <div class="hb-col after"><div class="hb-fr"><img src="ba-cosme-poster-a.jpg" alt="AIが制作した広告画像"></div><div class="hb-tag">AIが制作した<br>広告画像</div></div>
+    </div>
+    <div class="hb-in vidrow reveal">
+      <div class="hb-col photo"><div class="hb-fr"><img src="headphone-before.jpg" alt="あなたが撮った商品写真"></div><div class="hb-tag">あなたが撮った<br>商品写真</div></div>
+      <div class="hb-arrow">→</div>
+      <div class="hb-col after"><div class="hb-fr"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/accessory.mp4" loop muted playsinline webkit-playsinline disablepictureinpicture data-v></video><span class="hb-medialbl">VIDEO</span></div><div class="hb-tag">AIが制作した<br>広告動画</div></div>
     </div>
     <p class="hb-cap reveal"><span class="nb">商品写真を送るだけ。</span><span class="nb">画像も動画も、</span><span class="nb">そのまま使える広告に。</span></p>
   </div>
@@ -327,9 +334,10 @@ img{max-width:100%;display:block}
     <div class="sec-head reveal"><span class="sec-no">00</span><span class="sec-label">Pain</span></div>
     <h2 class="sec-title reveal">こんなお悩みは<br>ありませんか？</h2>
     <div class="reasons">
-      <div class="reason reveal"><div class="reason-n">1</div><div><div class="reason-t">商品ページや広告に、動画が全然ない</div><div class="reason-d">競合はもう動画で見せている時代。静止画だけだと、比較された瞬間に見劣りしてしまいます。</div></div></div>
-      <div class="reason reveal"><div class="reason-n">2</div><div><div class="reason-t">商品写真が、正直「素人っぽい」と感じている</div><div class="reason-d">スマホでサッと撮った写真のまま。プロに頼むほどではないけど、なんとかしたい…という悩み。</div></div></div>
-      <div class="reason reveal"><div class="reason-n">3</div><div><div class="reason-t">撮影もデザインも、時間もコストもかけられない</div><div class="reason-d"><span class="nb">撮影・カメラマン・スタジオ・デザイナー</span>…従来の方法では、<span class="nb">全部揃えるのは現実的じゃない。</span></div></div></div>
+      <div class="reason reveal"><div class="reason-n">1</div><div><div class="reason-t">何年も前に撮った写真のまま、サイトを運用し続けている</div><div class="reason-d">商品は良いのに、ページが古いまま。「そろそろリニューアルしたい」と思いながら、ずっと後回しになっている。</div></div></div>
+      <div class="reason reveal"><div class="reason-n">2</div><div><div class="reason-t">商品ページや広告に、動画が全然ない</div><div class="reason-d">競合はもう動画で見せている時代。静止画だけだと、比較された瞬間に見劣りしてしまいます。</div></div></div>
+      <div class="reason reveal"><div class="reason-n">3</div><div><div class="reason-t">商品写真が、正直「素人っぽい」と感じている</div><div class="reason-d">スマホでサッと撮った写真のまま。プロに頼むほどではないけど、なんとかしたい…という悩み。</div></div></div>
+      <div class="reason reveal"><div class="reason-n">4</div><div><div class="reason-t">撮影もデザインも、時間もコストもかけられない</div><div class="reason-d"><span class="nb">撮影・カメラマン・スタジオ・デザイナー</span>…従来の方法では、<span class="nb">全部揃えるのは現実的じゃない。</span></div></div></div>
     </div>
     <p class="pain-close reveal">その全部を、<span class="ac">撮影ゼロ</span>で解決します。</p>
   </div>
