@@ -141,7 +141,7 @@ img{max-width:100%;display:block}
 .cost-big.old s{text-decoration:line-through;text-decoration-color:var(--vermil)}
 .cost-big.new{color:var(--vermil)}
 .cost-arrow{font-family:var(--num);font-weight:700;font-size:22px;color:var(--gold);flex-shrink:0}
-.cost-badge{margin-top:18px;display:inline-flex;align-items:baseline;gap:8px;color:#fff;background:linear-gradient(135deg,var(--vermil),#a83c22);padding:12px 24px;border-radius:100px;letter-spacing:.02em;box-shadow:0 10px 26px -10px rgba(191,75,46,.55)}
+.cost-badge{margin-top:18px;display:inline-flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:4px 10px;max-width:100%;color:#fff;background:linear-gradient(135deg,var(--vermil),#a83c22);padding:12px 22px;border-radius:22px;letter-spacing:.02em;box-shadow:0 10px 26px -10px rgba(191,75,46,.55)}
 .cost-badge .pct{font-family:var(--num);font-weight:700;font-size:clamp(20px,5.6vw,26px);line-height:1}
 .cost-badge .sub{font-size:12px;font-weight:500;opacity:.92}
 
@@ -154,9 +154,25 @@ img{max-width:100%;display:block}
 .plan-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:#fff;background:var(--gold);padding:3px 10px;border-radius:100px;margin-bottom:10px}
 .plan-hook{font-family:var(--serif);font-weight:600;font-size:14.5px;line-height:1.6;margin-top:10px;color:var(--ink)}
 .plan-desc{font-size:11.5px;color:var(--ink3);line-height:1.75;margin-top:8px}
-.plan-price{font-family:var(--num);font-weight:700;font-size:21px;letter-spacing:-.01em;white-space:nowrap;color:var(--ink)}
+.plan-price{font-family:var(--num);font-weight:700;font-size:21px;letter-spacing:-.01em;white-space:nowrap;color:var(--ink);text-align:right}
 .plan-price .tl{font-size:15px;font-weight:600;margin-left:1px}
+.plan-price .was{display:block;font-size:12px;font-weight:600;color:var(--ink3);text-decoration:line-through;text-decoration-color:var(--vermil);line-height:1.2}
+.plan-badge.lim{background:var(--vermil)}
 .plan-note{font-size:11px;color:var(--ink3);margin-top:14px;text-align:center}
+
+/* single-item price menu */
+.pmenu{margin-top:14px;border:1px solid var(--line);border-radius:8px;background:var(--bg2);padding:18px 18px 16px}
+.pmenu-head{font-family:var(--serif);font-weight:600;font-size:14px;color:var(--ink);margin-bottom:12px}
+.pmenu-sub{display:block;font-family:var(--sans);font-size:10.5px;font-weight:400;color:var(--ink3);letter-spacing:.02em;margin-top:3px}
+.pmtable{width:100%;border-collapse:collapse}
+.pmtable th,.pmtable td{padding:8px 4px;border-bottom:1px solid var(--line);text-align:center;font-size:12px}
+.pmtable thead th{font-size:10.5px;font-weight:500;color:var(--ink3)}
+.pmtable td:first-child,.pmtable th:first-child{text-align:left;color:var(--ink2)}
+.pmtable .p{font-family:var(--num);font-weight:700;color:var(--ink);white-space:nowrap}
+.pmenu-img{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:14px}
+.pmenu-img .lbl{font-size:12px;color:var(--ink2);line-height:1.5}
+.pmenu-img .lbl small{display:block;font-size:10px;color:var(--ink3)}
+.pmenu-img .p{font-family:var(--num);font-weight:700;font-size:17px;color:var(--ink);white-space:nowrap}
 
 /* free sample offer */
 .offer{margin-top:28px;padding:30px 24px;border:1px solid var(--ink);border-radius:10px;background:var(--ink);color:var(--bg);text-align:center}
@@ -422,11 +438,11 @@ img{max-width:100%;display:block}
     </div>
     <div class="cost reveal">
       <div class="cost-row">
-        <div class="cost-col"><div class="cost-cap">制作会社なら</div><div class="cost-big old"><s>60万円〜</s></div></div>
+        <div class="cost-col"><div class="cost-cap">制作会社の動画なら</div><div class="cost-big old"><s>60万円〜</s></div></div>
         <div class="cost-arrow">→</div>
-        <div class="cost-col"><div class="cost-cap g">AIスマートLabなら</div><div class="cost-big new">¥48,000〜</div></div>
+        <div class="cost-col"><div class="cost-cap g">AIスマートLabなら</div><div class="cost-big new">¥50,000〜</div></div>
       </div>
-      <div class="cost-badge"><span class="pct nb">約92%OFF</span><span class="sub nb">動画+画像一式でこの価格</span></div>
+      <div class="cost-badge"><span class="pct nb">約92%OFF</span><span class="sub">同等クオリティの動画をこの価格で</span></div>
     </div>
   </div>
 </section>
@@ -471,32 +487,25 @@ img{max-width:100%;display:block}
 <section class="sec">
   <div class="wrap">
     <div class="sec-head reveal"><span class="sec-no">06</span><span class="sec-label">Price</span></div>
-    <h2 class="sec-title reveal">目的に合わせて、<br><span class="ac">4プラン</span>から</h2>
+    <h2 class="sec-title reveal">目的に合わせて、<br><span class="ac">3プラン</span>から</h2>
     <div class="plans">
       <div class="plan reveal">
+        <div class="plan-badge lim">初回限定枠</div>
         <div class="plan-top">
-          <div class="plan-name">ライトパック</div>
-          <div class="plan-price">¥48,000</div>
+          <div class="plan-name">お試しプラン</div>
+          <div class="plan-price"><span class="was">通常¥50,000</span>¥30,000</div>
         </div>
-        <div class="plan-hook">まずは1本から。<br><span class="nb">"広告レベル"</span>のクオリティを体感。</div>
-        <div class="plan-desc"><span class="nb">商品動画1本</span>／<span class="nb">商品画像リニューアル3枚</span>／<span class="nb">横・縦選択可</span>／<span class="nb">修正2回</span></div>
+        <div class="plan-hook">まずは品質を確かめたい方へ。<br>動画か画像、<span class="nb">どちらか1つから。</span></div>
+        <div class="plan-desc"><span class="nb">商品動画1本（〜15秒）</span> or <span class="nb">商品画像リニューアル5枚まで</span>／<span class="nb">修正2回</span></div>
       </div>
       <div class="plan feat reveal">
         <div class="plan-badge">人気No.1</div>
         <div class="plan-top">
-          <div class="plan-name">スタンダードパック</div>
+          <div class="plan-name">商品ページ<span class="nb">丸ごと＋動画</span></div>
           <div class="plan-price">¥98,000</div>
         </div>
-        <div class="plan-hook">最先端のAI技術で、<br>あなたの商品を<span class="nb">"広告レベル"</span>の武器に。</div>
-        <div class="plan-desc"><span class="nb">商品動画2本</span>／<span class="nb">商品画像リニューアル5枚</span>／<span class="nb">A/Bテスト対応</span>／<span class="nb">修正3回</span></div>
-      </div>
-      <div class="plan reveal">
-        <div class="plan-top">
-          <div class="plan-name">プレミアムパック</div>
-          <div class="plan-price">¥148,000</div>
-        </div>
-        <div class="plan-hook">動画・画像・バナーまで一新し、<br><span class="nb">"サイトの顔"</span>を強化する。</div>
-        <div class="plan-desc"><span class="nb">商品動画3本</span>／<span class="nb">商品画像リニューアル6枚</span>／<span class="nb">バナーでも可能</span>／<span class="nb">修正5回</span></div>
+        <div class="plan-hook">商品ページを丸ごと一新し、<br><span class="nb">"サイトの顔"</span>を強くする。</div>
+        <div class="plan-desc"><span class="nb">商品画像リニューアル10枚まで</span>＋<span class="nb">商品動画1本</span>／<span class="nb">構成提案込み</span>／<span class="nb">修正3回</span></div>
       </div>
       <div class="plan reveal">
         <div class="plan-top">
@@ -507,12 +516,28 @@ img{max-width:100%;display:block}
         <div class="plan-desc"><span class="nb">90分伴走コンサル×計4回（2ヶ月）</span>／<span class="nb">AIツールの使い方を体得</span></div>
       </div>
     </div>
+
+    <div class="pmenu reveal">
+      <div class="pmenu-head">動画メニュー<span class="pmenu-sub">UGC広告 / ブランド訴求 / CM風</span></div>
+      <table class="pmtable">
+        <thead><tr><th>尺</th><th>1本</th><th>2本セット</th></tr></thead>
+        <tbody>
+          <tr><td>10〜15秒</td><td class="p">¥50,000</td><td class="p">¥80,000</td></tr>
+          <tr><td>〜30秒</td><td class="p">¥80,000</td><td class="p">¥140,000</td></tr>
+        </tbody>
+      </table>
+      <div class="pmenu-img">
+        <span class="lbl">商品ページ丸ごと画像リニューアル<small>上限10枚まで（11枚以上は要相談）</small></span>
+        <span class="p">¥60,000</span>
+      </div>
+    </div>
+
     <p class="plan-note reveal"><span class="nb">SNS運用代行</span>・<span class="nb">LP制作</span>・<span class="nb">チラシデザイン</span>など、<span class="nb">他にもご相談があれば</span>お気軽にどうぞ。</p>
 
     <div class="offer reveal">
       <div class="offer-flag">🎁 今だけ・先着4名様限定</div>
       <div class="offer-title"><span class="nb"><span class="ac">商品画像リニューアル</span>か<span class="ac">動画</span></span>、<br><span class="nb">どちらか<span class="ac">無料プレゼント</span></span></div>
-      <p class="offer-sub">通常<span class="ac nb">¥48,000相当</span>の制作品質を、<br><span class="nb">先着4社限定で無料</span>に。クオリティを確認してから検討できます。</p>
+      <p class="offer-sub">通常<span class="ac nb">¥50,000相当</span>の制作品質を、<br><span class="nb">先着4社限定で無料</span>に。クオリティを確認してから検討できます。</p>
       <div class="guarantee">
         <span>完全無料・課金なし</span>
         <span>営業は一切なし</span>
@@ -555,7 +580,7 @@ img{max-width:100%;display:block}
       <div class="faq-item"><div class="faq-q">どんな素材があれば作れますか？</div><p class="faq-a">商品・サービスの画像やロゴ、訴求ポイントのテキストがあれば制作できます。撮影は一切不要です。素材が少ない場合もご相談ください。</p></div>
       <div class="faq-item"><div class="faq-q">動画と商品画像、どちらか一方だけ頼めますか？</div><p class="faq-a">はい。動画だけ、画像リニューアルだけのご依頼も可能です。無料サンプルもどちらか一方からお選びいただけます。</p></div>
       <div class="faq-item"><div class="faq-q">飲食・コスメ以外の業界でも対応できますか？</div><p class="faq-a">はい。アパレル・食品・不動産・EC・ガジェット・旅行など幅広い業種に対応しています。まずは無料サンプルでご確認ください。</p></div>
-      <div class="faq-item"><div class="faq-q">修正には対応してもらえますか？</div><p class="faq-a">ライトパックは2回、スタンダードパックは3回、プレミアムパックは5回まで修正に対応します。イメージに合うよう仕上げます。</p></div>
+      <div class="faq-item"><div class="faq-q">修正には対応してもらえますか？</div><p class="faq-a">お試しプランは2回、商品ページ丸ごと＋動画セットは3回まで修正に対応します。イメージに合うよう仕上げます。</p></div>
       <div class="faq-item"><div class="faq-q">納品までどのくらいかかりますか？</div><p class="faq-a">最短5営業日で納品します。素材のご共有が早いほど、スピーディーに対応できます。</p></div>
     </div>
   </div>
@@ -689,5 +714,6 @@ document.querySelectorAll('.faq-item').forEach(function(item){
   if(fin){new IntersectionObserver(function(e){atEnd=e[0].isIntersecting;up()},{threshold:.2}).observe(fin)}
 })();
 </script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
