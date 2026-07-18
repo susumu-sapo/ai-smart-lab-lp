@@ -193,7 +193,7 @@ img{max-width:100%;display:block}
 .offer-note{font-size:11px;color:rgba(244,241,234,.6);margin-top:14px}
 
 /* testimonials */
-.voices{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px;align-items:start}
 .voice{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:20px 22px 18px}
 .voice-stars{color:var(--gold);font-size:13px;letter-spacing:3px;margin-bottom:10px}
 .voice-q{font-family:var(--serif);font-weight:500;font-size:15px;line-height:1.9;margin-bottom:12px}
@@ -268,6 +268,9 @@ img{max-width:100%;display:block}
 
 @media(min-width:601px){.sticky{display:none}}
 @media(max-width:600px){
+.voices{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:86%;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:8px;scrollbar-width:none}
+.voices::-webkit-scrollbar{display:none}
+.voice{scroll-snap-align:center}
   .hero-cta-wrap{align-items:stretch}
   .hero-cta-wrap .btn{width:100%}
   body{padding-bottom:78px}
@@ -321,9 +324,9 @@ img{max-width:100%;display:block}
       <div class="hb-col after"><div class="hb-fr"><img src="ba-cosme-poster-a.jpg" alt="AIが制作した広告画像"></div><div class="hb-tag">AIが制作した<br>広告画像</div></div>
     </div>
     <div class="hb-in vidrow reveal">
-      <div class="hb-col photo"><div class="hb-fr"><img src="headphone-before.jpg" alt="あなたが撮った商品写真"></div><div class="hb-tag">あなたが撮った<br>商品写真</div></div>
+      <div class="hb-col photo"><div class="hb-fr"><img src="ba-cosme-poster-b.jpg" alt="あなたが撮った商品写真"></div><div class="hb-tag">あなたが撮った<br>商品写真</div></div>
       <div class="hb-arrow">→</div>
-      <div class="hb-col after"><div class="hb-fr"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/accessory.mp4" loop muted playsinline webkit-playsinline disablepictureinpicture data-v></video><span class="hb-medialbl">VIDEO</span></div><div class="hb-tag">AIが制作した<br>広告動画</div></div>
+      <div class="hb-col after"><div class="hb-fr"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/cosme-ad.mp4" loop muted playsinline webkit-playsinline disablepictureinpicture data-v></video><span class="hb-medialbl">VIDEO</span></div><div class="hb-tag">AIが制作した<br>広告動画</div></div>
     </div>
     <p class="hb-cap reveal"><span class="nb">商品写真を送るだけ。</span><span class="nb">画像も動画も、</span><span class="nb">そのまま使える広告に。</span></p>
   </div>
@@ -427,7 +430,7 @@ img{max-width:100%;display:block}
       <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/ugc-karaage.mp4" loop muted playsinline data-v></video><span class="vcap">食品｜<b>唐揚げレビュー</b></span></div>
       <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/ugc-fan.mp4" loop muted playsinline data-v></video><span class="vcap">季節家電｜<b>扇風機レビュー</b></span></div>
       <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/ugc-lip.mp4" loop muted playsinline data-v></video><span class="vcap">コスメ｜<b>リップレビュー</b></span></div>
-      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/short-1.mp4" loop muted playsinline data-v></video><span class="vcap">ショート｜<b>TikTok広告</b></span></div>
+      <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/short-ad.mp4" loop muted playsinline data-v></video><span class="vcap"><b>広告動画</b></span></div>
       <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/short-2.mp4" loop muted playsinline data-v></video><span class="vcap">ショート｜<b>Instagram Reels</b></span></div>
       <div class="vframe"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/short-3.mp4" loop muted playsinline data-v></video><span class="vcap">ショート｜<b>YouTube Shorts</b></span></div>
     </div>
@@ -438,31 +441,10 @@ img{max-width:100%;display:block}
   </div>
 </section>
 
-<!-- 03 WHY -->
-<section class="sec">
-  <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-no">03</span><span class="sec-label">Why</span></div>
-    <h2 class="sec-title reveal">なぜ、<span class="ac">撮影ゼロ</span>で<br>作れるのか</h2>
-    <div class="reasons">
-      <div class="reason reveal"><div class="reason-n">1</div><div><div class="reason-t">商品画像から、AIが映像とビジュアルを生成</div><div class="reason-d">最新の生成AIで、商品画像やロゴ・訴求ポイントから広告レベルの動画・画像を制作。素材は写真1枚でOKです。</div></div></div>
-      <div class="reason reveal"><div class="reason-n">2</div><div><div class="reason-t">撮影・スタジオ・キャストの工程をカット</div><div class="reason-d">従来の制作で最もコストと時間がかかる工程を丸ごと省略。だから速くて、安い。</div></div></div>
-      <div class="reason reveal"><div class="reason-n">3</div><div><div class="reason-t">最短5日・制作会社の数分の一のコスト</div><div class="reason-d">企画から納品まで最短5営業日。動画と画像を一式で揃えても、従来の1本分以下の費用です。</div></div></div>
-    </div>
-    <div class="cost reveal">
-      <div class="cost-row">
-        <div class="cost-col"><div class="cost-cap">制作会社の動画なら</div><div class="cost-big old"><s>60万円〜</s></div></div>
-        <div class="cost-arrow">→</div>
-        <div class="cost-col"><div class="cost-cap g">AIスマートLabなら</div><div class="cost-big new">¥50,000〜</div></div>
-      </div>
-      <div class="cost-badge"><span class="pct nb">約92%OFF</span><span class="sub">同等クオリティの動画をこの価格で</span></div>
-    </div>
-  </div>
-</section>
-
 <!-- 04 VOICE -->
 <section class="sec">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-no">04</span><span class="sec-label">Voice</span></div>
+    <div class="sec-head reveal"><span class="sec-no">03</span><span class="sec-label">Voice</span></div>
     <h2 class="sec-title reveal">お客様の声</h2>
     <div class="voices">
       <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「TikTokを活用してから、<b>若い方からの問い合わせが増え</b>、採用もしっかり取れています！専門学校でプチブームになっていると聞いて嬉しかったですね。」</p><div class="vchart"><div class="vchart-cap">若手採用の問い合わせ（月あたり）</div><div class="vrow"><span class="vrow-tag">導入前</span><span class="vrow-bar"><span class="vrow-fill before" style="--w:4%"></span></span><span class="vrow-val">0<small>件</small></span></div><div class="vrow"><span class="vrow-tag">導入後</span><span class="vrow-bar"><span class="vrow-fill after" style="--w:100%"></span></span><span class="vrow-val g">5<small>件</small></span></div></div><p class="voice-m">— 物流・運送業 ／ 某運送会社 代表</p></div>
@@ -472,34 +454,19 @@ img{max-width:100%;display:block}
   </div>
 </section>
 
-<!-- 05 FLOW -->
-<section class="sec">
-  <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-no">05</span><span class="sec-label">Flow</span></div>
-    <h2 class="sec-title reveal">ご依頼の流れ</h2>
-    <p class="sec-desc reveal" style="font-family:var(--serif);font-weight:600;font-size:17px;color:var(--ink);margin-top:4px">最短<span style="font-family:var(--num);font-weight:700">5</span>営業日で納品</p>
-    <div class="flow-steps">
-      <div class="flow-step reveal">
-        <div class="flow-icon">📋</div>
-        <div><div class="flow-n">STEP 1</div><div class="flow-t">フォームで無料サンプル申込み</div><div class="flow-d">業種・商品ジャンルを入力するだけ。画像か動画、お好きな方をお選びください。</div></div>
-      </div>
-      <div class="flow-step reveal">
-        <div class="flow-icon">📤</div>
-        <div><div class="flow-n">STEP 2</div><div class="flow-t">素材・情報を共有（1〜2日）</div><div class="flow-d">商品・サービスの画像、ロゴ、訴求ポイントをご共有ください。撮影は不要です。</div></div>
-      </div>
-      <div class="flow-step reveal">
-        <div class="flow-icon">🎬</div>
-        <div><div class="flow-n">STEP 3</div><div class="flow-t">制作〜納品（〜5営業日）</div><div class="flow-d">広告レベルの動画・画像を制作し納品。即日、広告・商品ページ・SNSでお使いいただけます。</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- 06 PRICE + OFFER -->
 <section class="sec">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-no">06</span><span class="sec-label">Price</span></div>
+    <div class="sec-head reveal"><span class="sec-no">04</span><span class="sec-label">Price</span></div>
     <h2 class="sec-title reveal">目的に合わせて、<br><span class="ac">3プラン</span>から</h2>
+    <div class="cost reveal">
+      <div class="cost-row">
+        <div class="cost-col"><div class="cost-cap">制作会社の動画なら</div><div class="cost-big old"><s>60万円〜</s></div></div>
+        <div class="cost-arrow">→</div>
+        <div class="cost-col"><div class="cost-cap g">AIスマートLabなら</div><div class="cost-big new">¥50,000〜</div></div>
+      </div>
+      <div class="cost-badge"><span class="pct nb">約92%OFF</span><span class="sub">同等クオリティの動画をこの価格で</span></div>
+    </div>
     <div class="plans">
       <div class="plan reveal">
         <div class="plan-badge lim">初回限定枠</div>
@@ -560,10 +527,33 @@ img{max-width:100%;display:block}
   </div>
 </section>
 
+<!-- 05 FLOW -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-no">05</span><span class="sec-label">Flow</span></div>
+    <h2 class="sec-title reveal">ご依頼の流れ</h2>
+    <p class="sec-desc reveal" style="font-family:var(--serif);font-weight:600;font-size:17px;color:var(--ink);margin-top:4px">最短<span style="font-family:var(--num);font-weight:700">5</span>営業日で納品</p>
+    <div class="flow-steps">
+      <div class="flow-step reveal">
+        <div class="flow-icon">📋</div>
+        <div><div class="flow-n">STEP 1</div><div class="flow-t">フォームで無料サンプル申込み</div><div class="flow-d">業種・商品ジャンルを入力するだけ。画像か動画、お好きな方をお選びください。</div></div>
+      </div>
+      <div class="flow-step reveal">
+        <div class="flow-icon">📤</div>
+        <div><div class="flow-n">STEP 2</div><div class="flow-t">素材・情報を共有（1〜2日）</div><div class="flow-d">商品・サービスの画像、ロゴ、訴求ポイントをご共有ください。撮影は不要です。</div></div>
+      </div>
+      <div class="flow-step reveal">
+        <div class="flow-icon">🎬</div>
+        <div><div class="flow-n">STEP 3</div><div class="flow-t">制作〜納品（〜5営業日）</div><div class="flow-d">広告レベルの動画・画像を制作し納品。即日、広告・商品ページ・SNSでお使いいただけます。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 07 PROFILE -->
 <section class="sec">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-no">07</span><span class="sec-label">Profile</span></div>
+    <div class="sec-head reveal"><span class="sec-no">06</span><span class="sec-label">Profile</span></div>
     <h2 class="sec-title reveal">運営者プロフィール</h2>
     <div class="profile reveal">
       <div class="profile-photo"><img src="profile.png" alt="すすむ" onerror="this.parentElement.style.display='none'"></div>
@@ -586,10 +576,11 @@ img{max-width:100%;display:block}
 <!-- 08 FAQ -->
 <section class="sec">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-no">08</span><span class="sec-label">FAQ</span></div>
+    <div class="sec-head reveal"><span class="sec-no">07</span><span class="sec-label">FAQ</span></div>
     <h2 class="sec-title reveal">よくあるご質問</h2>
     <div class="faq reveal">
       <div class="faq-item"><div class="faq-q">どんな素材があれば作れますか？</div><p class="faq-a">商品・サービスの画像やロゴ、訴求ポイントのテキストがあれば制作できます。撮影は一切不要です。素材が少ない場合もご相談ください。</p></div>
+      <div class="faq-item"><div class="faq-q">なぜ撮影なしで作れるのですか？</div><p class="faq-a">最新の生成AIが、商品画像1枚から広告レベルの映像・ビジュアルを生成するためです。撮影・スタジオ・キャストといった従来最もコストのかかる工程を丸ごと省略できるので、低価格・最短5日納品を実現できます。</p></div>
       <div class="faq-item"><div class="faq-q">動画と商品画像、どちらか一方だけ頼めますか？</div><p class="faq-a">はい。動画だけ、画像リニューアルだけのご依頼も可能です。無料サンプルもどちらか一方からお選びいただけます。</p></div>
       <div class="faq-item"><div class="faq-q">飲食・コスメ以外の業界でも対応できますか？</div><p class="faq-a">はい。アパレル・食品・不動産・EC・ガジェット・旅行など幅広い業種に対応しています。まずは無料サンプルでご確認ください。</p></div>
       <div class="faq-item"><div class="faq-q">修正には対応してもらえますか？</div><p class="faq-a">お試しプランは2回、商品ページ丸ごと＋動画セットは3回まで修正に対応します。イメージに合うよう仕上げます。</p></div>
