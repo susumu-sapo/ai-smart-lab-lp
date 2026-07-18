@@ -230,6 +230,7 @@ img{max-width:100%;display:block}
 .vrow-val.g{color:var(--gold);font-size:16px}
 .vrow-val.loss{color:var(--vermil)}
 .voice.vis .vrow-fill{width:var(--w)}
+.voices-hint{display:none}
 .voice-m{font-size:10px;color:var(--ink3);letter-spacing:.01em;text-align:right;line-height:1.6}
 
 /* profile */
@@ -288,7 +289,8 @@ img{max-width:100%;display:block}
 .hb-outs{width:100%}
 .plan-price{font-size:22px}
 
-.voices{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:86%;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:8px;scrollbar-width:none}
+.voices{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:80%;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:8px;scrollbar-width:none}
+.voices-hint{display:block;text-align:center;font-size:11.5px;font-weight:500;color:var(--ink2);margin-top:8px;letter-spacing:.02em}
 .voices::-webkit-scrollbar{display:none}
 .voice{scroll-snap-align:center}
   .hero-cta-wrap{align-items:stretch}
@@ -469,6 +471,7 @@ img{max-width:100%;display:block}
       <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「存在を知られていなかったお店が、今はTikTok・Instagramからも沢山ご予約をいただいています。<b>始めていなかったらと思うと恐ろしい</b>です(笑)」</p><div class="vchart"><div class="vchart-cap">月商の変化</div><div class="vrow"><span class="vrow-tag">導入前</span><span class="vrow-bar"><span class="vrow-fill loss" style="--w:15%"></span></span><span class="vrow-val loss">赤字</span></div><div class="vrow"><span class="vrow-tag">導入後</span><span class="vrow-bar"><span class="vrow-fill after" style="--w:100%"></span></span><span class="vrow-val g">200<small>万円超</small></span></div></div><p class="voice-m"><span class="nb">— 飲食業／某飲食店 オーナー</span></p></div>
       <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「商品画像を送るだけで、5日で想像以上のクオリティで納品されてびっくり。Instagram広告に使ったら<b>問い合わせとカート遷移が一気に増えました</b>。」</p><div class="vchart"><div class="vchart-cap">EC広告のCVR（購入率・従来比）</div><div class="vrow"><span class="vrow-tag">導入前</span><span class="vrow-bar"><span class="vrow-fill before" style="--w:56%"></span></span><span class="vrow-val">1.0<small>倍</small></span></div><div class="vrow"><span class="vrow-tag">導入後</span><span class="vrow-bar"><span class="vrow-fill after" style="--w:100%"></span></span><span class="vrow-val g">1.8<small>倍</small></span></div></div><p class="voice-m"><span class="nb">— アパレルEC／事業責任者</span></p></div>
     </div>
+    <p class="voices-hint">👉 横にスワイプすると、他の事例もご覧いただけます</p>
   </div>
 </section>
 
@@ -494,7 +497,7 @@ img{max-width:100%;display:block}
         <div class="plan-special"><span class="ps-tag">🎁 今なら先着4社限定</span><span class="ps-price">¥30,000<span class="offpill">40%OFF</span></span></div>
         <div class="plan-hook">まずは品質を確かめたい方へ。<br>動画か画像、<span class="nb">どちらか1つから。</span></div>
         <ul class="plan-list">
-          <li><span class="nb">商品動画1本（〜15秒）</span>or<span class="nb">商品画像リニューアル5枚まで</span></li>
+          <li>商品動画1本（〜15秒）or 商品画像リニューアル5枚まで</li>
           <li>修正2回対応</li>
         </ul>
       </div>
@@ -544,7 +547,7 @@ img{max-width:100%;display:block}
     <div class="offer reveal">
       <div class="offer-flag">🎁 今だけ・先着4名様限定</div>
       <div class="offer-title"><span class="nb"><span class="ac">商品画像リニューアル</span>か<span class="ac">動画</span></span>、<br><span class="nb">どちらか<span class="ac">無料プレゼント</span></span></div>
-      <p class="offer-sub">通常<span class="ac nb">¥50,000相当</span>の制作品質を、<br><span class="nb">先着4社限定で無料</span>に。クオリティを確認してから検討できます。</p>
+      <p class="offer-sub">クオリティを確認してから検討できます。</p>
       <div class="guarantee">
         <span>完全無料・課金なし</span>
         <span>営業は一切なし</span>
