@@ -87,10 +87,12 @@ img{max-width:100%;display:block}
 .hb-col{flex:1;min-width:0;text-align:center}
 .hb-fr{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:893/961;box-shadow:0 18px 38px -24px rgba(40,32,20,.5)}
 .hb-fr img,.hb-fr video{width:100%;height:100%;object-fit:cover;display:block}
-.hb-in+.hb-in{margin-top:18px}
-.hb-in.vidrow .hb-col.photo{flex:0 0 32%}
-.hb-in.vidrow .hb-col.photo .hb-fr{aspect-ratio:1/1}
-.hb-in.vidrow .hb-col.after .hb-fr{aspect-ratio:16/9}
+.hb-one{align-items:center}
+.hb-one .photo{flex:0 0 27%}
+.hb-outs{flex:1;display:flex;gap:12px;align-items:flex-start;min-width:0}
+.out-img{flex:1.62;min-width:0}
+.out-vid{flex:1;min-width:0}
+.out-vid .hb-fr{aspect-ratio:9/16}
 .hb-medialbl{position:absolute;top:8px;right:8px;z-index:2;font-size:9.5px;font-weight:700;letter-spacing:.06em;color:#fff;background:rgba(28,25,22,.72);padding:4px 10px;border-radius:100px;backdrop-filter:blur(4px)}
 .hb-tag{margin-top:9px;font-size:11.5px;letter-spacing:.04em;color:var(--ink2);line-height:1.4}
 .hb-col.after .hb-tag{color:var(--gold);font-weight:700}
@@ -153,17 +155,23 @@ img{max-width:100%;display:block}
 
 /* plans */
 .plans{display:flex;flex-direction:column;gap:12px;margin-top:24px}
-.plan{border:1px solid var(--line);border-radius:8px;padding:20px 22px;background:var(--bg2)}
-.plan.feat{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.plan{position:relative;border:1px solid rgba(154,123,62,.28);border-radius:12px;padding:22px 24px;background:linear-gradient(165deg,#fffdf8,#f6f1e6);box-shadow:0 14px 30px -24px rgba(40,32,20,.35)}
+.plan.feat{border-color:var(--gold);box-shadow:0 0 0 1.5px var(--gold),0 22px 44px -22px rgba(154,123,62,.5);background:linear-gradient(165deg,#fffcf2,#f9f2e0)}
 .plan-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .plan-name{font-family:var(--serif);font-weight:600;font-size:17px;line-height:1.35}
-.plan-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:#fff;background:var(--gold);padding:3px 10px;border-radius:100px;margin-bottom:10px}
+.plan-badge{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.05em;color:#1c1916;background:linear-gradient(92deg,#e8c982,#caa75f);padding:4px 13px;border-radius:100px;margin-bottom:10px;box-shadow:0 4px 10px -5px rgba(154,123,62,.6)}
 .plan-hook{font-family:var(--serif);font-weight:600;font-size:14.5px;line-height:1.6;margin-top:10px;color:var(--ink)}
 .plan-desc{font-size:11.5px;color:var(--ink3);line-height:1.75;margin-top:8px}
-.plan-price{font-family:var(--num);font-weight:700;font-size:21px;letter-spacing:-.01em;white-space:nowrap;color:var(--ink);text-align:right}
+.plan-price{font-family:var(--num);font-weight:700;font-size:25px;letter-spacing:-.01em;white-space:nowrap;color:var(--ink);text-align:right}
+.plan-price .nowp{display:inline-flex;align-items:center;gap:7px}
+.offpill{font-family:var(--sans);font-size:10.5px;font-weight:800;letter-spacing:.04em;color:#fff;background:var(--vermil);padding:3px 8px;border-radius:6px;line-height:1}
+.plan-list{list-style:none;margin-top:10px;padding:0}
+.plan-list li{font-size:12px;color:var(--ink2);line-height:1.7;padding:5px 0;display:flex;gap:7px;align-items:baseline;border-bottom:1px dashed rgba(154,123,62,.2)}
+.plan-list li:last-child{border-bottom:none}
+.plan-list li::before{content:"\2713";color:var(--gold);font-weight:700;flex-shrink:0}
 .plan-price .tl{font-size:15px;font-weight:600;margin-left:1px}
-.plan-price .was{display:block;font-size:12px;font-weight:600;color:var(--ink3);text-decoration:line-through;text-decoration-color:var(--vermil);line-height:1.2}
-.plan-badge.lim{background:var(--vermil)}
+.plan-price .was{display:block;font-size:13px;font-weight:700;color:var(--ink3);text-decoration:line-through;text-decoration-color:var(--vermil);text-decoration-thickness:2px;line-height:1.3;margin-bottom:2px}
+.plan-badge.lim{background:linear-gradient(92deg,#d95f3b,#bf4b2e);color:#fff}
 .plan-note{font-size:11px;color:var(--ink3);margin-top:14px;text-align:center}
 
 /* single-item price menu */
@@ -181,11 +189,13 @@ img{max-width:100%;display:block}
 .pmenu-img .p{font-family:var(--num);font-weight:700;font-size:17px;color:var(--ink);white-space:nowrap}
 
 /* free sample offer */
-.offer{margin-top:28px;padding:30px 24px;border:1px solid var(--ink);border-radius:10px;background:var(--ink);color:var(--bg);text-align:center}
+.offer{position:relative;margin-top:28px;padding:34px 24px 30px;border:1px solid rgba(232,201,130,.5);border-radius:14px;background:radial-gradient(130% 150% at 50% -30%,#33291a 0%,#1c1916 58%);color:var(--bg);text-align:center;box-shadow:0 0 0 4px rgba(232,201,130,.12),0 28px 60px -30px rgba(40,32,20,.65);overflow:hidden}
+.offer::before{content:"";position:absolute;inset:6px;border:1px solid rgba(232,201,130,.25);border-radius:10px;pointer-events:none}
 .offer-flag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.03em;color:#1c1916;background:linear-gradient(92deg,#e8c982,#caa75f);padding:8px 18px;border-radius:100px;margin-bottom:18px}
 .offer-title{font-family:var(--serif);font-weight:700;font-size:23px;line-height:1.5;margin-bottom:12px}
 .offer-title .ac{color:#e8c982}
 .offer-sub{font-size:13px;color:rgba(244,241,234,.78);line-height:1.8;margin-bottom:18px}
+.offer-sub .ac{font-size:15px;font-weight:700}
 .guarantee{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:22px}
 .guarantee span{font-size:11px;font-weight:500;color:#f0e3c4;border:1px solid rgba(240,227,196,.3);border-radius:100px;padding:6px 13px}
 .btn-cream{background:var(--bg);color:var(--ink)}
@@ -193,15 +203,15 @@ img{max-width:100%;display:block}
 .offer-note{font-size:11px;color:rgba(244,241,234,.6);margin-top:14px}
 
 /* testimonials */
-.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px;align-items:start}
-.voice{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:20px 22px 18px}
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.voice{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:20px 22px 18px;display:flex;flex-direction:column}
 .voice-stars{color:var(--gold);font-size:13px;letter-spacing:3px;margin-bottom:10px}
-.voice-q{font-family:var(--serif);font-weight:500;font-size:15px;line-height:1.9;margin-bottom:12px}
+.voice-q{font-family:var(--serif);font-weight:500;font-size:14px;line-height:1.85;margin-bottom:12px}
 .voice-q b{color:var(--gold);font-weight:600}
 .voice-result{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--ink);background:rgba(191,75,46,.07);border:1px solid rgba(191,75,46,.28);border-radius:8px;padding:8px 14px;margin-bottom:14px;line-height:1.5}
 .voice-result b{font-family:var(--num);color:var(--vermil);font-size:14px;font-weight:700;margin-left:1px}
 /* result mini bar-chart */
-.vchart{margin:2px 0 15px;padding:14px 15px 13px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.vchart{margin:auto 0 15px;padding:14px 15px 13px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
 .vchart-cap{font-size:11.5px;font-weight:700;color:var(--ink2);letter-spacing:.02em;margin-bottom:11px;display:flex;align-items:center;gap:6px}
 .vchart-cap::before{content:"📈";font-size:12px}
 .vrow{display:flex;align-items:center;gap:9px;margin-top:8px}
@@ -216,7 +226,7 @@ img{max-width:100%;display:block}
 .vrow-val.g{color:var(--gold);font-size:16px}
 .vrow-val.loss{color:var(--vermil)}
 .voice.vis .vrow-fill{width:var(--w)}
-.voice-m{font-size:11px;color:var(--ink3);letter-spacing:.03em;text-align:right}
+.voice-m{font-size:10.5px;color:var(--ink3);letter-spacing:.02em;text-align:right;line-height:1.6}
 
 /* profile */
 .profile{display:flex;gap:16px;align-items:center;margin-top:24px}
@@ -268,6 +278,12 @@ img{max-width:100%;display:block}
 
 @media(min-width:601px){.sticky{display:none}}
 @media(max-width:600px){
+.hb-one{flex-direction:column;gap:10px}
+.hb-one .photo{flex:none;width:58%}
+.hb-one .hb-arrow{transform:rotate(90deg)}
+.hb-outs{width:100%}
+.plan-price{font-size:22px}
+
 .voices{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:86%;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:8px;scrollbar-width:none}
 .voices::-webkit-scrollbar{display:none}
 .voice{scroll-snap-align:center}
@@ -318,15 +334,13 @@ img{max-width:100%;display:block}
 <!-- HERO PROOF: 商品写真 → 広告クリエイティブ -->
 <section class="hb">
   <div class="wrap">
-    <div class="hb-in reveal">
-      <div class="hb-col"><div class="hb-fr"><img src="ba-cosme-poster-b.jpg" alt="あなたが送る商品写真"></div><div class="hb-tag">あなたが送る<br>商品写真</div></div>
+    <div class="hb-in hb-one reveal">
+      <div class="hb-col photo"><div class="hb-fr"><img src="ba-cosme-poster-b.jpg" alt="あなたが送る商品写真"></div><div class="hb-tag">あなたが送る<br>商品写真</div></div>
       <div class="hb-arrow">→</div>
-      <div class="hb-col after"><div class="hb-fr"><img src="ba-cosme-poster-a.jpg" alt="AIが制作した広告画像"></div><div class="hb-tag">AIが制作した<br>広告画像</div></div>
-    </div>
-    <div class="hb-in vidrow reveal">
-      <div class="hb-col photo"><div class="hb-fr"><img src="ba-cosme-poster-b.jpg" alt="あなたが撮った商品写真"></div><div class="hb-tag">あなたが撮った<br>商品写真</div></div>
-      <div class="hb-arrow">→</div>
-      <div class="hb-col after"><div class="hb-fr"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/cosme-ad.mp4" loop muted playsinline webkit-playsinline disablepictureinpicture data-v></video><span class="hb-medialbl">VIDEO</span></div><div class="hb-tag">AIが制作した<br>広告動画</div></div>
+      <div class="hb-outs">
+        <div class="hb-col after out-img"><div class="hb-fr"><img src="ba-cosme-poster-a.jpg" alt="AIが制作した広告画像"></div><div class="hb-tag">AIが制作した<br>広告画像</div></div>
+        <div class="hb-col after out-vid"><div class="hb-fr"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/cosme-ad.mp4" loop muted playsinline webkit-playsinline disablepictureinpicture data-v></video><span class="hb-medialbl">VIDEO</span></div><div class="hb-tag">AIが制作した<br>広告動画</div></div>
+      </div>
     </div>
     <p class="hb-cap reveal"><span class="nb">商品写真を送るだけ。</span><span class="nb">画像も動画も、</span><span class="nb">そのまま使える広告に。</span></p>
   </div>
@@ -447,9 +461,9 @@ img{max-width:100%;display:block}
     <div class="sec-head reveal"><span class="sec-no">03</span><span class="sec-label">Voice</span></div>
     <h2 class="sec-title reveal">お客様の声</h2>
     <div class="voices">
-      <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「TikTokを活用してから、<b>若い方からの問い合わせが増え</b>、採用もしっかり取れています！専門学校でプチブームになっていると聞いて嬉しかったですね。」</p><div class="vchart"><div class="vchart-cap">若手採用の問い合わせ（月あたり）</div><div class="vrow"><span class="vrow-tag">導入前</span><span class="vrow-bar"><span class="vrow-fill before" style="--w:4%"></span></span><span class="vrow-val">0<small>件</small></span></div><div class="vrow"><span class="vrow-tag">導入後</span><span class="vrow-bar"><span class="vrow-fill after" style="--w:100%"></span></span><span class="vrow-val g">5<small>件</small></span></div></div><p class="voice-m">— 物流・運送業 ／ 某運送会社 代表</p></div>
-      <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「存在を知られていなかったお店が、今はTikTok・Instagramからも沢山ご予約をいただいています。<b>始めていなかったらと思うと恐ろしい</b>です(笑)」</p><div class="vchart"><div class="vchart-cap">月商の変化</div><div class="vrow"><span class="vrow-tag">導入前</span><span class="vrow-bar"><span class="vrow-fill loss" style="--w:15%"></span></span><span class="vrow-val loss">赤字</span></div><div class="vrow"><span class="vrow-tag">導入後</span><span class="vrow-bar"><span class="vrow-fill after" style="--w:100%"></span></span><span class="vrow-val g">200<small>万円超</small></span></div></div><p class="voice-m">— 飲食業 ／ 某飲食店 オーナー</p></div>
-      <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「商品画像を送るだけで、5日で想像以上のクオリティで納品されてびっくり。Instagram広告に使ったら<b>問い合わせとカート遷移が一気に増えました</b>。」</p><div class="vchart"><div class="vchart-cap">EC広告のCVR（購入率・従来比）</div><div class="vrow"><span class="vrow-tag">導入前</span><span class="vrow-bar"><span class="vrow-fill before" style="--w:56%"></span></span><span class="vrow-val">1.0<small>倍</small></span></div><div class="vrow"><span class="vrow-tag">導入後</span><span class="vrow-bar"><span class="vrow-fill after" style="--w:100%"></span></span><span class="vrow-val g">1.8<small>倍</small></span></div></div><p class="voice-m">— アパレル・EC ／ 某アパレルEC 事業責任者</p></div>
+      <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「TikTokを活用してから、<b>若い方からの問い合わせが増え</b>、採用もしっかり取れています！専門学校でプチブームになっていると聞いて嬉しかったですね。」</p><div class="vchart"><div class="vchart-cap">若手採用の問い合わせ（月あたり）</div><div class="vrow"><span class="vrow-tag">導入前</span><span class="vrow-bar"><span class="vrow-fill before" style="--w:4%"></span></span><span class="vrow-val">0<small>件</small></span></div><div class="vrow"><span class="vrow-tag">導入後</span><span class="vrow-bar"><span class="vrow-fill after" style="--w:100%"></span></span><span class="vrow-val g">5<small>件</small></span></div></div><p class="voice-m"><span class="nb">— 物流・運送業／</span><span class="nb">某運送会社 代表</span></p></div>
+      <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「存在を知られていなかったお店が、今はTikTok・Instagramからも沢山ご予約をいただいています。<b>始めていなかったらと思うと恐ろしい</b>です(笑)」</p><div class="vchart"><div class="vchart-cap">月商の変化</div><div class="vrow"><span class="vrow-tag">導入前</span><span class="vrow-bar"><span class="vrow-fill loss" style="--w:15%"></span></span><span class="vrow-val loss">赤字</span></div><div class="vrow"><span class="vrow-tag">導入後</span><span class="vrow-bar"><span class="vrow-fill after" style="--w:100%"></span></span><span class="vrow-val g">200<small>万円超</small></span></div></div><p class="voice-m"><span class="nb">— 飲食業／</span><span class="nb">某飲食店 オーナー</span></p></div>
+      <div class="voice reveal"><div class="voice-stars">★★★★★</div><p class="voice-q">「商品画像を送るだけで、5日で想像以上のクオリティで納品されてびっくり。Instagram広告に使ったら<b>問い合わせとカート遷移が一気に増えました</b>。」</p><div class="vchart"><div class="vchart-cap">EC広告のCVR（購入率・従来比）</div><div class="vrow"><span class="vrow-tag">導入前</span><span class="vrow-bar"><span class="vrow-fill before" style="--w:56%"></span></span><span class="vrow-val">1.0<small>倍</small></span></div><div class="vrow"><span class="vrow-tag">導入後</span><span class="vrow-bar"><span class="vrow-fill after" style="--w:100%"></span></span><span class="vrow-val g">1.8<small>倍</small></span></div></div><p class="voice-m"><span class="nb">— アパレルEC／</span><span class="nb">事業責任者</span></p></div>
     </div>
   </div>
 </section>
@@ -469,13 +483,16 @@ img{max-width:100%;display:block}
     </div>
     <div class="plans">
       <div class="plan reveal">
-        <div class="plan-badge lim">初回限定枠</div>
+        <div class="plan-badge lim">先着4社限定</div>
         <div class="plan-top">
           <div class="plan-name">お試しプラン</div>
-          <div class="plan-price"><span class="was">通常¥50,000</span>¥30,000</div>
+          <div class="plan-price"><span class="was">通常¥50,000</span><span class="nowp">¥30,000<span class="offpill">40%OFF</span></span></div>
         </div>
         <div class="plan-hook">まずは品質を確かめたい方へ。<br>動画か画像、<span class="nb">どちらか1つから。</span></div>
-        <div class="plan-desc"><span class="nb">商品動画1本（〜15秒）</span> or <span class="nb">商品画像リニューアル5枚まで</span>／<span class="nb">修正2回</span></div>
+        <ul class="plan-list">
+          <li><span class="nb">商品動画1本（〜15秒）</span>or<span class="nb">商品画像リニューアル5枚まで</span></li>
+          <li>修正2回対応</li>
+        </ul>
       </div>
       <div class="plan feat reveal">
         <div class="plan-badge">人気No.1</div>
@@ -484,7 +501,11 @@ img{max-width:100%;display:block}
           <div class="plan-price">¥98,000</div>
         </div>
         <div class="plan-hook">商品ページを丸ごと一新し、<br><span class="nb">"サイトの顔"</span>を強くする。</div>
-        <div class="plan-desc"><span class="nb">商品画像リニューアル10枚まで</span>＋<span class="nb">商品動画1本</span>／<span class="nb">構成提案込み</span>／<span class="nb">修正3回</span></div>
+        <ul class="plan-list">
+          <li>商品画像リニューアル10枚まで</li>
+          <li>商品動画1本＋構成提案込み</li>
+          <li>修正3回対応</li>
+        </ul>
       </div>
       <div class="plan reveal">
         <div class="plan-top">
@@ -492,7 +513,10 @@ img{max-width:100%;display:block}
           <div class="plan-price">¥198,000<span class="tl">〜</span></div>
         </div>
         <div class="plan-hook">外注に頼らず、自社で内製化を構築。<br><span class="nb">AI動画・AIチラシ</span>を作れる会社に。</div>
-        <div class="plan-desc"><span class="nb">90分伴走コンサル×計4回（2ヶ月）</span>／<span class="nb">AIツールの使い方を体得</span></div>
+        <ul class="plan-list">
+          <li>90分伴走コンサル×計4回（2ヶ月）</li>
+          <li>AIツールの使い方を体得</li>
+        </ul>
       </div>
     </div>
 
