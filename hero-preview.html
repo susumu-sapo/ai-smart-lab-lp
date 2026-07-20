@@ -86,6 +86,11 @@ img{max-width:100%;display:block}
 .hero-ba{display:flex;align-items:center;gap:12px;margin:20px 0 4px;max-width:430px}
 .hba-i{flex:1;min-width:0}
 .hba-i img{width:100%;border-radius:9px;box-shadow:0 14px 30px -16px rgba(40,32,20,.45);aspect-ratio:893/961;object-fit:cover}
+.hba-i.ph{flex:1.65}
+.hba-i.vd{flex:1}
+.hba-vf{position:relative;border-radius:9px;overflow:hidden;box-shadow:0 14px 30px -16px rgba(40,32,20,.45);aspect-ratio:9/16}
+.hba-vf video{width:100%;height:100%;object-fit:cover;display:block}
+.hba-lbl{position:absolute;top:6px;right:6px;font-size:8.5px;font-weight:700;letter-spacing:.06em;color:#fff;background:rgba(28,25,22,.72);padding:3px 8px;border-radius:100px}
 .hba-i span{display:block;text-align:center;font-size:10.5px;letter-spacing:.03em;color:var(--ink2);margin-top:6px}
 .hba-i span.g{color:var(--gold);font-weight:700}
 .hba-ar{flex-shrink:0;font-family:var(--num);font-weight:700;font-size:21px;color:var(--gold)}
@@ -325,9 +330,9 @@ img{max-width:100%;display:block}
     <div class="hero-urg"><span class="badge-urg">先着4名様限定・完全無料</span></div>
 
     <div class="hero-ba reveal">
-      <div class="hba-i"><img src="ba-cosme-poster-b.jpg" alt="あなたの商品写真"><span>あなたの商品写真</span></div>
+      <div class="hba-i ph"><img src="ba-cosme-poster-b.jpg" alt="あなたの商品写真"><span>あなたの商品写真</span></div>
       <span class="hba-ar">→</span>
-      <div class="hba-i"><img src="ba-cosme-poster-a.jpg" alt="AIが制作した広告画像"><span class="g">AIが制作した広告画像</span></div>
+      <div class="hba-i vd"><div class="hba-vf"><video src="https://pub-9ba991453cdb435eb57ba44f72c4079d.r2.dev/cosme-ad.mp4" loop muted playsinline webkit-playsinline disablepictureinpicture data-v></video><span class="hba-lbl">VIDEO</span></div><span class="g">AIが制作した広告動画</span></div>
     </div>
 
     <div class="proof reveal">
