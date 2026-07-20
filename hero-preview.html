@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<meta name="robots" content="noindex">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AIスマートLab｜商品写真1枚で、広告レベルの画像と動画を。</title>
@@ -82,6 +83,12 @@ img{max-width:100%;display:block}
 .hero-cta-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
 
 /* hero before→after band */
+.hero-ba{display:flex;align-items:center;gap:12px;margin:20px 0 4px;max-width:430px}
+.hba-i{flex:1;min-width:0}
+.hba-i img{width:100%;border-radius:9px;box-shadow:0 14px 30px -16px rgba(40,32,20,.45);aspect-ratio:893/961;object-fit:cover}
+.hba-i span{display:block;text-align:center;font-size:10.5px;letter-spacing:.03em;color:var(--ink2);margin-top:6px}
+.hba-i span.g{color:var(--gold);font-weight:700}
+.hba-ar{flex-shrink:0;font-family:var(--num);font-weight:700;font-size:21px;color:var(--gold)}
 .hb{padding:34px 0 4px}
 .hb-in{display:flex;align-items:center;gap:12px}
 .hb-col{flex:1;min-width:0;text-align:center}
@@ -317,6 +324,12 @@ img{max-width:100%;display:block}
     <p class="hero-sub"><span class="nb">広告・EC・SNS</span>で使える<span class="nb">画像も動画も。</span><br>撮影なし、<span class="nb">最短5日で制作します。</span></p>
     <div class="hero-urg"><span class="badge-urg">先着4名様限定・完全無料</span></div>
 
+    <div class="hero-ba reveal">
+      <div class="hba-i"><img src="ba-cosme-poster-b.jpg" alt="あなたの商品写真"><span>あなたの商品写真</span></div>
+      <span class="hba-ar">→</span>
+      <div class="hba-i"><img src="ba-cosme-poster-a.jpg" alt="AIが制作した広告画像"><span class="g">AIが制作した広告画像</span></div>
+    </div>
+
     <div class="proof reveal">
       <div class="proof-i"><div class="proof-n" data-count="5" data-prefix="最短" data-suffix="日">最短5日</div><div class="proof-l">ご依頼から<br>納品まで</div></div>
       <div class="proof-i"><div class="proof-n" data-count="1000" data-suffix="本+" data-comma>1,000本+</div><div class="proof-l">制作本数の<br>ノウハウ</div></div>
@@ -324,7 +337,7 @@ img{max-width:100%;display:block}
     </div>
 
     <div class="hero-cta-wrap">
-      <a class="btn" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=v4-hero"><span class="bl"><span class="nb">無料で自社商品の</span><span class="nb">サンプルを申し込む<span class="ar">→</span></span></span></a>
+      <a class="btn" href="https://forms.gle/JoJYXPFwcgzzzDuB9?src=v4-hero"><span class="bl"><span class="nb">無料サンプルを</span><span class="nb">1点つくってもらう<span class="ar">→</span></span></span></a>
       <span class="cta-note">画像でも動画でもOK・営業電話なし・フォーム30秒</span>
     </div>
   </div>
