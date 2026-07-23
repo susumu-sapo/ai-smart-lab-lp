@@ -184,6 +184,15 @@ img{max-width:100%;display:block}
 .plan-price .was{display:block;font-size:13px;font-weight:700;color:var(--ink3);text-decoration:line-through;text-decoration-color:var(--vermil);text-decoration-thickness:2px;line-height:1.3;margin-bottom:2px}
 .plan-badge.lim{background:linear-gradient(92deg,#d95f3b,#bf4b2e);color:#fff}
 .plan-note{font-size:12px;color:var(--ink2);margin-top:14px;text-align:center}
+.plan-compare{display:flex;align-items:stretch;gap:8px;margin-top:12px;padding:11px 13px;background:rgba(154,123,62,.07);border:1px solid rgba(154,123,62,.15);border-radius:9px}
+.pc-col{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.pc-lbl{font-size:9.5px;color:var(--ink3);line-height:1.35;margin-bottom:3px}
+.pc-val{font-family:var(--num);font-weight:700;font-size:14px;line-height:1.1;color:var(--ink3)}
+.pc-old .pc-val{text-decoration:line-through;text-decoration-color:var(--vermil);text-decoration-thickness:2px}
+.pc-arrow{flex-shrink:0;align-self:center;color:var(--gold);font-weight:700;font-family:var(--num);font-size:15px}
+.pc-new .pc-lbl{color:var(--gold);font-weight:700}
+.pc-new .pc-val{color:var(--ink);font-size:16px}
+.pc-save{display:block;font-size:9.5px;font-weight:700;color:var(--vermil);margin-top:3px}
 
 /* single-item price menu */
 .pmenu{margin-top:14px;border:1px solid rgba(154,123,62,.28);border-radius:12px;background:linear-gradient(165deg,#fffdf8,#f6f1e6);padding:20px 22px 18px;box-shadow:0 14px 30px -24px rgba(40,32,20,.35)}
@@ -495,35 +504,52 @@ img{max-width:100%;display:block}
 <section class="sec">
   <div class="wrap">
     <div class="sec-head reveal"><span class="sec-no">04</span><span class="sec-label">Price</span></div>
-    <h2 class="sec-title reveal">目的に合わせて、<br><span class="ac">3プラン</span>から</h2>
-    <div class="cost reveal">
-      <div class="cost-row">
-        <div class="cost-col"><div class="cost-cap">制作会社の動画なら</div><div class="cost-big old"><s>60万円〜</s></div></div>
-        <div class="cost-arrow">→</div>
-        <div class="cost-col"><div class="cost-cap g">AIスマートLabなら</div><div class="cost-big new">¥50,000〜</div></div>
-      </div>
-      <div class="cost-badge"><span class="pct nb">約92%OFF</span><span class="sub">同等クオリティの動画をこの価格で</span></div>
-    </div>
+    <h2 class="sec-title reveal">目的に合わせて、<br><span class="ac">4つのプラン</span>から</h2>
     <div class="plans">
       <div class="plan reveal">
         <div class="plan-top">
-          <div class="plan-name">お試しプラン</div>
-          <div class="plan-price">¥50,000</div>
+          <div class="plan-name">商品動画プラン</div>
+          <div class="plan-price">¥50,000<span class="tl">〜</span></div>
         </div>
-        <div class="plan-special"><span class="ps-tag">🎁 今なら先着10社限定</span><span class="ps-price">¥30,000<span class="offpill">40%OFF</span></span></div>
-        <div class="plan-hook">まずは品質を確かめたい方へ。<br>動画か画像、<span class="nb">どちらか1つから。</span></div>
+        <div class="plan-hook">写真1枚が、<span class="nb">広告レベルの動画に。</span></div>
+        <div class="plan-compare">
+          <div class="pc-col pc-old"><span class="pc-lbl">制作会社の動画なら</span><span class="pc-val">60万円〜</span></div>
+          <span class="pc-arrow">→</span>
+          <div class="pc-col pc-new"><span class="pc-lbl">AIスマートLabなら</span><span class="pc-val">¥50,000〜</span></div>
+        </div>
         <ul class="plan-list">
-          <li>商品動画1本（広告最適の〜15秒）or 商品画像リニューアル5枚まで</li>
-          <li>修正2回対応</li>
+          <li>広告最適の10〜15秒・CM級クオリティ</li>
+          <li>撮影不要・最短5日で納品</li>
+        </ul>
+      </div>
+      <div class="plan reveal">
+        <div class="plan-top">
+          <div class="plan-name">商品ページ<span class="nb">リニューアル</span></div>
+          <div class="plan-price">¥60,000</div>
+        </div>
+        <div class="plan-hook">商品ページの見た目を、<span class="nb">丸ごとプロ品質に。</span></div>
+        <div class="plan-compare">
+          <div class="pc-col pc-old"><span class="pc-lbl">プロ撮影・レタッチなら</span><span class="pc-val">15万円〜</span></div>
+          <span class="pc-arrow">→</span>
+          <div class="pc-col pc-new"><span class="pc-lbl">AIスマートLabなら</span><span class="pc-val">¥60,000</span></div>
+        </div>
+        <ul class="plan-list">
+          <li>商品画像リニューアル10枚まで</li>
+          <li>撮影不要・最短5日で納品</li>
         </ul>
       </div>
       <div class="plan feat reveal">
         <div class="plan-badge">人気No.1</div>
         <div class="plan-top">
-          <div class="plan-name">商品ページ<span class="nb">丸ごと＋動画</span></div>
+          <div class="plan-name">まるごとセット</div>
           <div class="plan-price">¥98,000</div>
         </div>
-        <div class="plan-hook">商品ページを丸ごと一新し、<br><span class="nb">"サイトの顔"</span>を強くする。</div>
+        <div class="plan-hook">動画も画像も、<span class="nb">まとめて一新。</span></div>
+        <div class="plan-compare">
+          <div class="pc-col pc-old"><span class="pc-lbl">単品で頼むと合計</span><span class="pc-val">¥110,000</span></div>
+          <span class="pc-arrow">→</span>
+          <div class="pc-col pc-new"><span class="pc-lbl">セットなら</span><span class="pc-val">¥98,000</span><span class="pc-save">¥12,000おトク</span></div>
+        </div>
         <ul class="plan-list">
           <li>商品画像リニューアル10枚まで</li>
           <li>商品動画1本＋構成提案込み</li>
@@ -535,7 +561,12 @@ img{max-width:100%;display:block}
           <div class="plan-name">クリエイティブ<span class="nb">自走化プログラム</span></div>
           <div class="plan-price">¥198,000<span class="tl">〜</span></div>
         </div>
-        <div class="plan-hook">外注に頼らず、自社で内製化を構築。<br><span class="nb">AI動画・AIチラシ</span>を作れる会社に。</div>
+        <div class="plan-hook">外注に頼らず、<span class="nb">自社で内製化を構築。</span></div>
+        <div class="plan-compare">
+          <div class="pc-col pc-old"><span class="pc-lbl">外注を続ければ年間</span><span class="pc-val">60万円〜</span></div>
+          <span class="pc-arrow">→</span>
+          <div class="pc-col pc-new"><span class="pc-lbl">自走できれば</span><span class="pc-val">追加0円</span></div>
+        </div>
         <ul class="plan-list">
           <li>90分伴走コンサル×計4回（2ヶ月）</li>
           <li>AIツールの使い方を体得</li>
@@ -544,8 +575,7 @@ img{max-width:100%;display:block}
     </div>
 
     <div class="pmenu reveal">
-      <div class="pmenu-head">動画メニュー<span class="pmenu-sub">UGC広告 / ブランド訴求 / CM風</span></div>
-      <p class="pmenu-note">10〜15秒は、SNS広告で最も成果が出るとされる<b>"広告最適尺"</b>。<br>尺の長さではなく、CM級のクオリティで<b>そのまま広告に使える</b>ことに価値があります。</p>
+      <div class="pmenu-head">動画の追加オプション<span class="pmenu-sub">尺・本数で選べます</span></div>
       <table class="pmtable">
         <thead><tr><th>尺</th><th>1本</th><th>2本セット</th></tr></thead>
         <tbody>
@@ -553,11 +583,7 @@ img{max-width:100%;display:block}
           <tr><td>〜30秒</td><td class="p">¥80,000</td><td class="p">¥140,000</td></tr>
         </tbody>
       </table>
-      <div class="pmenu-img">
-        <span class="lbl">商品ページ丸ごと画像リニューアル<small>上限10枚まで（11枚以上は要相談）</small></span>
-        <span class="p">¥60,000</span>
-      </div>
-      <p class="pmenu-cost">プロのカメラマン撮影・制作会社に頼めば、<b>動画1本30〜60万円／商品撮影は1点数万円〜</b>。<br>同等の"広告レベル"の品質を、撮影なし・最短5日で、この価格に。</p>
+      <p class="pmenu-note" style="margin:12px 0 0">10〜15秒は、SNS広告で最も成果が出るとされる<b>"広告最適尺"</b>。CM級の品質で、そのまま広告に使えます。</p>
     </div>
 
     <p class="plan-note reveal"><span class="nb">SNS運用代行</span>・<span class="nb">LP制作</span>・<span class="nb">チラシデザイン</span>など、<span class="nb">他にもご相談があれば</span>お気軽にどうぞ。</p>
@@ -632,7 +658,7 @@ img{max-width:100%;display:block}
       <div class="faq-item"><div class="faq-q">なぜ撮影なしで作れるのですか？</div><p class="faq-a">最新の生成AIが、商品画像1枚から広告レベルの映像・ビジュアルを生成するためです。撮影・スタジオ・キャストといった従来最もコストのかかる工程を丸ごと省略できるので、低価格・最短5日納品を実現できます。</p></div>
       <div class="faq-item"><div class="faq-q">動画と商品画像、どちらか一方だけ頼めますか？</div><p class="faq-a">はい。動画だけ、画像リニューアルだけのご依頼も可能です。無料サンプルもどちらか一方からお選びいただけます。</p></div>
       <div class="faq-item"><div class="faq-q">飲食・コスメ以外の業界でも対応できますか？</div><p class="faq-a">はい。アパレル・食品・不動産・EC・ガジェット・旅行など幅広い業種に対応しています。まずは無料サンプルでご確認ください。</p></div>
-      <div class="faq-item"><div class="faq-q">修正には対応してもらえますか？</div><p class="faq-a">お試しプランは2回、商品ページ丸ごと＋動画セットは3回まで修正に対応します。イメージに合うよう仕上げます。</p></div>
+      <div class="faq-item"><div class="faq-q">修正には対応してもらえますか？</div><p class="faq-a">動画プラン・商品ページリニューアルプランは2回、まるごとセットは3回まで修正に対応します。イメージに合うよう仕上げます。</p></div>
       <div class="faq-item"><div class="faq-q">納品までどのくらいかかりますか？</div><p class="faq-a">最短5営業日で納品します。素材のご共有が早いほど、スピーディーに対応できます。</p></div>
     </div>
   </div>
